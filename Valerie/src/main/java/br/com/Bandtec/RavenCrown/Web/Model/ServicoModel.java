@@ -1,0 +1,130 @@
+package br.com.Bandtec.RavenCrown.Web.Model;
+
+import org.springframework.stereotype.Component;
+
+import java.sql.Date;
+import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.List;
+
+@Component
+public class ServicoModel {
+
+    private int id;
+
+    private int idUsuario;
+
+    private EnderecoModel Endereco;
+
+    private int idCategoria;
+
+    private List<ImagemServicoModel> Imagem;
+
+    private String nomeServico;
+
+    private String descricaoServico;
+
+    private LocalTime tempoExecucao;
+
+    private Double precoServico;
+
+    private boolean localizacaoFixa;
+
+    public ServicoModel() {
+    }
+
+    public ServicoModel(int id, int idUsuario, EnderecoModel endereco, int idCategoria, List<ImagemServicoModel> Imagem, String nomeServico, String descricaoServico, LocalTime tempoExecucao, Double precoServico, boolean localizacaoFixa) {
+        this.id = id;
+        this.idUsuario = idUsuario;
+        Endereco = endereco;
+        this.idCategoria = idCategoria;
+        this.Imagem = Imagem;
+        this.nomeServico = nomeServico;
+        this.descricaoServico = descricaoServico;
+        this.tempoExecucao = tempoExecucao;
+        this.precoServico = precoServico;
+        this.localizacaoFixa = localizacaoFixa;
+    }
+
+    public int getid() {
+        return id;
+    }
+
+    public void setid(int id) {
+        this.id = id;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public EnderecoModel getEndereco() {
+        return Endereco;
+    }
+
+    public void setEndereco(EnderecoModel endereco) {
+        Endereco = endereco;
+    }
+
+    public int getIdCategoria() {
+        return idCategoria;
+    }
+
+    public void setIdCategoria(int idCategoria) {
+        this.idCategoria = idCategoria;
+    }
+
+    public List<ImagemServicoModel> getImagem() {
+        return Imagem;
+    }
+
+    public void setImagem(List<ImagemServicoModel> imagem) {
+        Imagem = imagem;
+    }
+
+    public String getNomeServico() {
+        return nomeServico;
+    }
+
+    public void setNomeServico(String nomeServico) {
+        this.nomeServico = nomeServico;
+    }
+
+    public String getDescricaoServico() {
+        return descricaoServico;
+    }
+
+    public void setDescricaoServico(String descricaoServico) {
+        this.descricaoServico = descricaoServico;
+    }
+
+    public LocalTime getTempoExecucao() {
+        return tempoExecucao;
+    }
+
+    public void setTempoExecucao(LocalTime tempoExecucao) {
+        this.tempoExecucao = tempoExecucao;
+    }
+
+    public Double getPrecoServico() {
+        return precoServico;
+    }
+
+    public void setPrecoServico(Double precoServico) {
+        this.precoServico = precoServico;
+    }
+
+    public boolean isLocalizacaoFixa() {
+        return localizacaoFixa;
+    }
+
+    public void setLocalizacaoFixa(boolean localizacaoFixa) {
+        this.localizacaoFixa = localizacaoFixa;
+    }
+}
