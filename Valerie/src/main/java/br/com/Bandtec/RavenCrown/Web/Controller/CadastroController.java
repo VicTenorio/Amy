@@ -31,9 +31,9 @@ public class CadastroController {
                 map().setImagem(null);
                 map().getImagem().setUsuario(map());
                 map().setEmail(source.getEmail());
-                map().setEstado_Civil(source.getEstadoCivil());
+                map().setEstadoCivil(source.getEstadoCivil());
                 map().setNome(source.getNome());
-                map().setCPF_CNPJ(source.getCpfCnpj());
+                map().setCpfCnpj(source.getCpfCnpj());
                 map().setTelefone(source.getTelefone());
                 map().getEndereco().setUsuario(map());
             }
@@ -45,8 +45,8 @@ public class CadastroController {
     public ResponseEntity<UsuarioModel> Cadastro (@RequestBody UsuarioModel user){
         UsuarioEntity entity = mapper.map(user,UsuarioEntity.class);
         if(userBusiness.Cadastro(entity) != null){
-            user.setId_Usuario(entity.getId());
-            user.getEndereco().setId_Endereco(entity.getEndereco().getId_Endereco());
+            user.setId(entity.getId());
+            user.getEndereco().setId(entity.getEndereco().getId());
             return new ResponseEntity<>(user,HttpStatus.OK);
         }else {
             return new ResponseEntity<>(user,HttpStatus.CONFLICT);

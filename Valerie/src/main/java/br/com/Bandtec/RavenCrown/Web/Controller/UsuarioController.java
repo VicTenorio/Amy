@@ -27,7 +27,7 @@ public class UsuarioController {
                 map().setImagem(null);
                 map().getImagem().setUsuario(map());
                 map().setEmail(source.getEmail());
-                map().setEstado_Civil(source.getEstadoCivil());
+                map().setEstadoCivil(source.getEstadoCivil());
                 map().setNome(source.getNome());
             }
         });

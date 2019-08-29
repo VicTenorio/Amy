@@ -4,113 +4,113 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="CONTRATO")
+@Table(name="contrato")
 public class ContratoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
-    private int Id;
+    private int id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_servico", referencedColumnName = "id")
-    private ServicoEntity Servico;
+    @JoinColumn(name = "idServico", referencedColumnName = "id")
+    private ServicoEntity servico;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_endereco", referencedColumnName = "id")
-    private EnderecoEntity Endereco;
+    @JoinColumn(name = "idEndereco", referencedColumnName = "id")
+    private EnderecoEntity endereco;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario_prestador")
-    private UsuarioEntity Prestador;
+    @JoinColumn(name = "idUsuarioPrestador")
+    private UsuarioEntity prestador;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario_consumidor")
-    private UsuarioEntity Consumidor;
+    @JoinColumn(name = "idUsuarioConsumidor")
+    private UsuarioEntity consumidor;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_demanda", referencedColumnName = "id")
-    private DemandaEntity Demanda;
+    @JoinColumn(name = "idDemanda", referencedColumnName = "id")
+    private DemandaEntity demanda;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Contrato")
-    private List<DataServicoEntity> Datas;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "contrato")
+    private List<DataServicoEntity> datas;
 
-    private double Valor_Final;
+    private double valorFinal;
 
-    private boolean Pago;
+    private boolean pago;
 
-    private boolean Aprovado_Consumidor;
+    private boolean aprovadoConsumidor;
 
-    private boolean Aprovado_Prestador;
+    private boolean aprovadoPrestador;
 
     public ContratoEntity() {
     }
 
-    public ContratoEntity(int id, ServicoEntity servico, EnderecoEntity endereco, UsuarioEntity prestador, UsuarioEntity consumidor, DemandaEntity demanda, List<DataServicoEntity> datas, double valor_Final, boolean pago, boolean aprovado_Consumidor, boolean aprovado_Prestador) {
-        Id = id;
-        Servico = servico;
-        Endereco = endereco;
-        Prestador = prestador;
-        Consumidor = consumidor;
-        Demanda = demanda;
-        Datas = datas;
-        Valor_Final = valor_Final;
-        Pago = pago;
-        Aprovado_Consumidor = aprovado_Consumidor;
-        Aprovado_Prestador = aprovado_Prestador;
+    public ContratoEntity(int id, ServicoEntity servico, EnderecoEntity endereco, UsuarioEntity prestador, UsuarioEntity consumidor, DemandaEntity demanda, List<DataServicoEntity> datas, double valorFinal, boolean pago, boolean aprovadoConsumidor, boolean aprovadoPrestador) {
+        this.id = id;
+        this.servico = servico;
+        this.endereco = endereco;
+        this.prestador = prestador;
+        this.consumidor = consumidor;
+        this.demanda = demanda;
+        this.datas = datas;
+        this.valorFinal = valorFinal;
+        this.pago = pago;
+        this.aprovadoConsumidor = aprovadoConsumidor;
+        this.aprovadoPrestador = aprovadoPrestador;
     }
 
     public ServicoEntity getServico() {
-        return Servico;
+        return servico;
     }
 
     public void setServico(ServicoEntity servico) {
-        Servico = servico;
+        this.servico = servico;
         this.setPrestador(this.getServico().getPrestador());
     }
 
-    public int getId() { return Id; }
+    public int getId() { return id; }
 
-    public void setId(int id) { Id = id; }
+    public void setId(int id) { id = id; }
 
-    public EnderecoEntity getEndereco() { return Endereco; }
+    public EnderecoEntity getEndereco() { return endereco; }
 
-    public void setEndereco(EnderecoEntity Endereco) { this.Endereco = Endereco; }
+    public void setEndereco(EnderecoEntity endereco) { this.endereco = endereco; }
 
-    public UsuarioEntity getPrestador() { return this.Prestador; }
+    public UsuarioEntity getPrestador() { return this.prestador; }
 
-    public void setPrestador(UsuarioEntity Prestador) { this.Prestador = Prestador; }
+    public void setPrestador(UsuarioEntity prestador) { this.prestador = prestador; }
 
-    public UsuarioEntity getConsumidor() { return Consumidor; }
+    public UsuarioEntity getConsumidor() { return consumidor; }
 
-    public void setConsumidor(UsuarioEntity Consumidor) { this.Consumidor = Consumidor; }
+    public void setConsumidor(UsuarioEntity consumidor) { this.consumidor = consumidor; }
 
-    public DemandaEntity getDemandaEntity() { return this.Demanda; }
+    public DemandaEntity getDemandaEntity() { return this.demanda; }
 
-    public void setDemanda(DemandaEntity Demanda) { this.Demanda = Demanda; }
+    public void setDemanda(DemandaEntity Demanda) { this.demanda = Demanda; }
 
-    public double getValor_Final() { return Valor_Final; }
+    public double getValorFinal() { return valorFinal; }
 
-    public void setValor_Final(double valor_Final) { Valor_Final = valor_Final; }
+    public void setValorFinal(double valorFinal) { this.valorFinal = valorFinal; }
 
-    public boolean isPago() { return Pago; }
+    public boolean isPago() { return pago; }
 
-    public void setPago(boolean pago) { Pago = pago; }
+    public void setPago(boolean pago) { this.pago = pago; }
 
-    public boolean isAprovado_Consumidor() { return Aprovado_Consumidor; }
+    public boolean isAprovadoConsumidor() { return aprovadoConsumidor; }
 
-    public void setAprovado_Consumidor(boolean aprovado_Consumidor) { Aprovado_Consumidor = aprovado_Consumidor; }
+    public void setAprovadoConsumidor(boolean aprovadoConsumidor) { this.aprovadoConsumidor = aprovadoConsumidor; }
 
-    public boolean isAprovado_Prestador() { return Aprovado_Prestador; }
+    public boolean isAprovadoPrestador() { return aprovadoPrestador; }
 
-    public void setAprovado_Prestador(boolean aprovado_Prestador) { Aprovado_Prestador = aprovado_Prestador; }
+    public void setAprovadoPrestador(boolean aprovadoPrestador) { this.aprovadoPrestador = aprovadoPrestador; }
 
     public List<DataServicoEntity> getDatas() {
-        return Datas;
+        return datas;
     }
 
     public void setDatas(List<DataServicoEntity> datas) {
-        Datas = datas;
+        this.datas = datas;
     }
 
 

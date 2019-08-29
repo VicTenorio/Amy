@@ -43,11 +43,11 @@ public class ServicoController {
             protected void configure() {
                 //map().setPrestador(userBussines.getUser(source.getIdUsuario()));
                 //map().setCategoria(categoriasDAL.getOne(source.getIdCategoria()));
-                map().setNome_Servico(source.getNomeServico());
-                map().setPreco_Servico(source.getPrecoServico());
-                map().setLocalizacao_Fixa(source.isLocalizacaoFixa());
-                map().setDescricao_Servico(source.getDescricaoServico());
-                map().setTempo_Execucao(source.getTempoExecucao());
+                map().setNome(source.getNome());
+                map().setPreco(source.getPreco());
+                map().setLocalizacaoFixa(source.isLocalizacaoFixa());
+                map().setDescricao(source.getDescricao());
+                map().setTempoExecucao(source.getTempoExecucao());
             }
         });
     }
@@ -55,7 +55,7 @@ public class ServicoController {
     @GetMapping("/Servico")
     public ResponseEntity<ServicoModel> getServico(@RequestParam("id") int id){
         ServicoModel model = modelMapper.map(servicoBussines.getById(id),ServicoModel.class);
-        model.setImagem(imagemBussines.getServiceImages(model.getIdServico()));
+        model.setImagem(imagemBussines.getServiceImages(model.getId()));
         return ResponseEntity.ok(model);
     }
 
@@ -64,11 +64,11 @@ public class ServicoController {
         try {
             List<ServicoModel> services = new ArrayList<>();
             servicoBussines.GetByCategory(id).forEach(x -> {
-                if(x.getPrestador().getId_Usuario() != prestador) {
+                if(x.getPrestador().getId() != prestador) {
                     ServicoModel servico = modelMapper.map(x, ServicoModel.class);
-                    servico.setIdUsuario(x.getPrestador().getId_Usuario());
+                    servico.setIdUsuario(x.getPrestador().getId());
                     try {
-                        servico.setImagem(imagemBussines.getServiceImages(x.getId_Servico()));
+                        servico.setImagem(imagemBussines.getServiceImages(x.getId()));
                     } catch (Exception ex) {
                         System.out.println("Error: " + ex.toString());
                         servico.setImagem(null);
@@ -104,7 +104,7 @@ public class ServicoController {
         }
 
         model = modelMapper.map(servicoEntity, ServicoModel.class);
-        model.setIdUsuario(servicoEntity.Prestador.getId_Usuario());
+        model.setIdUsuario(servicoEntity.prestador.getId());
         return ResponseEntity.ok(model);
     }
 
@@ -133,7 +133,7 @@ public class ServicoController {
         for(ServicoEntity servico : servicos){
             ServicoModel service = modelMapper.map(servico,ServicoModel.class);
             if(servico.getImagens() != null){
-                service.setImagem(imagemBussines.getServiceImages(servico.getId_Servico()));
+                service.setImagem(imagemBussines.getServiceImages(servico.getId()));
             }
             services.add(service);
         }

@@ -29,11 +29,11 @@ public class LoginController {
         this.mapper.addMappings(new PropertyMap<UsuarioEntity, UsuarioModel>() {
             protected void configure(){
                 map().setImagem(null);
-                map().setEmail(source.getEmail_Usuario());
-                map().setEstadoCivil(source.getEstado_Civil());
-                map().setNome(source.getNome_Usuario());
-                map().setCpfCnpj(source.getCPF_CNPJ());
-                map().setTelefone(source.getTelefone_usuario());
+                map().setEmail(source.getEmail());
+                map().setEstadoCivil(source.getEstadoCivil());
+                map().setNome(source.getNome());
+                map().setCpfCnpj(source.getCpfCnpj());
+                map().setTelefone(source.getTelefone());
             }
         });
     }
@@ -59,7 +59,7 @@ public class LoginController {
         if(usr == null){
             return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
         }else{
-            usr.setImagem(userImageBusiness.GetUserImage(usr.getId_Usuario()));
+            usr.setImagem(userImageBusiness.GetUserImage(usr.getId()));
             return new ResponseEntity<>(usr, HttpStatus.OK);
         }
         }catch (Exception erro){

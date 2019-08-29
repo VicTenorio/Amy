@@ -5,45 +5,45 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="CATEGORIA")
+@Table(name="categoria")
 public class CategoriaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private int Id;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
-    private String Nome;
+    private String nome;
 
-    @OneToMany(mappedBy = "Categoria")
-    private List<ServicoEntity> Servicos;
+    @OneToMany(mappedBy = "categoria")
+    private List<ServicoEntity> servicos;
 
     public CategoriaEntity() {
     }
 
     public CategoriaEntity(int id) {
-        this.Id  = id ;
+        this.id  = id ;
     }
 
     public CategoriaEntity(int id , String nome , List<ServicoEntity> servicos) {
-        Id  = id ;
-        Nome = nome;
-        Servicos = servicos;
+        this.id  = id ;
+        this.nome = nome;
+        this.servicos = servicos;
     }
 
     public List<ServicoEntity> getServicos() {
-        return Servicos;
+        return servicos;
     }
 
     public void setServicos(List<ServicoEntity> servicos) {
-        Servicos = servicos;
+        this.servicos = servicos;
     }
 
-    public int getId() { return Id; }
+    public int getId() { return id; }
 
-    public void setId(int id) { Id = id; }
+    public void setId(int id) { this.id = id; }
 
-    public String getNome() { return Nome; }
+    public String getNome() { return this.nome; }
 
-    public void setNome(String nome) { Nome = nome; }
+    public void setNome(String nome) { this.nome = nome; }
 }

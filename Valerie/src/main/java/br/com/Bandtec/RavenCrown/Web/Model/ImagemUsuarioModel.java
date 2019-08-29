@@ -7,45 +7,45 @@ import org.springframework.stereotype.Component;
 @Component
 public class ImagemUsuarioModel{
 
-    private int Id;
+    private int id;
 
-    private int Id_Usuario;
+    private int idUsuario;
 
-    private String Url;
+    private String url;
 
     private byte[] image;
 
     public ImagemUsuarioModel(){
     }
 
-    public ImagemUsuarioModel(int Id, int id_Usuario, String Url) {
-        this.Id = Id;
-        this.Id_Usuario = id_Usuario;
-        this.Url = Url;
+    public ImagemUsuarioModel(int id, int idUsuario, String url) {
+        this.id = id;
+        this.idUsuario = idUsuario;
+        this.url = url;
     }
 
-    public int getId() {
-        return Id;
+    public int getid() {
+        return id;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setid(int id) {
+        this.id = id;
     }
 
-    public int getId_Usuario() {
-        return Id_Usuario;
+    public int getidUsuario() {
+        return idUsuario;
     }
 
-    public void setId_Usuario(int id_Usuario) {
-        this.Id_Usuario = id_Usuario;
+    public void setidUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getUrl() {
-        return Url;
+        return url;
     }
 
-    public void setUrl(String Url) {
-        this.Url = Url;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public byte[] getImage() {

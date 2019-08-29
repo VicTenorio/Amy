@@ -26,7 +26,7 @@ public class EnderecoController {
     @PutMapping("/endereco/")
     public ResponseEntity<Boolean> AtualizarEndereco(@RequestBody EnderecoModel enderecoModel){
         EnderecoEntity enderecoEntity = mapper.map(enderecoModel,EnderecoEntity.class);
-        enderecoEntity.setUsuario(bussiness.GetEndereco(enderecoModel.getId_Endereco()).getUsuario());
+        enderecoEntity.setUsuario(bussiness.GetEndereco(enderecoModel.getId()).getUsuario());
         Boolean sucess = bussiness.UpdateEndereco(enderecoEntity);
         return ResponseEntity.ok(sucess);
     }

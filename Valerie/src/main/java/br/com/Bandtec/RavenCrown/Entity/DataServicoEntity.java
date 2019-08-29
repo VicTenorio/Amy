@@ -6,102 +6,102 @@ import java.sql.Date;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name="Datas_Servico_agendado")
+@Table(name="DataServioAgendado")
 public class DataServicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private int Id;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario_prestador")
-    private UsuarioEntity Prestador;
+    @JoinColumn(name = "idUsuarioPrestador")
+    private UsuarioEntity prestador;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario_consumidor")
-    private UsuarioEntity Consumidor;
+    @JoinColumn(name = "idUsuarioConsumidor")
+    private UsuarioEntity consumidor;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_servico", referencedColumnName = "id_servico")
-    private ServicoEntity Servico;
+    @JoinColumn(name = "idServico", referencedColumnName = "idServico")
+    private ServicoEntity servico;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_contrato", referencedColumnName = "id_contrato")
-    private ContratoEntity Contrato;
+    @JoinColumn(name = "idContrato", referencedColumnName = "idContrato")
+    private ContratoEntity contrato;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_demanda", referencedColumnName = "id_demanda")
-    private DemandaEntity Demanda;
+    @JoinColumn(name = "idDemanda", referencedColumnName = "idDemanda")
+    private DemandaEntity demanda;
 
-    private LocalDateTime Dt_Agendamento;
+    private LocalDateTime dtAgendamento;
 
-    private char Tipo_Reserva;
+    private char tipoReserva;
 
     public DataServicoEntity() {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public UsuarioEntity getPrestador() {
-        return Prestador;
+        return prestador;
     }
 
     public void setPrestador(UsuarioEntity prestador) {
-        Prestador = prestador;
+        this.prestador = prestador;
     }
 
     public UsuarioEntity getConsumidor() {
-        return Consumidor;
+        return consumidor;
     }
 
     public void setConsumidor(UsuarioEntity consumidor) {
-        Consumidor = consumidor;
+        this.consumidor = consumidor;
     }
 
     public ServicoEntity getServico() {
-        return Servico;
+        return servico;
     }
 
     public void setServico(ServicoEntity servico) {
-        Servico = servico;
+        this.servico = servico;
     }
 
     public ContratoEntity getContrato() {
-        return Contrato;
+        return contrato;
     }
 
     public void setContrato(ContratoEntity contrato) {
-        Contrato = contrato;
+        this.contrato = contrato;
     }
 
     public DemandaEntity getDemanda() {
-        return Demanda;
+        return demanda;
     }
 
     public void setDemanda(DemandaEntity demanda) {
-        Demanda = demanda;
+        this.demanda = demanda;
     }
 
-    public LocalDateTime getDt_Agendamento() {
-        return Dt_Agendamento;
+    public LocalDateTime getDtAgendamento() {
+        return dtAgendamento;
     }
 
-    public void setDt_Agendamento(LocalDateTime dt_Agendamento) {
-        Dt_Agendamento = dt_Agendamento;
+    public void setDtAgendamento(LocalDateTime dtAgendamento) {
+        this.dtAgendamento = dtAgendamento;
     }
 
-    public char getTipo_Reserva() {
-        return Tipo_Reserva;
+    public char getTipoReserva() {
+        return this.tipoReserva;
     }
 
-    public void setTipo_Reserva(char tipo_Reserva) {
-        Tipo_Reserva = tipo_Reserva;
+    public void setTipoReserva(char tipoReserva) {
+        this.tipoReserva = tipoReserva;
     }
 }

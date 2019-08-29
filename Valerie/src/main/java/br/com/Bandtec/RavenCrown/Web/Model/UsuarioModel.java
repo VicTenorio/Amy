@@ -149,11 +149,11 @@ public class UsuarioModel {
         this.estadoCivil = estadoCivil;
     }
 
-    public LocalDate getData_Nascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setData_Nascimento(LocalDate data_Nascimento) {
-        this.dataNascimento = data_Nascimento;
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }
