@@ -8,129 +8,129 @@ import java.time.LocalTime;
 import java.util.List;
 
 @Entity
-@Table(name="SERVICO")
+@Table(name="servico")
 public class ServicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private int Id;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
     @OneToOne(cascade = CascadeType.DETACH)
-    @JoinColumn(name = "id_usuario_prestador", referencedColumnName = "id")
-    public UsuarioEntity Prestador;
+    @JoinColumn(name = "idUsuarioPrestador", referencedColumnName = "id")
+    public UsuarioEntity prestador;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_endereco", referencedColumnName = "Id")
-    private EnderecoEntity Endereco;
+    @JoinColumn(name = "idEndereco", referencedColumnName = "Id")
+    private EnderecoEntity endereco;
 
-    @OneToMany(mappedBy = "Servico")
-    private List<ComentarioEntity> Comentarios;
+    @OneToMany(mappedBy = "servico")
+    private List<ComentarioEntity> comentarios;
 
-    @OneToMany(mappedBy = "Servico")
-    private List<DataServicoEntity> Datas;
+    @OneToMany(mappedBy = "servico")
+    private List<DataServicoEntity> datas;
 
     @ManyToOne(cascade = CascadeType.DETACH)
-    @JoinColumn(name= "ID_categoria")
-    private CategoriaEntity Categoria;
+    @JoinColumn(name= "idCategoria")
+    private CategoriaEntity categoria;
 
-    @OneToMany(mappedBy = "Servico")
-    private List<ImagemServicoEntity> Imagens;
+    @OneToMany(mappedBy = "servico")
+    private List<ImagemServicoEntity> imagens;
 
 
-    private String Nome;
+    private String nome;
 
-    private String Descricao;
+    private String descricao;
 
-    private LocalTime Tempo_Execucao;
+    private LocalTime tempoExecucao;
 
-    private Double Preco;
+    private Double preco;
 
-    private boolean Localizacao_Fixa;
+    private boolean localizacaoFixa;
 
     public ServicoEntity() {
     }
 
-    public ServicoEntity(int id, UsuarioEntity prestador, EnderecoEntity endereco, List<ComentarioEntity> comentarios, List<DataServicoEntity> datas, CategoriaEntity categoria, String nome, String descricao, LocalTime tempo_Execucao, Double preco, boolean localizacao_Fixa) {
-        Id = id;
-        Prestador = prestador;
-        Endereco = endereco;
-        Comentarios = comentarios;
-        Datas = datas;
-        Categoria = categoria;
-        Nome = nome;
-        Descricao = descricao;
-        Tempo_Execucao = tempo_Execucao;
-        Preco = preco;
-        Localizacao_Fixa = localizacao_Fixa;
+    public ServicoEntity(int id, UsuarioEntity prestador, EnderecoEntity endereco, List<ComentarioEntity> comentarios, List<DataServicoEntity> datas, CategoriaEntity categoria, String nome, String descricao, LocalTime tempoExecucao, Double preco, boolean localizacaoFixa) {
+        this.id = id;
+        this.prestador = prestador;
+        this.endereco = endereco;
+        this.comentarios = comentarios;
+        this.datas = datas;
+        this.categoria = categoria;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.tempoExecucao = tempoExecucao;
+        this.preco = preco;
+        this.localizacaoFixa = localizacaoFixa;
     }
 
     public ServicoEntity(int id) {
-        this.Id = id;
+        this.id = id;
     }
 
-    public int getId() { return Id;}
+    public int getId() { return id;}
 
-    public void setId(int Id) { this.Id = Id;}
+    public void setId(int Id) { this.id = Id;}
 
-    public UsuarioEntity getPrestador() { return Prestador; }
+    public UsuarioEntity getPrestador() { return prestador; }
 
-    public void setPrestador(UsuarioEntity Prestador) { this.Prestador = Prestador;}
+    public void setPrestador(UsuarioEntity Prestador) { this.prestador = Prestador;}
 
-    public EnderecoEntity getEndereco() { return Endereco;}
+    public EnderecoEntity getEndereco() { return endereco;}
 
-    public void setEndereco(EnderecoEntity Endereco) { this.Endereco = Endereco;}
+    public void setEndereco(EnderecoEntity Endereco) { this.endereco = Endereco;}
 
-    public String getNome() { return Nome;}
+    public String getNome() { return nome;}
 
-    public void setNome(String Nome) { this.Nome = Nome; }
+    public void setNome(String Nome) { this.nome = Nome; }
 
-    public String getDescricao() { return Descricao; }
+    public String getDescricao() { return descricao; }
 
-    public void setDescricao(String Desc) { this.Descricao = Desc; }
+    public void setDescricao(String Desc) { this.descricao = Desc; }
 
-    public LocalTime getTempo_Execucao() { return Tempo_Execucao; }
+    public LocalTime getTempoExecucao() { return tempoExecucao; }
 
-    public void setTempo_Execucao(LocalTime Tempo_Execucao) {this.Tempo_Execucao = Tempo_Execucao; }
+    public void setTempoExecucao(LocalTime TempoExecucao) {this.tempoExecucao = TempoExecucao; }
 
-    public Double getPreco() { return Preco; }
+    public Double getPreco() { return preco; }
 
-    public void setPreco(Double Preco) { this.Preco = Preco; }
+    public void setPreco(Double Preco) { this.preco = Preco; }
 
-    public boolean isLocalizacao_Fixa() { return Localizacao_Fixa; }
+    public boolean isLocalizacaoFixa() { return localizacaoFixa; }
 
-    public void setLocalizacao_Fixa(boolean Localizacao_Fixa) { this.Localizacao_Fixa = Localizacao_Fixa; }
+    public void setLocalizacaoFixa(boolean LocalizacaoFixa) { this.localizacaoFixa = LocalizacaoFixa; }
 
     public List<ComentarioEntity> getComentarios() {
-        return Comentarios;
+        return comentarios;
     }
 
     public void setComentarios(List<ComentarioEntity> comentarios) {
-        Comentarios = comentarios;
+        this.comentarios = comentarios;
     }
 
     public List<DataServicoEntity> getDatas() {
-        return Datas;
+        return this.datas;
     }
 
     public void setDatas(List<DataServicoEntity> datas) {
-        Datas = datas;
+        this.datas = datas;
     }
 
     public CategoriaEntity getCategoria() {
-        return Categoria;
+        return categoria;
     }
 
     public void setCategoria(CategoriaEntity categoria) {
-        Categoria = categoria;
+        this.categoria = categoria;
     }
 
     public List<ImagemServicoEntity> getImagens() {
-        return Imagens;
+        return imagens;
     }
 
     public void setImagens(List<ImagemServicoEntity> imagens) {
-        Imagens = imagens;
+        this.imagens = imagens;
     }
 
 

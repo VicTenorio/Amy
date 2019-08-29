@@ -16,43 +16,43 @@ public class ServicoModel {
 
     private int idUsuario;
 
-    private EnderecoModel Endereco;
+    private EnderecoModel endereco;
 
     private int idCategoria;
 
     private List<ImagemServicoModel> Imagem;
 
-    private String nomeServico;
+    private String nome;
 
-    private String descricaoServico;
+    private String descricao;
 
     private LocalTime tempoExecucao;
 
-    private Double precoServico;
+    private Double preco;
 
     private boolean localizacaoFixa;
 
     public ServicoModel() {
     }
 
-    public ServicoModel(int id, int idUsuario, EnderecoModel endereco, int idCategoria, List<ImagemServicoModel> Imagem, String nomeServico, String descricaoServico, LocalTime tempoExecucao, Double precoServico, boolean localizacaoFixa) {
+    public ServicoModel(int id, int idUsuario, EnderecoModel endereco, int idCategoria, List<ImagemServicoModel> Imagem, String nome, String descricao, LocalTime tempoExecucao, Double preco, boolean localizacaoFixa) {
         this.id = id;
         this.idUsuario = idUsuario;
-        Endereco = endereco;
+        this.endereco = endereco;
         this.idCategoria = idCategoria;
         this.Imagem = Imagem;
-        this.nomeServico = nomeServico;
-        this.descricaoServico = descricaoServico;
+        this.nome = nome;
+        this.descricao = descricao;
         this.tempoExecucao = tempoExecucao;
-        this.precoServico = precoServico;
+        this.preco = preco;
         this.localizacaoFixa = localizacaoFixa;
     }
 
-    public int getid() {
+    public int getId() {
         return id;
     }
 
-    public void setid(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -65,11 +65,11 @@ public class ServicoModel {
     }
 
     public EnderecoModel getEndereco() {
-        return Endereco;
+        return endereco;
     }
 
     public void setEndereco(EnderecoModel endereco) {
-        Endereco = endereco;
+        this.endereco = endereco;
     }
 
     public int getIdCategoria() {
@@ -88,20 +88,20 @@ public class ServicoModel {
         Imagem = imagem;
     }
 
-    public String getNomeServico() {
-        return nomeServico;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeServico(String nomeServico) {
-        this.nomeServico = nomeServico;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getDescricaoServico() {
-        return descricaoServico;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescricaoServico(String descricaoServico) {
-        this.descricaoServico = descricaoServico;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public LocalTime getTempoExecucao() {
@@ -112,12 +112,12 @@ public class ServicoModel {
         this.tempoExecucao = tempoExecucao;
     }
 
-    public Double getPrecoServico() {
-        return precoServico;
+    public Double getPreco() {
+        return preco;
     }
 
-    public void setPrecoServico(Double precoServico) {
-        this.precoServico = precoServico;
+    public void setPreco(Double preco) {
+        this.preco = preco;
     }
 
     public boolean isLocalizacaoFixa() {

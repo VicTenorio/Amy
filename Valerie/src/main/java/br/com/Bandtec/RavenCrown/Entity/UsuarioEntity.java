@@ -6,54 +6,54 @@ import java.time.LocalDate;
 import java.util.Collection;
 
 @Entity
-@Table(name="USUARIO")
+@Table(name="usuario")
 public class UsuarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private int Id;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_endereco", referencedColumnName = "Id")
-    private EnderecoEntity Endereco;
+    @JoinColumn(name = "idEndereco", referencedColumnName = "id")
+    private EnderecoEntity endereco;
 
-    @OneToOne(mappedBy="Usuario")
-    private ImagemUsuarioEntity Imagem;
+    @OneToOne(mappedBy="usuario")
+    private ImagemUsuarioEntity imagem;
 
-    private String Nome;
-
-    @Column(unique=true)
-    private String Email;
+    private String nome;
 
     @Column(unique=true)
-    private String CPF_CNPJ;
+    private String email;
+
+    @Column(unique=true)
+    private String cpfCnpj;
 
     private String RG;
 
-    private String Telefone;
+    private String telefone;
 
-    private String Senha;
+    private String senha;
 
-    private boolean Prestador;
+    private boolean prestador;
 
-    private char Sexo;
+    private char sexo;
 
-    private String Estado_Civil;
+    private String estadoCivil;
 
-    private LocalDate Data_Nascimento;
+    private LocalDate dataNascimento;
 
 
-    @OneToMany(mappedBy="Prestador")
-    private Collection<DataServicoEntity> DatasPrestar;
+    @OneToMany(mappedBy="prestador")
+    private Collection<DataServicoEntity> datasPrestar;
 
-    @OneToMany(mappedBy="Consumidor")
-    private Collection<DataServicoEntity>  DatasConsumir;
+    @OneToMany(mappedBy="consumidor")
+    private Collection<DataServicoEntity>  datasConsumir;
 
-    @OneToMany(mappedBy="Prestador")
+    @OneToMany(mappedBy="prestador")
     private Collection<ContratoEntity> servicosPrestar ;
 
-    @OneToMany(mappedBy="Consumidor")
+    @OneToMany(mappedBy="consumidor")
     private Collection<ContratoEntity> servicosConsumir;
 
     public UsuarioEntity() {
@@ -68,48 +68,48 @@ public class UsuarioEntity {
         this.setId(id);
     }
 
-    public UsuarioEntity(int id, EnderecoEntity endereco, ImagemUsuarioEntity imagem, String nome, String email, String CPF_CNPJ, String RG, String telefone, String senha, boolean prestador, char sexo, String estado_Civil, LocalDate data_Nascimento, Collection<DataServicoEntity> datasPrestar, Collection<DataServicoEntity> datasConsumir, Collection<ContratoEntity> servicosPrestar, Collection<ContratoEntity> servicosConsumir) {
-        Id = id;
-        Endereco = endereco;
-        Imagem = imagem;
-        Nome = nome;
-        Email = email;
-        this.CPF_CNPJ = CPF_CNPJ;
+    public UsuarioEntity(int id, EnderecoEntity endereco, ImagemUsuarioEntity imagem, String nome, String email, String CPFCNPJ, String RG, String telefone, String senha, boolean prestador, char sexo, String estadoCivil, LocalDate dataNascimento, Collection<DataServicoEntity> datasPrestar, Collection<DataServicoEntity> datasConsumir, Collection<ContratoEntity> servicosPrestar, Collection<ContratoEntity> servicosConsumir) {
+        this.id = id;
+        this.endereco = endereco;
+        this.imagem = imagem;
+        this.nome = nome;
+        this.email = email;
+        this.cpfCnpj = cpfCnpj;
         this.RG = RG;
-        Telefone = telefone;
-        Senha = senha;
-        Prestador = prestador;
-        Sexo = sexo;
-        Estado_Civil = estado_Civil;
-        Data_Nascimento = data_Nascimento;
-        DatasPrestar = datasPrestar;
-        DatasConsumir = datasConsumir;
+        this.telefone = telefone;
+        this.senha = senha;
+        this.prestador = prestador;
+        this.sexo = sexo;
+        this.estadoCivil = estadoCivil;
+        this.dataNascimento = dataNascimento;
+        this.datasPrestar = datasPrestar;
+        this.datasConsumir = datasConsumir;
         this.servicosPrestar = servicosPrestar;
         this.servicosConsumir = servicosConsumir;
     }
 
-    public LocalDate getData_Nascimento() {
-        return Data_Nascimento;
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setData_Nascimento(LocalDate data_Nascimento) {
-        Data_Nascimento = data_Nascimento;
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public Collection<DataServicoEntity> getDatasPrestar() {
-        return DatasPrestar;
+        return datasPrestar;
     }
 
     public void setDatasPrestar(Collection<DataServicoEntity> datasPrestar) {
-        DatasPrestar = datasPrestar;
+        this.datasPrestar = datasPrestar;
     }
 
     public Collection<DataServicoEntity> getDatasConsumir() {
-        return DatasConsumir;
+        return this.datasConsumir;
     }
 
     public void setDatasConsumir(Collection<DataServicoEntity> datasConsumir) {
-        DatasConsumir = datasConsumir;
+        this.datasConsumir = datasConsumir;
     }
 
     public Collection<ContratoEntity> getServicosPrestar() {
@@ -129,27 +129,27 @@ public class UsuarioEntity {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getNome() {
-        return Nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.nome = nome;
     }
 
-    public String getCPF_CNPJ() {
-        return CPF_CNPJ;
+    public String getCpfCnpj() {
+        return cpfCnpj;
     }
 
-    public void setCPF_CNPJ(String CPF_CNPJ) {
-        this.CPF_CNPJ = CPF_CNPJ;
+    public void setCpfCnpj(String cpfCnpj) {
+        this.cpfCnpj = cpfCnpj;
     }
 
     public String getRG() {
@@ -161,68 +161,68 @@ public class UsuarioEntity {
     }
 
     public String getTelefone() {
-        return Telefone;
+        return telefone;
     }
 
     public void setTelefone(String telefone) {
-        Telefone = telefone;
+        this.telefone = telefone;
     }
 
     public String getSenha() {
-        return Senha;
+        return senha;
     }
 
     public void setSenha(String senha) {
-        Senha = senha;
+        this.senha = senha;
     }
 
     public boolean isPrestador() {
-        return Prestador;
+        return prestador;
     }
 
     public void setPrestador(boolean prestador) {
-        Prestador = prestador;
+        this.prestador = prestador;
     }
 
     public char getSexo() {
-        return Sexo;
+        return this.sexo;
     }
 
     public void setSexo(char sexo) {
-        Sexo = sexo;
+        this.sexo = sexo;
     }
 
-    public String getEstado_Civil() {
-        return Estado_Civil;
+    public String getEstadoCivil() {
+        return estadoCivil;
     }
 
-    public void setEstado_Civil(String estado_Civil) {
-        Estado_Civil = estado_Civil;
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public EnderecoEntity getEndereco() {
-        return Endereco;
+        return endereco;
     }
 
     public void setEndereco(EnderecoEntity endereco) {
-        Endereco = endereco;
-        Endereco.setUsuario(this);
+        this.endereco = endereco;
+        this.endereco.setUsuario(this);
     }
 
     public ImagemUsuarioEntity getImagem() {
-        return Imagem;
+        return imagem;
     }
 
     public void setImagem(ImagemUsuarioEntity imagem) {
-        Imagem = imagem;
+        this.imagem = imagem;
     }
 
 }

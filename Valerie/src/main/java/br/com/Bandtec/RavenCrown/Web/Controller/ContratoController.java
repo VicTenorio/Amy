@@ -40,9 +40,9 @@ public class ContratoController {
             protected void configure() {
                 map().setImagem(null);
                 map().getImagem().setUsuario(map());
-                map().setEmail_Usuario(source.getEmail());
-                map().setEstado_Civil(source.getEstadoCivil());
-                map().setNome_Usuario(source.getNome());
+                map().setEmail(source.getEmail());
+                map().setEstadoCivil(source.getEstadoCivil());
+                map().setNome(source.getNome());
             }
         };
         mapper.addMappings(userMap);
@@ -52,11 +52,11 @@ public class ContratoController {
             protected void configure() {
                 //map().setPrestador(userBussines.getUser(source.getIdUsuario()));
                 //map().setCategoria(categoriasDAL.getOne(source.getIdCategoria()));
-                map().setNome_Servico(source.getNomeServico());
-                map().setPreco_Servico(source.getPrecoServico());
-                map().setLocalizacao_Fixa(source.isLocalizacaoFixa());
-                map().setDescricao_Servico(source.getDescricaoServico());
-                map().setTempo_Execucao(source.getTempoExecucao());
+                map().setNome(source.getNome());
+                map().setPreco(source.getPreco());
+                map().setLocalizacaoFixa(source.isLocalizacaoFixa());
+                map().setDescricao(source.getDescricao());
+                map().setTempoExecucao(source.getTempoExecucao());
             }
         };
         mapper.addMappings(serviceMap);
@@ -71,30 +71,30 @@ public class ContratoController {
             contract.setServico(servicoBussiness.getById(contrato.getIdServico()));
             contract.setPrestador(contract.getServico().getPrestador());
             contract.setConsumidor(usuarioBusiness.getUser(contrato.getIdConsumidor()));
-            contract.setAprovado_Prestador(false);
-            contract.setAprovado_Consumidor(false);
+            contract.setAprovadoPrestador(false);
+            contract.setAprovadoConsumidor(false);
 
             List<DataServicoEntity> datas = new ArrayList<>();
             for (DataServicoModel x : contrato.getDatas()) {
                 DataServicoEntity data = new DataServicoEntity();
                 data.setPrestador(contract.getPrestador());
                 data.setConsumidor(contract.getConsumidor());
-                data.setDt_Agendamento(x.getDtAgendamento());
-                data.setTipo_Reserva(x.getTipoReserva());
+                data.setDtAgendamento(x.getDtAgendamento());
+                data.setTipoReserva(x.getTipoReserva());
                 data.setDemanda(null);
                 data.setServico(contract.getServico());
                 datas.add(data);
             }
             contract.setDatas(datas);
-            contract.setValor_Final(contrato.getValor_Final());
+            contract.setValorFinal(contrato.getValorFinal());
             contract.setEndereco(contrato.getEndereco() != null ? new ModelMapper().map(contrato.getEndereco(), EnderecoEntity.class) : null);
 
             contract = contratoBussiness.CreateContract(contract);
 
-            contrato.setAprovado_Consumidor(contract.isAprovado_Consumidor());
-            contrato.setAprovado_Prestador(contract.isAprovado_Prestador());
+            contrato.setAprovadoConsumidor(contract.isAprovadoConsumidor());
+            contrato.setAprovadoPrestador(contract.isAprovadoPrestador());
             contrato.setEndereco(contrato.getEndereco() != null ? new ModelMapper().map(contract.getEndereco(), EnderecoModel.class) : null);
-            contrato.setIdContrato(contract.getId_Contrato());
+            contrato.setIdContrato(contract.getId());
             return ResponseEntity.ok(contrato);
 
         } catch (Exception ex) {
@@ -137,7 +137,7 @@ public class ContratoController {
 
                 model = mapper.map(contratoEntity, VisualizacaoContratoModel.class);
 
-                model.setIdContrato(contratoEntity.getId_Contrato());
+                model.setIdContrato(contratoEntity.getId());
                 model.setServicoModel(mapper.map(contratoEntity.getServico(), ServicoModel.class));
                 model.setPrestador(mapper.map(contratoEntity.getServico().getPrestador(), UsuarioModel.class));
                 List<DataServicoModel> datas = new ArrayList<>();

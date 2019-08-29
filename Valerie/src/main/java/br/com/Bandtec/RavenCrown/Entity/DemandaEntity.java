@@ -3,62 +3,62 @@ package br.com.Bandtec.RavenCrown.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="DEMANDA")
+@Table(name="demanda")
 public class DemandaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private int Id;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_endereco", referencedColumnName = "id")
-    private EnderecoEntity Endereco;
+    @JoinColumn(name = "idEndereco", referencedColumnName = "id")
+    private EnderecoEntity endereco;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario_consumidor")
-    private UsuarioEntity Contratante;
+    @JoinColumn(name = "idUsuarioConsumidor")
+    private UsuarioEntity contratante;
 
-    private String Nome;
+    private String nome;
 
-    private String Descricao;
+    private String descricao;
 
-    private Double Valor_Previsto;
+    private Double valorPrevisto;
 
     public DemandaEntity() {
     }
 
-    public DemandaEntity(int id, EnderecoEntity endereco, UsuarioEntity contratante, String nome, String descricao, Double valor_Previsto) {
-        Id = id;
-        Endereco = endereco;
-        Contratante = contratante;
-        Nome = nome;
-        Descricao = descricao;
-        Valor_Previsto = valor_Previsto;
+    public DemandaEntity(int id, EnderecoEntity endereco, UsuarioEntity contratante, String nome, String descricao, Double valorPrevisto) {
+        this.id = id;
+        this.endereco = endereco;
+        this.contratante = contratante;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.valorPrevisto = valorPrevisto;
     }
 
-    public int getId() { return Id; }
+    public int getId() { return id; }
 
-    public void setId(int id) { Id = id; }
+    public void setId(int id) { this.id = id; }
 
-    public EnderecoEntity getEndereco() { return Endereco; }
+    public EnderecoEntity getEndereco() { return endereco; }
 
-    public void setEndereco(EnderecoEntity Endereco) { Endereco = Endereco; }
+    public void setEndereco(EnderecoEntity endereco) { this.endereco = endereco; }
 
-    public UsuarioEntity getContratante() { return Contratante; }
+    public UsuarioEntity getContratante() { return contratante; }
 
-    public void setContratante(UsuarioEntity Contratante) { Contratante = Contratante; }
+    public void setContratante(UsuarioEntity contratante) { this.contratante = contratante; }
 
-    public String getNome() { return Nome; }
+    public String getNome() { return nome; }
 
-    public void setNome(String nome) { Nome = nome; }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public String getDescricao() { return Descricao; }
+    public String getDescricao() { return descricao; }
 
-    public void setDescricao(String descricao_Ddemanda) { Descricao = descricao_Ddemanda; }
+    public void setDescricao(String descricaoDdemanda) { this.descricao = descricaoDdemanda; }
 
-    public Double getValor_Previsto() { return Valor_Previsto; }
+    public Double getValorPrevisto() { return valorPrevisto; }
 
-    public void setValor_Previsto(Double valor_Previsto) { Valor_Previsto = valor_Previsto; }
+    public void setValorPrevisto(Double valorPrevisto) { this.valorPrevisto = valorPrevisto; }
 }
 

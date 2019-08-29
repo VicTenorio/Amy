@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ContratoModel {
 
-    private int idContrato;
+    private int id;
 
     private int idServico;
 
@@ -34,8 +34,8 @@ public class ContratoModel {
     public ContratoModel() {
     }
 
-    public ContratoModel(int idContrato, int idServico, EnderecoModel endereco, int idPrestador, int idConsumidor, int idDemanda, double valorFinal, boolean pago, boolean aprovado_Consumidor, boolean aprovadoPrestador, List<DataServicoModel> datas) {
-        this.idContrato = idContrato;
+    public ContratoModel(int id, int idServico, EnderecoModel endereco, int idPrestador, int idConsumidor, int idDemanda, double valorFinal, boolean pago, boolean aprovadoConsumidor, boolean aprovadoPrestador, List<DataServicoModel> datas) {
+        this.id = id;
         this.idServico = idServico;
         this.endereco = endereco;
         this.idPrestador = idPrestador;
@@ -43,17 +43,17 @@ public class ContratoModel {
         this.idDemanda = idDemanda;
         this.valorFinal = valorFinal;
         this.pago = pago;
-        this.aprovadoConsumidor = aprovado_Consumidor;
+        this.aprovadoConsumidor = aprovadoConsumidor;
         this.aprovadoPrestador = aprovadoPrestador;
         this.datas = datas;
     }
 
     public int getIdContrato() {
-        return idContrato;
+        return id;
     }
 
     public void setIdContrato(int idContrato) {
-        this.idContrato = idContrato;
+        this.id = idContrato;
     }
 
     public int getIdServico() {
@@ -112,11 +112,11 @@ public class ContratoModel {
         this.pago = pago;
     }
 
-    public boolean isAprovado_Consumidor() {
+    public boolean isAprovadoConsumidor() {
         return this.aprovadoConsumidor;
     }
 
-    public void setAprovado_Consumidor(boolean aprovadoConsumidor) {
+    public void setAprovadoConsumidor(boolean aprovadoConsumidor) {
         this.aprovadoConsumidor = aprovadoConsumidor;
     }
 

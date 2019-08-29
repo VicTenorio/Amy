@@ -3,47 +3,47 @@ package br.com.Bandtec.RavenCrown.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="IMAGEM_SERVICO")
+@Table(name="imagemServico")
 public class ImagemServicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private int Id;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name="Id_servico")
-    private ServicoEntity Servico;
+    @JoinColumn(name="idServico")
+    private ServicoEntity servico;
 
     @ManyToOne(cascade = CascadeType.DETACH)
-    @JoinColumn(name = "Id_usuario", referencedColumnName = "Id_usuario")
-    private UsuarioEntity Usuario;
+    @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
+    private UsuarioEntity usuario;
 
-    private String Imagem_URL;
+    private String imagemURL;
 
     public ImagemServicoEntity() {
     }
 
-    public ImagemServicoEntity(int id, ServicoEntity servico, UsuarioEntity usuario, String _ImagemURL) {
-        Id = id;
-        Servico = servico;
-        Usuario = usuario;
-        Imagem_URL = _ImagemURL;
+    public ImagemServicoEntity(int id, ServicoEntity servico, UsuarioEntity usuario, String imagemURL) {
+        this.id = id;
+        this.servico = servico;
+        this.usuario = usuario;
+        this.imagemURL = imagemURL;
     }
 
-    public int getId() { return Id; }
+    public int getId() { return id; }
 
-    public void setId(int Id) { this.Id = Id; }
+    public void setId(int Id) { this.id = Id; }
 
-    public ServicoEntity getServico() { return Servico; }
+    public ServicoEntity getServico() { return servico; }
 
-    public void setServico(ServicoEntity Servico) { this.Servico = Servico; }
+    public void setServico(ServicoEntity Servico) { this.servico = Servico; }
 
-    public UsuarioEntity getUsuario() { return Usuario; }
+    public UsuarioEntity getUsuario() { return usuario; }
 
-    public void setUsuario(UsuarioEntity Usuario) { this.Usuario = Usuario; }
+    public void setUsuario(UsuarioEntity Usuario) { this.usuario = Usuario; }
 
-    public String getImagem_URL() { return Imagem_URL; }
+    public String getImagemURL() { return imagemURL; }
 
-    public void setImagem_URL(String Url_Imagem) { this.Imagem_URL = Url_Imagem; }
+    public void setImagemURL(String UrlImagem) { this.imagemURL = UrlImagem; }
 }

@@ -3,104 +3,104 @@ package br.com.Bandtec.RavenCrown.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="ENDERECO")
+@Table(name="endereco")
 public class EnderecoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private int Id;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
-    private String Rua;
+    private String lougradouro;
 
-    private String Cep;
+    private String cep;
 
-    private String Complemento;
+    private String complemento;
 
-    private String Numero;
+    private String numero;
 
-    private String Referencia;
+    private String referencia;
 
-    private String Bairro;
+    private String bairro;
 
-    private String Cidade;
+    private String cidade;
 
-    private String Estado;
+    private String estado;
 
-    private String Pais;
+    private String pais;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario", referencedColumnName = "id")
-    private UsuarioEntity Usuario;
+    @JoinColumn(name = "idUsuario", referencedColumnName = "id")
+    private UsuarioEntity usuario;
 
     public EnderecoEntity(int id) {
-        this.Id = id;
+        this.id = id;
     }
 
     public EnderecoEntity() {
     }
 
-    public EnderecoEntity(int id, String rua, String cep, String complemento, String numero, String referencia, String bairro, String cidade, String estado, String pais, UsuarioEntity usuario) {
-        Id = id;
-        Rua = rua;
-        Cep = cep;
-        Complemento = complemento;
-        Numero = numero;
-        Referencia = referencia;
-        Bairro = bairro;
-        Cidade = cidade;
-        Estado = estado;
-        Pais = pais;
-        Usuario = usuario;
+    public EnderecoEntity(int id, String lougradouro, String cep, String complemento, String numero, String referencia, String bairro, String cidade, String estado, String pais, UsuarioEntity usuario) {
+        this.id = id;
+        this.lougradouro = lougradouro;
+        this.cep = cep;
+        this.complemento = complemento;
+        this.numero = numero;
+        this.referencia = referencia;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.pais = pais;
+        this.usuario = usuario;
     }
 
     public UsuarioEntity getUsuario() {
-        return Usuario;
+        return usuario;
     }
 
     public void setUsuario(UsuarioEntity usuario) {
-        Usuario = usuario;
+        this.usuario = usuario;
     }
 
-    public int getId() {return this.Id;}
+    public int getId() {return this.id;}
 
-    public void setId(int id) {Id = id; }
+    public void setId(int id) {this.id = id; }
 
-    public String getRua() {return this.Rua;}
+    public String getLougradouro() {return this.lougradouro;}
 
-    public void setRua(String rua) {this.Rua = rua;}
+    public void setLougradouro(String lougradouro) {this.lougradouro = lougradouro;}
 
-    public String getCep() {return Cep; }
+    public String getCep() {return cep; }
 
-    public void setCep(String cep) {this.Cep = cep; }
+    public void setCep(String cep) {this.cep = cep; }
 
-    public String getComplemento() { return Complemento; }
+    public String getComplemento() { return complemento; }
 
-    public void setComplemento(String complemento) {this.Complemento = complemento; }
+    public void setComplemento(String complemento) {this.complemento = complemento; }
 
-    public String getNumero() { return Numero; }
+    public String getNumero() { return numero; }
 
-    public void setNumero(String Numero) {this.Numero = Numero; }
+    public void setNumero(String numero) {this.numero = numero; }
 
-    public String getReferencia() { return Referencia; }
+    public String getReferencia() { return referencia; }
 
-    public void setReferencia(String Referencia) {this.Referencia = Referencia; }
+    public void setReferencia(String referencia) {this.referencia = referencia; }
 
-    public String getBairro() {return Bairro;}
+    public String getBairro() {return bairro;}
 
-    public void setBairro(String Bairro) {this.Bairro = Bairro; }
+    public void setBairro(String Bairro) {this.bairro = Bairro; }
 
-    public String getCidade() { return Cidade; }
+    public String getCidade() { return cidade; }
 
-    public void setCidade(String Cidade) {this.Cidade = Cidade; }
+    public void setCidade(String cidade) {this.cidade = cidade; }
 
-    public String getEstado() { return Estado; }
+    public String getEstado() { return estado; }
 
-    public void setEstado(String Estado) {this.Estado = Estado; }
+    public void setEstado(String estado) {this.estado = estado; }
 
-    public String getPais() { return Pais; }
+    public String getPais() { return pais; }
 
-    public void setPais(String Pais) {this.Pais = Pais; }
+    public void setPais(String pais) {this.pais = pais; }
 
 
 }

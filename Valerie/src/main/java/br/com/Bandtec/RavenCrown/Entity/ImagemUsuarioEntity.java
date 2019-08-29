@@ -4,41 +4,41 @@ package br.com.Bandtec.RavenCrown.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="USUARIO")
+@Table(name="imagemUsuario")
 public class ImagemUsuarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private int Id;
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario", referencedColumnName = "id")
-    private UsuarioEntity Usuario;
+    @JoinColumn(name = "idUsuario", referencedColumnName = "id")
+    private UsuarioEntity usuario;
 
-    private String Url;
+    private String url;
 
     public ImagemUsuarioEntity() {
     }
 
     public ImagemUsuarioEntity(int Id, UsuarioEntity usuario, String Url) {
-        this.Id = Id;
-        this.Usuario = usuario;
-        this.Url = Url;
+        this.id = Id;
+        this.usuario = usuario;
+        this.url = Url;
     }
 
-    public UsuarioEntity getUsuario() {return Usuario; }
+    public UsuarioEntity getUsuario() {return usuario; }
 
     public void setUsuario(UsuarioEntity Usuario) {
-        this.Usuario = Usuario;
+        this.usuario = Usuario;
         Usuario.setImagem(this);
     }
 
-    public int getId() { return Id; }
+    public int getId() { return id; }
 
-    public void setId(int Id) {this.Id = Id;}
+    public void setId(int Id) {this.id = Id;}
 
-    public String getUrl() { return Url; }
+    public String getUrl() { return url; }
 
-    public void setUrl(String Url) {this.Url = Url; }
+    public void setUrl(String Url) {this.url = Url; }
 }

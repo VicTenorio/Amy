@@ -7,20 +7,20 @@ import java.sql.Date;
 
 public class ComentarioModel {
 
-    private int idComentario;
+    private int id;
 
     private String comentario ;
 
-    private Date dataComentario;
+    private Date data;
 
     private ServicoEntity servico;
 
     private UsuarioEntity usuario;
 
-    public ComentarioModel(int idComentario, String comentario, Date dataComentario, ServicoEntity servico, UsuarioEntity usuario) {
-        this.idComentario = idComentario;
+    public ComentarioModel(int id, String comentario, Date data, ServicoEntity servico, UsuarioEntity usuario) {
+        this.id = id;
         this.comentario = comentario;
-        this.dataComentario = dataComentario;
+        this.data = data;
         this.servico = servico;
         this.usuario = usuario;
     }

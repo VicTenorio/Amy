@@ -29,20 +29,20 @@ public class ImagemUsuarioBusiness {
         this.fileDAO = new ImageUserDAO(RepositoriesAdress.USER_IMAGE.toString());
     }
 
-    public ImagemUsuarioModel GetUserImage(int Id_usuario){
+    public ImagemUsuarioModel GetUserImage(int Idusuario){
 
         ModelMapper mapper = new ModelMapper();
 
         mapper.addMappings(new PropertyMap<ImagemUsuarioEntity,ImagemUsuarioModel>(){
             @Override
             protected void configure() {
-                map().setId_Usuario(source.getUsuario().getId_Usuario());
-                map().setImagem_Url(source.getImagem_Url());
+                map().setId(source.getUsuario().getId());
+                map().setImagemUrl(source.getImagemUrl());
                 map().setImage(null);
             }
         });
 
-        ImagemUsuarioEntity imagem = imagensDal.GetImagemByUser(Id_usuario);
+        ImagemUsuarioEntity imagem = imagensDal.GetImagemByUser(Idusuario);
 
         if(imagem == null){
             return null;
@@ -50,43 +50,43 @@ public class ImagemUsuarioBusiness {
 
         ImagemUsuarioModel image =  mapper.map(imagem,ImagemUsuarioModel.class);
 
-        image.setImage(this.fileDAO.getImage(image.getImagem_Url()));
+        image.setImage(this.fileDAO.getImage(image.getImagemUrl()));
 
         return image;
     }
 
     public ImagemUsuarioModel InsertUserImage(ImagemUsuarioModel model){
 
-        ImagemUsuarioEntity oldImage = imagensDal.GetImagemByUser(model.getId_Usuario());
+        ImagemUsuarioEntity oldImage = imagensDal.GetImagemByUser(model.getIdUsuario());
         if(oldImage != null)
             imagensDal.delete(oldImage);
 
-            UsuarioEntity user = userDAL.getOne(model.getId_Usuario());
+            UsuarioEntity user = userDAL.getOne(model.getIdUsuario());
             ImagemUsuarioEntity imagemUsuarioEntity = new ImagemUsuarioEntity();
-            imagemUsuarioEntity.setImagem_Url(fileDAO.saveImage(model));
+            imagemUsuarioEntity.setImagemUrl(fileDAO.saveImage(model));
             imagemUsuarioEntity.setUsuario(user);
             imagensDal.save(imagemUsuarioEntity);
 
-        model.setImagem_Id(user.getImagem().getImagem_Id());
-        model.setImagem_Url(user.getImagem().getImagem_Url());
+        model.setImagemId(user.getImagem().getImagemId());
+        model.setImagemUrl(user.getImagem().getImagemUrl());
 
         return model;
     }
 
     public ImagemUsuarioModel UpdateUserImage(ImagemUsuarioModel model){
 
-        ImagemUsuarioEntity oldImage = imagensDal.GetImagemByUser(model.getId_Usuario());
+        ImagemUsuarioEntity oldImage = imagensDal.GetImagemByUser(model.getIdUsuario());
         if(oldImage != null)
             imagensDal.delete(oldImage);
 
-        UsuarioEntity user = userDAL.getOne(model.getId_Usuario());
+        UsuarioEntity user = userDAL.getOne(model.getIdUsuario());
         ImagemUsuarioEntity imagemUsuarioEntity = new ImagemUsuarioEntity();
-        imagemUsuarioEntity.setImagem_Url(fileDAO.saveImage(model));
+        imagemUsuarioEntity.setImagemUrl(fileDAO.saveImage(model));
         imagemUsuarioEntity.setUsuario(user);
         imagensDal.save(imagemUsuarioEntity);
 
-        model.setImagem_Id(user.getImagem().getImagem_Id());
-        model.setImagem_Url(user.getImagem().getImagem_Url());
+        model.setImagemId(user.getImagem().getImagemId());
+        model.setImagemUrl(user.getImagem().getImagemUrl());
 
         return model;
     }
