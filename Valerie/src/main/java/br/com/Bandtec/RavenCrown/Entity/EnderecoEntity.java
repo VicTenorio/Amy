@@ -8,7 +8,7 @@ public class EnderecoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "idEndereco", unique = true, nullable = false)
     private int id;
 
     private String lougradouro;
@@ -30,7 +30,7 @@ public class EnderecoEntity {
     private String pais;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idUsuario", referencedColumnName = "id")
+    @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
     private UsuarioEntity usuario;
 
     public EnderecoEntity(int id) {

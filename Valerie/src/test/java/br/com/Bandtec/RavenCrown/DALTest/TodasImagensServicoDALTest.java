@@ -39,13 +39,13 @@ public class TodasImagensServicoDALTest {
     public void PersistirImagemServicoTest(){
         imagem = new ImagemServicoEntity();
 
-        imagem.setImagem_URL("https://i.pinimg.com/originals/8a/3d/a2/8a3da20e55bd36a2f29f8f3ab4d0c5b5.jpg");
+        //imagem.setImagemURL("https://i.pinimg.com/originals/8a/3d/a2/8a3da20e55bd36a2f29f8f3ab4d0c5b5.jpg");
         imagem.setUsuario(usuariosDAL.getOne(10));
         imagem.setServico(servicosDAL.getOne(1));
 
         imagemServicoDAL.save(imagem);
 
-        ImagemServicoEntity imagemPerssitido = imagemServicoDAL.getOne(imagem.getId_Imagem_Servico());
+        ImagemServicoEntity imagemPerssitido = imagemServicoDAL.getOne(imagem.getId());
 
         assertEquals(imagemPerssitido,imagem);
     }

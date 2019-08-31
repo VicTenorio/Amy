@@ -8,11 +8,11 @@ public class DemandaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "idDemanda", unique = true, nullable = false)
     private int id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idEndereco", referencedColumnName = "id")
+    @JoinColumn(name = "idEndereco", referencedColumnName = "idEndereco")
     private EnderecoEntity endereco;
 
     @OneToOne(cascade = CascadeType.ALL)

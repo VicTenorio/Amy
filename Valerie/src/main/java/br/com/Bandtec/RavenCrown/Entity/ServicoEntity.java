@@ -13,15 +13,15 @@ public class ServicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "idServico", unique = true, nullable = false)
     private int id;
 
     @OneToOne(cascade = CascadeType.DETACH)
-    @JoinColumn(name = "idUsuarioPrestador", referencedColumnName = "id")
+    @JoinColumn(name = "idUsuarioPrestador", referencedColumnName = "idUsuario")
     public UsuarioEntity prestador;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idEndereco", referencedColumnName = "Id")
+    @JoinColumn(name = "idEndereco", referencedColumnName = "idEndereco")
     private EnderecoEntity endereco;
 
     @OneToMany(mappedBy = "servico")

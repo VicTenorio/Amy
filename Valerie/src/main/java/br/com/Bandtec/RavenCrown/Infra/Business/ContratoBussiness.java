@@ -24,7 +24,7 @@ public class ContratoBussiness {
     public ContratoEntity CreateContract(ContratoEntity contrato){
         contrato = contratosDAL.save(contrato);
 
-        emailDAO.sandConfirmation(contrato.getPrestador().getId_Usuario(),contrato.getConsumidor().getId_Usuario());
+        emailDAO.sandConfirmation(contrato.getPrestador().getId(),contrato.getConsumidor().getId());
 
         return contrato;
     }
@@ -37,13 +37,13 @@ public class ContratoBussiness {
         LocalDateTime today = LocalDateTime.now();
 
         for(DataServicoEntity x : contrato.getDatas()){
-            if (x.getDt_Agendamento() ==  today){
+            if (x.getDtAgendamento() ==  today){
                 sucess = false;
                 break;
             }
         };
 
-        contrato.setAprovado_Consumidor(sucess && approvation);
+        contrato.setAprovadoConsumidor(sucess && approvation);
         contratosDAL.save(contrato);
         return  sucess;
     }
@@ -56,13 +56,13 @@ public class ContratoBussiness {
         LocalDateTime today = LocalDateTime.now();
 
         for(DataServicoEntity x : contrato.getDatas()){
-            if (x.getDt_Agendamento() ==  today){
+            if (x.getDtAgendamento() ==  today){
                 sucess = false;
                 break;
             }
         };
 
-        contrato.setAprovado_Prestador(sucess && approvation);
+        contrato.setAprovadoPrestador(sucess && approvation);
         contratosDAL.save(contrato);
         return  sucess;
     }

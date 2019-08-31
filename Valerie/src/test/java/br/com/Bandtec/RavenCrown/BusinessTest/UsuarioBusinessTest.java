@@ -42,16 +42,16 @@ public class UsuarioBusinessTest {
     public void UsuarioBusinessTest(){
         UsuarioEntity userModel = new UsuarioEntity();
 
-        userModel.setEmail_Usuario("teste@revencrown");
-        userModel.setNome_Usuario("Usuario de teste");
-        userModel.setTelefone_usuario("4002-8922");
-        userModel.setEstado_Civil("Solteiro");
+        userModel.setEmail("teste@revencrown");
+        userModel.setNome("Usuario de teste");
+        userModel.setTelefone("4002-8922");
+        userModel.setEstadoCivil("Solteiro");
         userModel.setSexo('I');
         userModel.setPrestador(false);
         userModel.setRG("XX.XXX.XX-X");
-        userModel.setCPF_CNPJ("123.456.789-09");
+        userModel.setCpfCnpj("123.456.789-09");
         userModel.setSenha("string");
-        userModel.setData_Nascimento(LocalDate.now());
+        userModel.setDataNascimento(LocalDate.now());
         userModel = business.Cadastro(userModel);
 
     }

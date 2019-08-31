@@ -28,11 +28,11 @@ public class TodasCategoriasDALTest {
     @Test
     public void persistirCategoria(){
         categoria = new CategoriaEntity();
-        categoria.setNome_Categoria("Teste Categoria");
+        categoria.setNome("Teste Categoria");
 
         categoriasDAL.save(categoria);
 
-        CategoriaEntity categoriaSalva = categoriasDAL.getOne(categoria.getId_Categoria());
+        CategoriaEntity categoriaSalva = categoriasDAL.getOne(categoria.getId());
 
         assertEquals(categoria,categoriaSalva);
     }

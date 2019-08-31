@@ -53,14 +53,14 @@ public class TodasDemandasDALTest {
 
         demanda = new DemandaEntity();
 
-        demanda.setDescricao_Demanda("Dar um jeito na pia quebrada");
-        demanda.setNome_Demanda("Pia Quebrada");
-        demanda.setValor_Previsto(100.00);
+        demanda.setDescricao("Dar um jeito na pia quebrada");
+        demanda.setNome("Pia Quebrada");
+        demanda.setValorPrevisto(100.00);
         demanda.setEndereco(endereco);
         demanda.setContratante(usuariosDAL.getOne(10));
         demandasDAL.save(demanda);
 
-        DemandaEntity demandaPerssitido = demandasDAL.getOne(demanda.getId_Demanda());
+        DemandaEntity demandaPerssitido = demandasDAL.getOne(demanda.getId());
 
         assertEquals(demandaPerssitido, demanda);
     }

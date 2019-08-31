@@ -51,14 +51,14 @@ public class TodosDatasServicoDALTest {
         java.util.Date DATA = new java.util.Date();
 
         dataServico.setServico(this.servico);
-        dataServico.setDt_Agendamento(LocalDateTime.now());
+        dataServico.setDtAgendamento(LocalDateTime.now());
         dataServico.setPrestador(servico.getPrestador());
         dataServico.setConsumidor(this.usuario);
-        dataServico.setTipo_Reserva('T');
+        dataServico.setTipoReserva('T');
 
         datasServicoDAL.save(dataServico);
 
-        DataServicoEntity dataPersistida = datasServicoDAL.getOne(dataServico.getId_data_agendado());
+        DataServicoEntity dataPersistida = datasServicoDAL.getOne(dataServico.getId());
 
         assertEquals(dataPersistida,dataServico);
     }

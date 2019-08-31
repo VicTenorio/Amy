@@ -25,10 +25,10 @@ public class ImagemServicoBussines {
         List<ImagemServicoEntity> entities = repositorio.GetAllByServiceId(idServico);
         entities.forEach(X -> {
             ImagemServicoModel imagemModel = new ImagemServicoModel();
-            imagemModel.setImage(imageDAO.getImage(X.getImagem_URL()));
-            imagemModel.setImagemURL(X.getImagem_URL());
-            imagemModel.setIdServico(X.getId_Imagem_Servico());
-            imagemModel.setIdUsuario(X.getUsuario().getId_Usuario());
+            imagemModel.setImage(imageDAO.getImage(X.getUrl()));
+            imagemModel.setUrl(X.getUrl());
+            imagemModel.setIdServico(X.getId());
+            imagemModel.setIdUsuario(X.getUsuario().getId());
             images.add(imagemModel);
         });
 
@@ -38,10 +38,10 @@ public class ImagemServicoBussines {
     public void SaveImage (ImagemServicoModel imagem, ServicoEntity entity){
         ImageServiceDAO imageDAO = new ImageServiceDAO();
 
-        imagem.setImagemURL(imageDAO.saveImage(imagem));
+        imagem.setUrl(imageDAO.saveImage(imagem));
 
         ImagemServicoEntity imagemServicoEntity = new ImagemServicoEntity(
-                0,entity,entity.getPrestador(),imagem.getImagemURL()
+                0,entity,entity.getPrestador(),imagem.getUrl()
         );
 
         repositorio.save(imagemServicoEntity);

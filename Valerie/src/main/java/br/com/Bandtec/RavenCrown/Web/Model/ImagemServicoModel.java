@@ -11,15 +11,15 @@ public class ImagemServicoModel{
 
     public int idUsuario;
 
-    public String imagemURL;
+    public String url;
 
     public byte[] image;
 
-    public ImagemServicoModel(int id, int idServico, int idUsuario, String imagemURL, byte[] image) {
+    public ImagemServicoModel(int id, int idServico, int idUsuario, String url, byte[] image) {
         this.id = id;
         this.idServico = idServico;
         this.idUsuario = idUsuario;
-        this.imagemURL = imagemURL;
+        this.url = url;
         this.image = image;
     }
 
@@ -50,12 +50,12 @@ public class ImagemServicoModel{
         this.idUsuario = idUsuario;
     }
 
-    public String getImagemURL() {
-        return imagemURL;
+    public String getUrl() {
+        return url;
     }
 
-    public void setImagemURL(String imagemURL) {
-        this.imagemURL = imagemURL;
+    public void setUrl(String Url) {
+        this.url = Url;
     }
 
     public byte[] getImage() {

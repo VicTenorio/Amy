@@ -37,7 +37,7 @@ public class EnderecoBusinessTest {
         endereco = new EnderecoEntity();
         endereco.setBairro("Lapa");
         endereco.setCep("00000-000");
-        endereco.setRua("Rua da Lapa");
+        endereco.setLougradouro("Rua da Lapa");
         endereco.setCidade("São Paulo");
         endereco.setComplemento("Predio Azul");
         endereco.setNumero("302");
@@ -52,7 +52,7 @@ public class EnderecoBusinessTest {
     public void AtualizarUmEndereco(){
         endereco.setBairro("Mooca");
         endereco.setCep("00000-111");
-        endereco.setRua("Rua da Mooca");
+        endereco.setLougradouro("Rua da Mooca");
         endereco.setCidade("São Arnaldo");
         endereco.setComplemento(null);
         endereco.setNumero("111");
@@ -64,7 +64,7 @@ public class EnderecoBusinessTest {
 
     @Test
     public void ObterEndereco(){
-        EnderecoEntity enderecoObtido = enderecoBussiness.GetEndereco(endereco.getId_Endereco());
+        EnderecoEntity enderecoObtido = enderecoBussiness.GetEndereco(endereco.getId());
         assertEquals(enderecoObtido,endereco);
     }
 

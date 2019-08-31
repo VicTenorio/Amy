@@ -44,7 +44,7 @@ public class TodosEnderecosDALTest {
 
         endereco.setBairro("Lapa");
         endereco.setCep("00000-000");
-        endereco.setRua("Rua da Lapa");
+        endereco.setLougradouro("Logradouro da Lapa");
         endereco.setCidade("São Paulo");
         endereco.setComplemento("Predio Azul");
         endereco.setNumero("302");
@@ -53,7 +53,7 @@ public class TodosEnderecosDALTest {
         endereco.setUsuario(todosUsuarios.getOne(10));
 
         todosEnderecosDAL.save(endereco);
-        EnderecoEntity enderecoSalvo = todosEnderecosDAL.getOne(endereco.getId_Endereco());
+        EnderecoEntity enderecoSalvo = todosEnderecosDAL.getOne(endereco.getId());
 
         assertEquals(enderecoSalvo, endereco);
 

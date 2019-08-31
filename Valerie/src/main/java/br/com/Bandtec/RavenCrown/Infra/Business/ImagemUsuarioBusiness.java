@@ -37,7 +37,7 @@ public class ImagemUsuarioBusiness {
             @Override
             protected void configure() {
                 map().setId(source.getUsuario().getId());
-                map().setImagemUrl(source.getImagemUrl());
+                map().setUrl(source.getUrl());
                 map().setImage(null);
             }
         });
@@ -50,7 +50,7 @@ public class ImagemUsuarioBusiness {
 
         ImagemUsuarioModel image =  mapper.map(imagem,ImagemUsuarioModel.class);
 
-        image.setImage(this.fileDAO.getImage(image.getImagemUrl()));
+        image.setImage(this.fileDAO.getImage(image.getUrl()));
 
         return image;
     }
@@ -63,12 +63,12 @@ public class ImagemUsuarioBusiness {
 
             UsuarioEntity user = userDAL.getOne(model.getIdUsuario());
             ImagemUsuarioEntity imagemUsuarioEntity = new ImagemUsuarioEntity();
-            imagemUsuarioEntity.setImagemUrl(fileDAO.saveImage(model));
+            imagemUsuarioEntity.setUrl(fileDAO.saveImage(model));
             imagemUsuarioEntity.setUsuario(user);
             imagensDal.save(imagemUsuarioEntity);
 
-        model.setImagemId(user.getImagem().getImagemId());
-        model.setImagemUrl(user.getImagem().getImagemUrl());
+        model.setId(user.getImagem().getId());
+        model.setUrl(user.getImagem().getUrl());
 
         return model;
     }
@@ -81,12 +81,12 @@ public class ImagemUsuarioBusiness {
 
         UsuarioEntity user = userDAL.getOne(model.getIdUsuario());
         ImagemUsuarioEntity imagemUsuarioEntity = new ImagemUsuarioEntity();
-        imagemUsuarioEntity.setImagemUrl(fileDAO.saveImage(model));
+        imagemUsuarioEntity.setUrl(fileDAO.saveImage(model));
         imagemUsuarioEntity.setUsuario(user);
         imagensDal.save(imagemUsuarioEntity);
 
-        model.setImagemId(user.getImagem().getImagemId());
-        model.setImagemUrl(user.getImagem().getImagemUrl());
+        model.setId(user.getImagem().getId());
+        model.setUrl(user.getImagem().getUrl());
 
         return model;
     }
