@@ -60,18 +60,18 @@ public class ServicoBussinesTest {
     public void persistirServicoSEMImagem(){
         model = new ServicoEntity();
 
-        model.setDescricao_Servico("Alteração de pisos e azuleijos da sua cozinha, montamos pias de arrumamos calhas");
+        model.setDescricao("Alteração de pisos e azuleijos da sua cozinha, montamos pias de arrumamos calhas");
         model.setPrestador(userDAL.getOne(11));
-        model.setNome_Servico("O Famoso Pedreiro");
-        model.setLocalizacao_Fixa(false);
-        model.setPreco_Servico(33.33);
+        model.setNome("O Famoso Pedreiro");
+        model.setLocalizacaoFixa(false);
+        model.setPreco(33.33);
         model.setImagens(null);
         model.setCategoria(catDAL.getOne(1));
 
         Time timer = new Time(Time.valueOf("10:00:00").getTime());
         java.sql.Date date = new java.sql.Date(timer.getTime());
 
-        model.setTempo_Execucao(LocalTime.now());
+        model.setTempoExecucao(LocalTime.now());
 
         ServicoEntity servicoSalvo = serviceBusiness.insertService(model);
 
@@ -82,17 +82,17 @@ public class ServicoBussinesTest {
 //    public void persistirServicoCOMImagem(){
 //        model = new ServicoEntity();
 //
-//        model.setDescricao_Servico("Criação de aplicações que monitoram o sistema operacional");
+//        model.setDescricaoServico("Criação de aplicações que monitoram o sistema operacional");
 //        model.setPrestador(userDAL.getOne(11));
-//        model.setNome_Servico("Full bitfrosts");
-//        model.setLocalizacao_Fixa(false);
-//        model.setPreco_Servico(100.33);
+//        model.setNomeServico("Full bitfrosts");
+//        model.setLocalizacaoFixa(false);
+//        model.setPrecoServico(100.33);
 //        model.setCategoria(catDAL.getOne(1));
 //
 //        Time timer = new Time(Time.valueOf("00:10:00").getTime());
 //        java.sql.Date date = new java.sql.Date(timer.getTime());
 //
-//        model.setTempo_Execucao(date);
+//        model.setTempoExecucao(date);
 //
 //        ServicoEntity servicoSalvo = serviceBusiness.insertService((mapper.map(model,ServicoEntity.class)));
 //
@@ -113,15 +113,15 @@ public class ServicoBussinesTest {
 //
 //        ImagemServicoModel imagem = new ImagemServicoModel();
 //        imagem.setImage(bos.toByteArray());
-//        imagem.setId_Usuario(servicoSalvo.getPrestador().getId_Usuario());
-//        imagem.setId_Servico(servicoSalvo.getId_Servico());
+//        imagem.setIdUsuario(servicoSalvo.getPrestador().getIdUsuario());
+//        imagem.setIdServico(servicoSalvo.getIdServico());
 //
 //        imagemServicoBussines.SaveImage(imagem,servicoSalvo);
 //
 //        ImagemServicoEntity serviceImage = new ImagemServicoEntity();
 //        serviceImage.setServico(servicoSalvo);
 //        serviceImage.setUsuario(servicoSalvo.getPrestador());
-//        serviceImage.setImagem_URL(imagem.getImagem_URL());
+//        serviceImage.setImagemURL(imagem.getImagemURL());
 //        imagens.add(serviceImage);
 //        servicoSalvo.setImagens(imagens);
 //

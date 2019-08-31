@@ -18,7 +18,7 @@ public class SecurityApplication {
         int retorno = -1;
 
         for (int i = 0; i < this.userCredencial.size(); i++ ){
-            if(this.userCredencial.get(i).getEmail_Usuario().equalsIgnoreCase(usuarioEntity.getEmail_Usuario())
+            if(this.userCredencial.get(i).getEmail().equalsIgnoreCase(usuarioEntity.getEmail())
             && this.userCredencial.get(i).getSenha().equalsIgnoreCase(usuarioEntity.getSenha())){
                 new LogBussines().logLoginHistory(usuarioEntity);
                 retorno = i;

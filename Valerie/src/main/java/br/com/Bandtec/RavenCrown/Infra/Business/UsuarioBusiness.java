@@ -19,7 +19,7 @@ public class UsuarioBusiness {
     public UsuarioEntity Login(String email, String senha){
 
         UsuarioEntity entity = new UsuarioEntity();
-        entity.setEmail_Usuario(email);
+        entity.setEmail(email);
         entity.setSenha(new Encryption().Encript(senha));
 
         List<UsuarioEntity> users = userdal.findAll();
@@ -39,12 +39,12 @@ public class UsuarioBusiness {
     public UsuarioEntity Cadastro(String nome, String email, EnderecoEntity endereco, String senha){
 
         UsuarioEntity entity = new UsuarioEntity();
-        entity.setNome_Usuario(nome);
-        entity.setEmail_Usuario(email);
+        entity.setNome(nome);
+        entity.setEmail(email);
         entity.setEndereco(endereco);
         entity.setSenha(senha);
 
-        UsuarioEntity usuarioEncontrado = userdal.getByEmail(entity.getEmail_Usuario());
+        UsuarioEntity usuarioEncontrado = userdal.getByEmail(entity.getEmail());
 
         if(usuarioEncontrado == null){
             return null;
@@ -56,7 +56,7 @@ public class UsuarioBusiness {
 
     public UsuarioEntity Cadastro(UsuarioEntity user){
 
-        UsuarioEntity usuarioEncontrado = userdal.getByEmail(user.getEmail_Usuario());
+        UsuarioEntity usuarioEncontrado = userdal.getByEmail(user.getEmail());
 
         if(usuarioEncontrado == null){
             user.setSenha(new Encryption().Encript(user.getSenha()));
@@ -70,7 +70,7 @@ public class UsuarioBusiness {
 
     public boolean Update(UsuarioEntity entity) {
 
-        UsuarioEntity usuarioEncontrado = userdal.getByEmail(entity.getEmail_Usuario());
+        UsuarioEntity usuarioEncontrado = userdal.getByEmail(entity.getEmail());
         if(usuarioEncontrado != null){
             entity.setSenha(new Encryption().Encript(entity.getSenha()));
             userdal.save(entity);

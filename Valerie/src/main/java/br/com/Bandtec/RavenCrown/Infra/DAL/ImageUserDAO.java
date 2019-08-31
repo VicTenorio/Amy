@@ -19,7 +19,7 @@ public class ImageUserDAO implements RavenCrownSaveImage<ImagemUsuarioModel> {
     @Override
     public String saveImage(ImagemUsuarioModel imageBLOB) {
 
-        String imageURL = local+"/image-"+imageBLOB.getId_Usuario()+".jpg";
+        String imageURL = local+"/image-"+imageBLOB.getId()+".jpg";
 
         byte[] data = imageBLOB.getImage();
 

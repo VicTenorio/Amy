@@ -39,7 +39,7 @@ public class LoginController {
     }
 
     @GetMapping("/login")
-    public ResponseEntity<UsuarioModel> LoginController (@RequestParam("Id") int id) {
+    public ResponseEntity<UsuarioModel> LoginController (@RequestParam("id") int id) {
         ModelMapper mapper = new ModelMapper();
         return new ResponseEntity<>(mapper.map(userBusiness.getUser(id),UsuarioModel.class),HttpStatus.OK);
     }

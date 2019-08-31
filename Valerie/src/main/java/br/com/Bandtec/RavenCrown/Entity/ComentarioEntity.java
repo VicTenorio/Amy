@@ -11,7 +11,7 @@ public class ComentarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "idComentario", unique = true, nullable = false)
     private int id;
 
     @Column(name = "deComentario")
@@ -63,11 +63,11 @@ public class ComentarioEntity {
         this.id = id;
     }
 
-    public String getDe() {
+    public String getDeComentario() {
         return deComentario;
     }
 
-    public void setDe(String deComentario) {
+    public void setDeComentario(String deComentario) {
         this.deComentario = deComentario;
     }
 

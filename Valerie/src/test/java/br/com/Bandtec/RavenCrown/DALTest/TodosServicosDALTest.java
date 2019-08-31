@@ -37,16 +37,16 @@ public class TodosServicosDALTest {
     @Test
     public void PersistirServico(){
         servico = new ServicoEntity();
-        servico.setDescricao_Servico("Manutenção de Pias e Tanques de Lavanderia");
-        servico.setLocalizacao_Fixa(false);
-        servico.setNome_Servico("Pias e Tanques Conserto");
-        servico.setPreco_Servico(33.59);
+        servico.setDescricao("Manutenção de Pias e Tanques de Lavanderia");
+        servico.setLocalizacaoFixa(false);
+        servico.setNome("Pias e Tanques Conserto");
+        servico.setPreco(33.59);
         servico.setPrestador(usuariosDAL.getOne(10));
-        servico.setTempo_Execucao(LocalTime.now());
+        servico.setTempoExecucao(LocalTime.now());
 
         servicosDAL.save(servico);
 
-        ServicoEntity servicoPerssitido = servicosDAL.getOne(servico.getId_Servico());
+        ServicoEntity servicoPerssitido = servicosDAL.getOne(servico.getId());
 
         assertEquals(servicoPerssitido,servico);
     }
@@ -57,8 +57,6 @@ public class TodosServicosDALTest {
         List<ServicoEntity> todosServicos  = servicosDAL.findAll();
 
         assertFalse(todosServicos.isEmpty());
-
-
 
     }
 }

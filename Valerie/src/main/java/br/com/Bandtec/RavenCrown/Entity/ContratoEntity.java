@@ -9,15 +9,15 @@ public class ContratoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "idContrato", unique = true, nullable = false)
     private int id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idServico", referencedColumnName = "id")
+    @JoinColumn(name = "idServico", referencedColumnName = "idServico")
     private ServicoEntity servico;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idEndereco", referencedColumnName = "id")
+    @JoinColumn(name = "idEndereco", referencedColumnName = "idEndereco")
     private EnderecoEntity endereco;
 
     @ManyToOne(cascade = CascadeType.ALL)
@@ -29,7 +29,7 @@ public class ContratoEntity {
     private UsuarioEntity consumidor;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idDemanda", referencedColumnName = "id")
+    @JoinColumn(name = "idDemanda", referencedColumnName = "idDemanda")
     private DemandaEntity demanda;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "contrato")

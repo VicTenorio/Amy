@@ -35,16 +35,16 @@ public class ImagemUsuarioBusinessTest {
     private UsuarioBusiness business;
 
     @Autowired
-    private ImagemUsuarioBusiness ImageBusiness;
+    private ImagemUsuarioBusiness imageBusiness;
 
-    int Id_Usuario = 10;
+    int idUsuario = 10;
 
 
 //    @Test
-//    public void A_PersistImage(){
+//    public void APersistImage(){
 //
 //        ImagemUsuarioModel imagemUsuarioModel = new ImagemUsuarioModel();
-//        imagemUsuarioModel.setId_Usuario(Id_Usuario);
+//        imagemUsuarioModel.setIdUsuario(IdUsuario);
 //
 //        BufferedImage bImage = null;
 //        try {
@@ -66,8 +66,8 @@ public class ImagemUsuarioBusinessTest {
 //    }
 
     @Test
-    public void B_GetUserImage(){
-//        ImagemUsuarioModel image = ImageBusiness.GetUserImage(Id_Usuario);
+    public void BGetUserImage(){
+//        ImagemUsuarioModel image = ImageBusiness.GetUserImage(IdUsuario);
 
         assertTrue(true);
     }

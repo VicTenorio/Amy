@@ -23,13 +23,13 @@ public class DataServicoBussiness {
     public boolean ValidateDate(DataServicoModel data) {
         boolean available = true;
 
-        ServicoEntity servico = servicoBussiness.getById(data.getIdServico());
+        ServicoEntity servico = servicoBussiness.getById(data.getidServico());
 
         for (DataServicoEntity x : servico.getDatas()) {
-            if (x.getDt_Agendamento() != (data.getDtAgendamento())) {
-                if (x.getDt_Agendamento().getDayOfMonth() == data.getDtAgendamento().getDayOfMonth()) {
+            if (x.getDtAgendamento() != (data.getDtAgendamento())) {
+                if (x.getDtAgendamento().getDayOfMonth() == data.getDtAgendamento().getDayOfMonth()) {
 
-                    if(data.getDtAgendamento().getHour() > x.getDt_Agendamento().getHour()+servico.getTempo_Execucao().getHour() || x.getDt_Agendamento().getHour()+servico.getTempo_Execucao().getHour() <  data.getDtAgendamento().getHour())
+                    if(data.getDtAgendamento().getHour() > x.getDtAgendamento().getHour()+servico.getTempoExecucao().getHour() || x.getDtAgendamento().getHour()+servico.getTempoExecucao().getHour() <  data.getDtAgendamento().getHour())
 
                         available = false;
                         break;

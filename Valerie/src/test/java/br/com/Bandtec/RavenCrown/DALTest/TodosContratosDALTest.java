@@ -58,15 +58,15 @@ public class TodosContratosDALTest {
         contrato.getConsumidor().setEndereco(endereco);
         contrato.setPrestador(usuariosDAL.getOne(11));
         contrato.setServico(servicosDAL.getOne(1));
-        contrato.setAprovado_Consumidor(false);
-        contrato.setAprovado_Prestador(false);
+        contrato.setAprovadoConsumidor(false);
+        contrato.setAprovadoPrestador(false);
         contrato.setEndereco(endereco);
         contrato.setPago(false);
-        contrato.setValor_Final(200.00);
+        contrato.setValorFinal(200.00);
 
         contratosDAL.save(contrato);
 
-        ContratoEntity contratoPersistido = contratosDAL.getOne(contrato.getId_Contrato());
+        ContratoEntity contratoPersistido = contratosDAL.getOne(contrato.getId());
 
         assertEquals(contrato,contratoPersistido);
     }
@@ -91,9 +91,9 @@ public class TodosContratosDALTest {
 
         DemandaEntity demanda = new DemandaEntity();
 
-        demanda.setDescricao_Demanda("Dar um jeito na pia quebrada");
-        demanda.setNome_Demanda("Pia Quebrada");
-        demanda.setValor_Previsto(100.00);
+        demanda.setDescricao("Dar um jeito na pia quebrada");
+        demanda.setNome("Pia Quebrada");
+        demanda.setValorPrevisto(100.00);
         demanda.setEndereco(endereco);
         demanda.setContratante(usuariosDAL.getOne(10));
         demandasDAl.save(demanda);
@@ -104,15 +104,15 @@ public class TodosContratosDALTest {
         contrato.getConsumidor().setEndereco(endereco);
         contrato.setPrestador(usuariosDAL.getOne(10));
         contrato.setDemanda(demanda);
-        contrato.setAprovado_Consumidor(true);
-        contrato.setAprovado_Prestador(true);
+        contrato.setAprovadoConsumidor(true);
+        contrato.setAprovadoPrestador(true);
         contrato.setEndereco(endereco);
         contrato.setPago(true);
-        contrato.setValor_Final(00.00);
+        contrato.setValorFinal(00.00);
 
         contratosDAL.save(contrato);
 
-        ContratoEntity contratoPersistido = contratosDAL.getOne(contrato.getId_Contrato());
+        ContratoEntity contratoPersistido = contratosDAL.getOne(contrato.getId());
 
         assertEquals(contrato,contratoPersistido);
     }

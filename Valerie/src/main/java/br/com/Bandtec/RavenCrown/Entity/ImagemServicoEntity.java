@@ -8,7 +8,7 @@ public class ImagemServicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "idImagemUsuario", unique = true, nullable = false)
     private int id;
 
     @ManyToOne(cascade=CascadeType.ALL)
@@ -19,16 +19,16 @@ public class ImagemServicoEntity {
     @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
     private UsuarioEntity usuario;
 
-    private String imagemURL;
+    private String url;
 
     public ImagemServicoEntity() {
     }
 
-    public ImagemServicoEntity(int id, ServicoEntity servico, UsuarioEntity usuario, String imagemURL) {
+    public ImagemServicoEntity(int id, ServicoEntity servico, UsuarioEntity usuario, String url) {
         this.id = id;
         this.servico = servico;
         this.usuario = usuario;
-        this.imagemURL = imagemURL;
+        this.url = url;
     }
 
     public int getId() { return id; }
@@ -43,7 +43,7 @@ public class ImagemServicoEntity {
 
     public void setUsuario(UsuarioEntity Usuario) { this.usuario = Usuario; }
 
-    public String getImagemURL() { return imagemURL; }
+    public String getUrl() { return url; }
 
-    public void setImagemURL(String UrlImagem) { this.imagemURL = UrlImagem; }
+    public void setUrl(String url) { this.url = url; }
 }

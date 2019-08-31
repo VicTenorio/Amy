@@ -11,11 +11,11 @@ public class UsuarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "idUsuario", unique = true, nullable = false)
     private int id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idEndereco", referencedColumnName = "id")
+    @JoinColumn(name = "idEndereco", referencedColumnName = "idEndereco")
     private EnderecoEntity endereco;
 
     @OneToOne(mappedBy="usuario")
@@ -68,7 +68,7 @@ public class UsuarioEntity {
         this.setId(id);
     }
 
-    public UsuarioEntity(int id, EnderecoEntity endereco, ImagemUsuarioEntity imagem, String nome, String email, String CPFCNPJ, String RG, String telefone, String senha, boolean prestador, char sexo, String estadoCivil, LocalDate dataNascimento, Collection<DataServicoEntity> datasPrestar, Collection<DataServicoEntity> datasConsumir, Collection<ContratoEntity> servicosPrestar, Collection<ContratoEntity> servicosConsumir) {
+    public UsuarioEntity(int id, EnderecoEntity endereco, ImagemUsuarioEntity imagem, String nome, String email, String cpfCnpj, String RG, String telefone, String senha, boolean prestador, char sexo, String estadoCivil, LocalDate dataNascimento, Collection<DataServicoEntity> datasPrestar, Collection<DataServicoEntity> datasConsumir, Collection<ContratoEntity> servicosPrestar, Collection<ContratoEntity> servicosConsumir) {
         this.id = id;
         this.endereco = endereco;
         this.imagem = imagem;

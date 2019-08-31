@@ -15,7 +15,7 @@ public class LogBussines {
         SimpleDateFormat df = new SimpleDateFormat("dd MMM yyyy");
         Date d = new Date();
 
-        String time = df.format(d) +" | "+user.getEmail_Usuario();
+        String time = df.format(d) +" | "+user.getEmail();
 
         logWriter.logLogin(time);
     }

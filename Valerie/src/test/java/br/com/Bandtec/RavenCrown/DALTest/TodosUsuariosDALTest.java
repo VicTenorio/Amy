@@ -68,21 +68,21 @@ public class TodosUsuariosDALTest {
         UsuarioEntity user = new UsuarioEntity();
 
         user.setSenha("rv2058");
-        user.setNome_Usuario("Regina");
-        user.setEmail_Usuario("vitoria@outlook.com"+LocalDateTime.now().toString());
-        user.setCPF_CNPJ("111.111.111.11");
-        user.setEstado_Civil("Casada");
+        user.setNome("Regina");
+        user.setEmail("vitoria@outlook.com"+LocalDateTime.now().toString());
+        user.setCpfCnpj("111.111.111.11");
+        user.setEstadoCivil("Casada");
         user.setPrestador(false);
         user.setRG("34-443-443-X");
         user.setSexo('F');
-        user.setTelefone_usuario("(11) 4002-8922");
-        user.setData_Nascimento(LocalDate.now());
+        user.setTelefone("(11) 4002-8922");
+        user.setDataNascimento(LocalDate.now());
         user.setEndereco(endereco);
 
 
         userDAL.save(user);
 
-        UsuarioEntity usuarioFromDB = userDAL.getOne(user.getId_Usuario());
+        UsuarioEntity usuarioFromDB = userDAL.getOne(user.getId());
 
         user.setSenha(usuarioFromDB.getSenha());
 
@@ -108,19 +108,19 @@ public class TodosUsuariosDALTest {
 
         UsuarioEntity user = new UsuarioEntity();
         user.setSenha("rv2058");
-        user.setNome_Usuario("João das Neves");
-        user.setEmail_Usuario("sabe@outlook.com");
-        user.setCPF_CNPJ("71294533817");
-        user.setEstado_Civil("Viuvo");
+        user.setNome("João das Neves");
+        user.setEmail("sabe@outlook.com");
+        user.setCpfCnpj("71294533817");
+        user.setEstadoCivil("Viuvo");
         user.setPrestador(false);
         user.setRG("34-443-888-X");
         user.setSexo('M');
-        user.setTelefone_usuario("(11) 89902-8922");
+        user.setTelefone("(11) 89902-8922");
         user.setEndereco(endereco);
 
         userDAL.save(user);
 
-        UsuarioEntity login = userDAL.getByUserAndPass(user.getEmail_Usuario(),user.getSenha());
+        UsuarioEntity login = userDAL.getByUserAndPass(user.getEmail(),user.getSenha());
 
         user.setSenha(login.getSenha());
 

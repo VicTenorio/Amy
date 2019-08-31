@@ -11,7 +11,7 @@ public class DataServicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "idDataServico", unique = true, nullable = false)
     private int id;
 
     @ManyToOne(cascade = CascadeType.ALL)

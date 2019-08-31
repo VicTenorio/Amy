@@ -58,7 +58,7 @@ public class TodasImagensUsuarioDALTest {
 
         ImagemUsuarioEntity ImagemDoUsuario  = imagemUsuarioDAL.GetImagemByUser(10);
 
-        assertEquals(ImagemDoUsuario.getUsuario().getId_Usuario() ,10);
+        assertEquals(ImagemDoUsuario.getUsuario().getId() ,10);
     }
 
 }

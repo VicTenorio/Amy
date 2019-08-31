@@ -24,19 +24,19 @@ public class ImagemUsuarioModel{
         this.url = url;
     }
 
-    public int getid() {
+    public int getId() {
         return id;
     }
 
-    public void setid(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public int getidUsuario() {
+    public int getIdUsuario() {
         return idUsuario;
     }
 
-    public void setidUsuario(int idUsuario) {
+    public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
 
