@@ -79,7 +79,6 @@ public class TodosUsuariosDALTest {
         user.setDataNascimento(LocalDate.now());
         user.setEndereco(endereco);
 
-
         userDAL.save(user);
 
         UsuarioEntity usuarioFromDB = userDAL.getOne(user.getId());

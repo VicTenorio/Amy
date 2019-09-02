@@ -1,5 +1,6 @@
 package br.com.Bandtec.RavenCrown.DALTest;
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.DataServicoEntity;
 import br.com.Bandtec.RavenCrown.Entity.ServicoEntity;
 import br.com.Bandtec.RavenCrown.Entity.UsuarioEntity;
@@ -38,10 +39,14 @@ public class TodosDatasServicoDALTest {
     TodosUsuariosDAL usuariosDAL;
     UsuarioEntity usuario;
 
+    Construtores construtores;
+
     @Before
-    public void definirTest(){
-        this.servico = this.servicosDAL.getOne(1);
-        this.usuario = this.usuariosDAL.getOne(11);
+    public void setters(){
+        construtores = new Construtores();
+        construtores.setEndereco();
+        construtores.setUser();
+        construtores.setService();
     }
 
     @Test
@@ -50,10 +55,10 @@ public class TodosDatasServicoDALTest {
 
         java.util.Date DATA = new java.util.Date();
 
-        dataServico.setServico(this.servico);
+        dataServico.setServico(construtores.getService());
         dataServico.setDtAgendamento(LocalDateTime.now());
-        dataServico.setPrestador(servico.getPrestador());
-        dataServico.setConsumidor(this.usuario);
+        dataServico.setPrestador(construtores.getService().getPrestador());
+        dataServico.setConsumidor(construtores.getUser());
         dataServico.setTipoReserva('T');
 
         datasServicoDAL.save(dataServico);

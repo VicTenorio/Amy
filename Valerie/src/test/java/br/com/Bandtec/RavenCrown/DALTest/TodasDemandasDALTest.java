@@ -1,5 +1,6 @@
 package br.com.Bandtec.RavenCrown.DALTest;
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.DemandaEntity;
 import br.com.Bandtec.RavenCrown.Entity.EnderecoEntity;
 import br.com.Bandtec.RavenCrown.Entity.ServicoEntity;
@@ -8,6 +9,7 @@ import br.com.Bandtec.RavenCrown.Infra.DAL.TodosDemandasDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosEnderecosDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosServicosDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,32 +34,37 @@ public class TodasDemandasDALTest {
     DemandaEntity demanda;
 
     @Autowired
-    TodosUsuariosDAL usuariosDAL;
+    TodosUsuariosDAL userDAL;
+
+    @Autowired
+    TodosServicosDAL servicosDAL;
+
+    Construtores construtores;
+
+    @Before
+    public void setters(){
+        construtores = new Construtores();
+        construtores.setEndereco();
+        construtores.setUser();
+        construtores.setService();
+        construtores.setContrato();
+        construtores.setImagemServico();
+
+        //persistencias
+        userDAL.save(construtores.getUser());
+        servicosDAL.save(construtores.getService());
+    }
 
     @Test
     public void PersistirDemandaTest() {
-
-        EnderecoEntity endereco = new EnderecoEntity(
-                0,
-                "Rua das Bergamotas",
-                "01001-555",
-                "APT 77",
-                "48A",
-                "Feira de Sabado",
-                "Jardim das Frutas",
-                "São Carlos",
-                "SP",
-                "Brazil",
-                null
-        );
 
         demanda = new DemandaEntity();
 
         demanda.setDescricao("Dar um jeito na pia quebrada");
         demanda.setNome("Pia Quebrada");
         demanda.setValorPrevisto(100.00);
-        demanda.setEndereco(endereco);
-        demanda.setContratante(usuariosDAL.getOne(10));
+        demanda.setEndereco(construtores.getEndereco());
+        demanda.setContratante(userDAL.getOne(construtores.getUser().getId()));
         demandasDAL.save(demanda);
 
         DemandaEntity demandaPerssitido = demandasDAL.getOne(demanda.getId());

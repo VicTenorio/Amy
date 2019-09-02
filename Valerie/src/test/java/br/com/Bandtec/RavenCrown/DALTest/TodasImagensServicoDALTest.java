@@ -1,11 +1,13 @@
 package br.com.Bandtec.RavenCrown.DALTest;
 
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.ImagemServicoEntity;
 import br.com.Bandtec.RavenCrown.Entity.UsuarioEntity;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosImagemServicoDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosServicosDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,26 +30,38 @@ public class TodasImagensServicoDALTest {
     ImagemServicoEntity imagem;
 
     @Autowired
-    TodosUsuariosDAL usuariosDAL;
+    TodosUsuariosDAL userDAL;
     UsuarioEntity usuario;
 
     @Autowired
     TodosServicosDAL servicosDAL;
     UsuarioEntity servico;
 
+
+    Construtores construtores;
+
+    @Before
+    public void setters(){
+        construtores = new Construtores();
+        construtores.setEndereco();
+        construtores.setUser();
+        construtores.setService();
+        construtores.setContrato();
+        construtores.setImagemServico();
+
+        //persistencias
+        userDAL.save(construtores.getUser());
+        servicosDAL.save(construtores.getService());
+    }
+
     @Test
     public void PersistirImagemServicoTest(){
-        imagem = new ImagemServicoEntity();
 
-        //imagem.setImagemURL("https://i.pinimg.com/originals/8a/3d/a2/8a3da20e55bd36a2f29f8f3ab4d0c5b5.jpg");
-        imagem.setUsuario(usuariosDAL.getOne(10));
-        imagem.setServico(servicosDAL.getOne(1));
+        imagemServicoDAL.save(construtores.getImagemServico());
 
-        imagemServicoDAL.save(imagem);
+        ImagemServicoEntity imagemPersistido = imagemServicoDAL.getOne(construtores.getImagemServico().getId());
 
-        ImagemServicoEntity imagemPerssitido = imagemServicoDAL.getOne(imagem.getId());
-
-        assertEquals(imagemPerssitido,imagem);
+        assertEquals(imagemPersistido,construtores.getImagemServico());
     }
 
     @Test

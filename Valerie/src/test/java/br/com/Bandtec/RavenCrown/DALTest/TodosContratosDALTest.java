@@ -1,9 +1,11 @@
 package br.com.Bandtec.RavenCrown.DALTest;
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.ContratoEntity;
 import br.com.Bandtec.RavenCrown.Entity.DemandaEntity;
 import br.com.Bandtec.RavenCrown.Entity.EnderecoEntity;
 import br.com.Bandtec.RavenCrown.Infra.DAL.*;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,33 +36,34 @@ public class TodosContratosDALTest {
     TodosDemandasDAL demandasDAl;
 
     @Autowired
-    TodosUsuariosDAL usuariosDAL;
+    TodosUsuariosDAL userDAL;
+
+    Construtores construtores;
+
+    @Before
+    public void setters(){
+        construtores = new Construtores();
+        construtores.setEndereco();
+        construtores.setUser();
+        construtores.setService();
+        construtores.setContrato();
+
+        //persistencias
+        userDAL.save(construtores.getUser());
+        servicosDAL.save(construtores.getService());
+    }
 
     @Test
     public void PersistirUmContratoDeServicoTest(){
         contrato = new ContratoEntity();
 
-        EnderecoEntity endereco = new EnderecoEntity(
-                0,
-                "Rua das Bergamotas",
-                "01001-555",
-                "APT 77",
-                "48A",
-                "Feira de Sabado",
-                "Jardim das Frutas",
-                "São Carlos",
-                "SP",
-                "Brazil",
-                null
-        );
-
-        contrato.setConsumidor(usuariosDAL.getOne(10));
-        contrato.getConsumidor().setEndereco(endereco);
-        contrato.setPrestador(usuariosDAL.getOne(11));
-        contrato.setServico(servicosDAL.getOne(1));
+        contrato.setConsumidor(userDAL.getOne(construtores.getUser().getId()));
+        contrato.getConsumidor().setEndereco(construtores.getEndereco());
+        contrato.setPrestador(userDAL.getOne(construtores.getUser().getId()));
+        contrato.setServico(servicosDAL.getOne(construtores.getService().getId()));
         contrato.setAprovadoConsumidor(false);
         contrato.setAprovadoPrestador(false);
-        contrato.setEndereco(endereco);
+        contrato.setEndereco(construtores.getEndereco());
         contrato.setPago(false);
         contrato.setValorFinal(200.00);
 
@@ -75,38 +78,22 @@ public class TodosContratosDALTest {
     public void PersistirUmContratoDeDemandaTest(){
         contrato = new ContratoEntity();
 
-        EnderecoEntity endereco = new EnderecoEntity(
-                0,
-                "Rua das Bergamotas",
-                "01001-555",
-                "APT 77",
-                "48A",
-                "Feira de Sabado",
-                "Jardim das Frutas",
-                "São Carlos",
-                "SP",
-                "Brazil",
-                null
-        );
-
         DemandaEntity demanda = new DemandaEntity();
 
         demanda.setDescricao("Dar um jeito na pia quebrada");
         demanda.setNome("Pia Quebrada");
         demanda.setValorPrevisto(100.00);
-        demanda.setEndereco(endereco);
-        demanda.setContratante(usuariosDAL.getOne(10));
+        demanda.setEndereco(construtores.getEndereco());
+        demanda.setContratante(userDAL.getOne(construtores.getUser().getId()));
         demandasDAl.save(demanda);
 
-
-
-        contrato.setConsumidor(usuariosDAL.getOne(11));
-        contrato.getConsumidor().setEndereco(endereco);
-        contrato.setPrestador(usuariosDAL.getOne(10));
+        contrato.setConsumidor(userDAL.getOne(construtores.getUser().getId()));
+        contrato.getConsumidor().setEndereco(construtores.getEndereco());
+        contrato.setPrestador(userDAL.getOne(construtores.getUser().getId()));
         contrato.setDemanda(demanda);
         contrato.setAprovadoConsumidor(true);
         contrato.setAprovadoPrestador(true);
-        contrato.setEndereco(endereco);
+        contrato.setEndereco(construtores.getEndereco());
         contrato.setPago(true);
         contrato.setValorFinal(00.00);
 
