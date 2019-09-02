@@ -1,10 +1,12 @@
 package br.com.Bandtec.RavenCrown.DALTest;
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.ComentarioEntity;
 import br.com.Bandtec.RavenCrown.Entity.UsuarioEntity;
 import br.com.Bandtec.RavenCrown.Infra.Business.UsuarioBusiness;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosComentariosDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosServicosDAL;
+import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +37,7 @@ public class TodosComentariosDALTest {
     private TodosComentariosDAL todosComentariosDAL;
 
     @Autowired
-    TodosUsuariosDAL usuariosDAL;
+    TodosUsuariosDAL userDAL;
     UsuarioEntity userModel;
 
     @Autowired
@@ -45,22 +47,19 @@ public class TodosComentariosDALTest {
     @Autowired
     private UsuarioBusiness business;
 
+    Construtores construtores;
+
     @Before
-    public void UsuarioBusinessTest(){
-        userModel = new UsuarioEntity();
+    public void setters(){
+        construtores = new Construtores();
+        construtores.setEndereco();
+        construtores.setUser();
+        construtores.setService();
+        construtores.setContrato();
 
-        userModel.setEmail("teste@revencrown");
-        userModel.setNome("Usuario de teste");
-        userModel.setTelefone("4002-8922");
-        userModel.setEstadoCivil("Solteiro");
-        userModel.setSexo('I');
-        userModel.setPrestador(false);
-        userModel.setRG("XX.XXX.XX-X");
-        userModel.setCpfCnpj("123.456.789-09");
-        userModel.setSenha("string");
-        userModel.setDataNascimento(LocalDate.now());
-        userModel = business.Cadastro(userModel);
-
+        //persistencias
+        userDAL.save(construtores.getUser());
+        servicosDAL.save(construtores.getService());
     }
 
 
@@ -80,8 +79,8 @@ public class TodosComentariosDALTest {
 
         comentario.setData(data);
         comentario.setDeComentario("Testes do Spring Boot");
-        comentario.setServico(servicosDAL.getOne(userModel.getId()));
-        comentario.setUsuario(usuariosDAL.getOne(userModel.getId()));
+        comentario.setServico(servicosDAL.getOne(construtores.getService().getId()));
+        comentario.setUsuario(userDAL.getOne(construtores.getUser().getId()));
 
         todosComentariosDAL.save(comentario);
 

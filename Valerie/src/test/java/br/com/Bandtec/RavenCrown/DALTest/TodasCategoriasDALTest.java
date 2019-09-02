@@ -1,8 +1,10 @@
 package br.com.Bandtec.RavenCrown.DALTest;
 
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.CategoriaEntity;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosCategoriasDAL;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,8 @@ public class TodasCategoriasDALTest {
     @Autowired
     TodosCategoriasDAL categoriasDAL;
     private CategoriaEntity categoria;
+
+
 
     @Test
     public void persistirCategoria(){
