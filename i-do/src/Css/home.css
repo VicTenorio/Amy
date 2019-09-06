@@ -1,0 +1,23 @@
+#body {
+    background-image: url(../Images/6edbdb59-c5c8-4c54-82f5-0fab8db89cd7.jpg);
+    margin: 0;
+}
+
+#title {
+    color: #FF9900;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 400%;
+}
+
+#text {
+    color: #FF9900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200%;
+}
+
+.item-catalogo {
+    color:rgb(247, 247, 239);
+	border: 1px solid;
+	border-radius: 5%;
+	border-color: transparent;
+}
