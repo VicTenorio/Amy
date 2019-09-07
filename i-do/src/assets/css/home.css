@@ -1,5 +1,6 @@
 #body {
-    background-image: url(../Images/6edbdb59-c5c8-4c54-82f5-0fab8db89cd7.jpg);
+    background-image: url(../images/6edbdb59-c5c8-4c54-82f5-0fab8db89cd7.jpg);
+    background-size: cover;
     margin: 0;
 }
 
@@ -16,8 +17,8 @@
 }
 
 .item-catalogo {
+    height: 115px;
+    border: 1px solid black;
+    border-radius: 10%;
     color:rgb(247, 247, 239);
-	border: 1px solid;
-	border-radius: 5%;
-	border-color: transparent;
 }
