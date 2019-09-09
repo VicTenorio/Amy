@@ -1,16 +1,15 @@
 #navbar {
-
+    
 }
 
 #btnLoginNavbar {
     color: #FF9900;
-    border: 3px solid #FCB05A;
+    border: 2px solid #FCB05A;
     border-radius: 50px;
-    margin-left: 220%;
 }
 
 #btnCadastroNavbar {
     color: #FCB05A;
-    text-align: left;
-    margin-left: 220%;
+    border: none;
+    background-color: transparent;
 }
