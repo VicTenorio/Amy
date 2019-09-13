@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import Home from './pages/home';
-import Login from '../src/pages/login'
+import Home from '../src/Pages/home';
+import Login from '../src/Pages/login'
 
 ReactDOM.render(
         <BrowserRouter>

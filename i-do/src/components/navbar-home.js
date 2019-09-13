@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/css/navbar.css';
+import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
     render() {
@@ -12,12 +13,14 @@ class Navbar extends React.Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarText">
                         <form className="row w-100 form-inline justify-content-end p-3">
-                            <div className="row">
-                                <div className="col-xl-7 col-lg-7 col-md-7">
+                            <div className="row" align="center">
+                                <div className="col-7">
                                     <button id="btnCadastroNavbar" className="form-control mr-sm-2">Cadastre-se!</button>
                                 </div>
-                                <div className="col-xl-4 col-lg-4 col-md-4">
-                                    <button id="btnLoginNavbar" className="btn my-2 my-sm-0" type="submit">Login</button>
+                                <div className="col-5">
+                                    <Link to="/login">
+                                        <button id="btnLoginNavbar" className="btn my-2 my-sm-0" type="submit">Login</button>
+                                    </Link>
                                 </div>
                             </div>
                         </form>
