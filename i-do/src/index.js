@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import Home from './Pages/home';
-import Navbar from '../src/components/navbar-home'
+import Home from './pages/home';
+import Login from '../src/pages/login'
 
 ReactDOM.render(
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact={true} component={Home}/>
-                <Route path="/navbar" exact={true} component={Navbar}/>
+                <Route path="/login" exact={true} component={Login}/>
             </Switch>
         </BrowserRouter>
     , document.getElementById('root'));
