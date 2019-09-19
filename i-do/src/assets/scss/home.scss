@@ -25,3 +25,38 @@
     color:#34326E;
     width: 160px;
 }
+
+#redonda {
+    background: linear-gradient(180deg, white 50%, rgb(141, 141, 248) 50%);
+    border-radius: 500% 200% 0% 0%;
+}
+
+#iNeed, #iDo {
+    background-color: white;
+    border-radius: 5% 5% 5% 5%;
+}
+
+#titleIneed, #titleIdo {
+    color: #FF9900;
+}
+
+#meetSolution {
+    color: rgb(141, 141, 248);
+}
+
+#developedFor {
+    color: rgb(141, 141, 248);
+}
+svg {
+    display: inline-block;
+    position: absolute;
+  }
+.containeer {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: transparent;
+  }

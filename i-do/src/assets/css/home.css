@@ -1,17 +1,20 @@
 #body {
   background-image: url(../images/6edbdb59-c5c8-4c54-82f5-0fab8db89cd7.jpg);
   background-size: cover;
-  margin: 0; }
+  margin: 0;
+}
 
 #title {
   color: #FF9900;
   font: 16pt Quicksand, sans-serif;
-  font-size: 400%; }
+  font-size: 400%;
+}
 
 #text {
   color: #FF9900;
   font: 16pt Quicksand, sans-serif;
-  font-size: 30px; }
+  font-size: 30px;
+}
 
 .item-catalogo {
   background-color: #09E7D8;
@@ -20,4 +23,44 @@
   border-radius: 10%;
   border-color: transparent;
   color: #34326E;
-  width: 160px; }
+  width: 160px;
+}
+
+#redonda {
+  background: linear-gradient(180deg, white 50%, #8d8df8 50%);
+  border-radius: 500% 200% 0% 0%;
+}
+
+#iNeed, #iDo {
+  background-color: white;
+  border-radius: 5% 5% 5% 5%;
+}
+
+#titleIneed, #titleIdo {
+  color: #FF9900;
+}
+
+#meetSolution {
+  color: #8d8df8;
+}
+
+#developedFor {
+  color: #8d8df8;
+}
+
+svg {
+  display: inline-block;
+  position: absolute;
+}
+
+.containeer {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%;
+  vertical-align: middle;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -1,7 +1,3 @@
-body {
-  overflow: hidden;
-}
-
 .bg-login {
   background-image: linear-gradient(117deg, rgba(52, 50, 110, 0.9) 0%, rgba(52, 50, 110, 0.9) 100%), url("../img/bg-img.png");
   background-size: cover;
