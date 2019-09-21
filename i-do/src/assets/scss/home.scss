@@ -27,13 +27,14 @@
 }
 
 #redonda {
-    background: linear-gradient(180deg, white 50%, rgb(141, 141, 248) 50%);
-    border-radius: 500% 200% 0% 0%;
+    background: linear-gradient(180deg, white 70%, rgb(141, 141, 248) 30%);
 }
 
 #iNeed, #iDo {
     background-color: white;
-    border-radius: 5% 5% 5% 5%;
+    border: 1px solid black;
+    border-radius: 10px 10px 0px 30px;
+    box-shadow: 1px 1px 0px 0px rgb(107, 107, 107);
 }
 
 #titleIneed, #titleIdo {
@@ -41,22 +42,20 @@
 }
 
 #meetSolution {
-    color: rgb(141, 141, 248);
+    color: #6060e9;
 }
 
 #developedFor {
     color: rgb(141, 141, 248);
 }
-svg {
-    display: inline-block;
-    position: absolute;
-  }
-.containeer {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 60%;
-    vertical-align: middle;
-    overflow: hidden;
-    background-color: transparent;
-  }
+
+.description {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.us {
+    background-color: #000423;
+    color: #586ADF;
+    font-family: Quicksand;
+}

@@ -27,40 +27,37 @@
 }
 
 #redonda {
-  background: linear-gradient(180deg, white 50%, #8d8df8 50%);
-  border-radius: 500% 200% 0% 0%;
+  background: linear-gradient(180deg, white 55%, #8d8df8 45%);
 }
 
 #iNeed, #iDo {
   background-color: white;
-  border-radius: 5% 5% 5% 5%;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 10px 10px 0px 30px;
+  box-shadow: 1px 1px 0px 0px rgb(107, 107, 107);
 }
 
 #titleIneed, #titleIdo {
+  padding: 20px;
   color: #FF9900;
 }
 
 #meetSolution {
-  color: #8d8df8;
+  color: #6060e9;
 }
 
 #developedFor {
   color: #8d8df8;
 }
 
-svg {
-  display: inline-block;
-  position: absolute;
+.description {
+  padding: 20px;
+  font-size: 30px;
 }
 
-.containeer {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 60%;
-  vertical-align: middle;
-  overflow: hidden;
-  background-color: transparent;
+.us {
+  background-color: #000423;
+  color: #586ADF;
+  font-family: Quicksand;
 }
-
 /*# sourceMappingURL=home.css.map */
