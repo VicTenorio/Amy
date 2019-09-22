@@ -24,9 +24,18 @@
     border-color: transparent;
     color:#34326E;
     width: 160px;
+    &:hover {
+        color: #09E7D8;
+        background-color: #000423;
+        transition: 0.1s ease-in-out;
+    }
 }
 
-#redonda {
+#light {
+    color: #FF9900
+}
+
+#solution {
     background: linear-gradient(180deg, white 70%, rgb(141, 141, 248) 30%);
 }
 
@@ -39,6 +48,7 @@
 
 #titleIneed, #titleIdo {
     color: #FF9900;
+    padding: 4%;
 }
 
 #meetSolution {
@@ -58,4 +68,8 @@
     background-color: #000423;
     color: #586ADF;
     font-family: Quicksand;
+}
+
+.icons-social {
+    font-size: 30px;
 }

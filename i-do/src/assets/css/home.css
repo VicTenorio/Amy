@@ -25,21 +25,30 @@
   color: #34326E;
   width: 160px;
 }
+.item-catalogo:hover {
+  color: #09E7D8;
+  background-color: #000423;
+  transition: 0.1s ease-in-out;
+}
 
-#redonda {
-  background: linear-gradient(180deg, white 55%, #8d8df8 45%);
+#light {
+  color: #FF9900;
+}
+
+#solution {
+  background: linear-gradient(180deg, white 70%, #8d8df8 30%);
 }
 
 #iNeed, #iDo {
   background-color: white;
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid black;
   border-radius: 10px 10px 0px 30px;
-  box-shadow: 1px 1px 0px 0px rgb(107, 107, 107);
+  box-shadow: 1px 1px 0px 0px #6b6b6b;
 }
 
 #titleIneed, #titleIdo {
-  padding: 20px;
   color: #FF9900;
+  padding: 4%;
 }
 
 #meetSolution {
@@ -60,4 +69,9 @@
   color: #586ADF;
   font-family: Quicksand;
 }
+
+.icons-social {
+  font-size: 30px;
+}
+
 /*# sourceMappingURL=home.css.map */
