@@ -1,17 +1,27 @@
-const mysql = require("mysql")
-module.exports = class Conn {
+const mssql = require("mssql")
 
-    connection() {
-        const connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: 'root',
-            database: 'test',  
-        })
 
-        return connection;
+const config = {
+    user: 'placebo',
+    password: 'info@211',
+    server: 'bosco.database.windows.net',
+    database: 'musical',
+    options: {
+        encrypt: true
     }
+};
 
+const connect = async (query, call) => {
+    try {
+        await mssql.connect(config);
+        let result = await mssql.query(query);
+        mssql.close();
+        call(result);        
+    } catch (error) {
+        call(error);
+        throw error;
+    }
+    
 }
 
-
+module.exports = connect;
