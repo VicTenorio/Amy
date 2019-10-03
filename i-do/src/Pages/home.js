@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/home.css';
 import Navbar from '../components/navbar-home';
+import Footer from '../components/footer';
 import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
@@ -17,60 +18,24 @@ class Home extends React.Component {
                                         <h1 id="title">Vamos começar?</h1>
                                     </div>
                                     <div align="center">
-                                        <p id="text">Explore a variedade de serviços com a facilidade de divisão por categorias.</p>
+                                        <p id="text">Explore o lugar perfeito para realizar seus serviços e gerenciá-los com facilidade.</p>
                                     </div>
                                 </div>
-                                <div className="justify-content-center p-5" align="center">
-                                    <div className="row w-100">
-                                        <div className="col-xl-6">
-                                            <div className="row">
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-automobile display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-child display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-bathtub display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-code display-1"></i>
-                                                    </div>
-                                                </Link>
-                                            </div>
+                                <div className="row w-100 justify-content-center p-5" align="center">
+                                    <Link className="col-xl-6">
+                                        <div className="justify-content-center item-catalogo">
+                                            <h3>Cadastre seus serviços</h3>
+                                            <hr/>
+                                            <p>Dê o primeiro passo e cadastre seus serviços!</p>
                                         </div>
-                                        <div className="col-xl-6">
-                                            <div className="row">
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-cog display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-cutlery display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-futbol-o display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-graduation-cap display-1"></i>
-                                                    </div>
-                                                </Link>
-                                            </div>
+                                    </Link>
+                                    <Link className="col-xl-6">
+                                        <div className="justify-content-center item-catalogo">
+                                            <h3>Cadastre seus serviços</h3>
+                                            <hr/>
+                                            <p>Dê o primeiro passo e cadastre seus serviços!</p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </section>
                         </div>
@@ -109,26 +74,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <section name="aboutUs">
-                    <footer className="us row w-100">
-                        <div className="col">
-                            <p className="description mt-3 mb-5 p-5">Somos Amy! idealizada a contornar
-                                as dificuldades de comunicação, organização e
-                                tempo na hora de prestar serviços ou contratar um prestador
-                                de modo ágil.
-                            </p>
-                        </div>
-                        <div className="col">
-                            <div className="social mt-3 mb-5 p-5">
-                                <h1>Redes Socias</h1>
-                                <i className="icons-social fa fa-facebook-square p-1"></i>
-                                <i className="icons-social fa fa-instagram p-1"></i>
-                                <i className="icons-social fa fa-linkedin-square p-1"></i>
-                                <i className="icons-social fa fa-tumblr-square p-1"></i>
-                            </div>
-                        </div>
-                    </footer>
-                </section>
+                <Footer/>
             </div>
         )
     };

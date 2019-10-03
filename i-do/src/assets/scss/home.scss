@@ -11,22 +11,19 @@
 }
 
 #text {
-    color: #FF9900;
-    font: 16pt Quicksand, sans-serif;
+    color: #B0ACAC;
+    font-family: 16pt Quicksand, sans-serif;
     font-size: 30px;
 }
 
 .item-catalogo {
-    background-color: #09E7D8;
-    height: 115px;
-    border: 1px solid black;
-    border-radius: 10%;
-    border-color: transparent;
-    color:#34326E;
-    width: 160px;
+    color:#FF9900;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: 16pt Quicksand, sans-serif;
     &:hover {
-        color: #09E7D8;
-        background-color: #000423;
+        border: 2px solid #FF9900;
         transition: 0.1s ease-in-out;
     }
 }
@@ -61,15 +58,5 @@
 
 .description {
     padding: 20px;
-    font-size: 30px;
-}
-
-.us {
-    background-color: #000423;
-    color: #586ADF;
-    font-family: Quicksand;
-}
-
-.icons-social {
     font-size: 30px;
 }
