@@ -1,0 +1,75 @@
+#body {
+    background-image: url(../images/6edbdb59-c5c8-4c54-82f5-0fab8db89cd7.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+#title {
+    color: #FF9900;
+    font: 16pt Quicksand, sans-serif;
+    font-size: 400%;
+}
+
+#text {
+    color: #FF9900;
+    font: 16pt Quicksand, sans-serif;
+    font-size: 30px;
+}
+
+.item-catalogo {
+    background-color: #09E7D8;
+    height: 115px;
+    border: 1px solid black;
+    border-radius: 10%;
+    border-color: transparent;
+    color:#34326E;
+    width: 160px;
+    &:hover {
+        color: #09E7D8;
+        background-color: #000423;
+        transition: 0.1s ease-in-out;
+    }
+}
+
+#light {
+    color: #FF9900
+}
+
+#solution {
+    background: linear-gradient(180deg, white 70%, rgb(141, 141, 248) 30%);
+}
+
+#iNeed, #iDo {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px 10px 0px 30px;
+    box-shadow: 1px 1px 0px 0px rgb(107, 107, 107);
+}
+
+#titleIneed, #titleIdo {
+    color: #FF9900;
+    padding: 4%;
+}
+
+#meetSolution {
+    color: #6060e9;
+}
+
+#developedFor {
+    color: rgb(141, 141, 248);
+}
+
+.description {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.us {
+    background-color: #000423;
+    color: #586ADF;
+    font-family: Quicksand;
+}
+
+.icons-social {
+    font-size: 30px;
+}
