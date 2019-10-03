@@ -17,9 +17,9 @@ const usuarioRoute = require('./routes/usuarioRoute');
 
 
 //teste upload documentos
-const uploadFile = require('./routes/uploadFile');
-app.use(express.static('src/view'));
-app.use('/profile', uploadFile);
+//const uploadFile = require('./routes/uploadFile');
+//pp.use(express.static('src/view'));
+//app.use('/profile', uploadFile);
 
 app.use('/', index);
 app.use('/persons', personRoute);

@@ -1,31 +1,37 @@
-var Conn = require("../models/connection");
-var conn = new Conn();
+const sql = require("mssql")
+var config = require("../models/connection");
 
 module.exports = class Usuario {
-    constructor(_email,_senha) {
-        this.email = _email;
-        this.senha = _senha;
+
+    selectAll(res){
+        
+        sql.connect(config).then(() => {
+            return sql.query`select * from usuario`
+        }).then(result => {
+            res.json(result);
+        }).catch(err => {
+            res.json(err);
+        })
+
+        sql.close();
+        //return connect(query,call => {console.log(call.recordset)});
     }
 
-    
-    save() {
-        var usuario = [
-            {
-              email: this.email, 
-              senha: this.senha
-            },
-            {
-              email: "teste@2",
-              senha: "senha123"
-            },
-            {
-              email: "teste@3", 
-              senha: "senha123"
-            }
-        ];
-        return JSON.stringify(usuario);
-    }
+    login(email,senha,res){
+        sql.connect(config).then(async () => {
+            var resultado = await sql.query`select * from usuario where email = ${email} and senha = ${senha}`
+            console.log(">>>"+email);
+            return res.json(resultado);            
+        })
+        .catch(err => {
+            res.json(err);
+            console.log("eroooo");
+        })
 
+        //sql.close();
+        //return connect(query,call => {console.log(call.recordset)});
+    }
+/*
     selectAll(res){
         var sqlQry = "select * from usuarios;"
         conn.connection().query(sqlQry, function(err, results, fields){
@@ -81,5 +87,5 @@ module.exports = class Usuario {
             else return res.json(results);
             connection.end();
         })
-    }
+    }*/
 }
