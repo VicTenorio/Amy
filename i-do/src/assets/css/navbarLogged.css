@@ -1,0 +1,13 @@
+.navLogged {
+  background-color: #34326E;
+}
+.navLogged button {
+  background: none;
+  border: none;
+  color: #FF9900;
+  font-size: 19pt;
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=navbarLogged.css.map */

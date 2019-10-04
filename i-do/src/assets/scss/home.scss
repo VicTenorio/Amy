@@ -1,3 +1,5 @@
+@import '../scss/styleDefault.scss';
+
 #body {
     background-image: url(../images/6edbdb59-c5c8-4c54-82f5-0fab8db89cd7.jpg);
     background-size: cover;
@@ -5,13 +7,13 @@
 }
 
 #title {
-    color: #FF9900;
+    color: $color-primary;
     font: 16pt Quicksand, sans-serif;
     font-size: 400%;
 }
 
 #text {
-    color: #FF9900;
+    color: $color-primary0;
     font: 16pt Quicksand, sans-serif;
     font-size: 30px;
 }
@@ -32,7 +34,7 @@
 }
 
 #light {
-    color: #FF9900
+    color: $color-primary
 }
 
 #solution {
@@ -47,7 +49,7 @@
 }
 
 #titleIneed, #titleIdo {
-    color: #FF9900;
+    color: $color-primary;
     padding: 4%;
 }
 

@@ -1,13 +1,14 @@
+@import '../scss/styleDefault.scss';
 
 #btnLoginNavbar {
-    color: #FF9900;
+    color: $color-primary;
     border: 2px solid #FCB05A;
     border-radius: 50px;
     font-size: 25px;
     width: 140px;
 
     &:hover {
-    background-color: #FF9900;
+    background-color: $color-primary;
     color: white;
     transition: 0.1s ease-in-out;
     }
