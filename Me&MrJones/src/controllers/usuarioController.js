@@ -3,7 +3,27 @@ var Maps = require('../models/mapsModel');
 var Conn = require('../models/connection');
 var Usuario = require('../models/usuarioModel');
 
+ exports.selectAll = (req,res,next)=>{
+     var usuario = new Usuario();
+     usuario.selectAll(res);
+ }
 
+
+ 
+ exports.login = (req, res, next) => {
+    var usuario = new Usuario();
+    const email = req.body.email;
+    const senha = req.body.senha;
+    usuario.login(email,senha,res);
+}
+/*
+exports.selectAll = (req,res,next) => {
+    const usuario = new Usuario();
+    usuario.selectAll(res);
+    console.log(res.recordset);
+}*/
+
+/*
 exports.getUser = (req, res, next) => {
     //var maps = new Maps("Wesley","123");
     //res.status(201).send(maps.save());
@@ -48,4 +68,4 @@ exports.login = (req, res, next) => {
     const email = req.body.email;
     const senha = req.body.senha;
     usuario.login(email,senha,res);
-}
+}*/
