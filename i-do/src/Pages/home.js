@@ -13,29 +13,33 @@ class Home extends React.Component {
                         <Navbar />
                         <div id="content" className="justify-content-center mt-4">
                             <section name="start">
-                                <div className="justify-content-center mt-4">
-                                    <div className="col-xl-12 p-3" align="center">
+                                <div className="row w-100">
+                                    <div className="col-xl-6" align="center">
                                         <h1 id="title">Vamos começar?</h1>
+                                        <div align="center">
+                                            <p id="text">Explore o lugar perfeito para realizar seus serviços e gerenciá-los com facilidade.</p>
+                                        </div>
                                     </div>
-                                    <div align="center">
-                                        <p id="text">Explore o lugar perfeito para realizar seus serviços e gerenciá-los com facilidade.</p>
+                                    <div className="col-xl-6 p-3">
+                                        <div className="row">
+                                            <Link to="/cadastroDeServico" className="col">
+                                                <div className="p-3 justify-content-center item-catalogo">
+                                                    <h4>Cadastre seus serviços</h4>
+                                                    <hr />
+                                                    <p>Encontre quem precisa da sua ajuda e aumente seu portfólio. Dê o primeiro passo cadastrando seus serviços!</p>
+                                                </div>
+                                            </Link>
+                                            <Link className="col">
+                                                <div className="p-3 justify-content-center item-catalogo">
+                                                    <h4>Meus serviços</h4>
+                                                    <hr />
+                                                    <p>Acesse seus serviços cadastrados no sistema e acompanhe os que já estão agendados.</p>
+                                                </div>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="row w-100 justify-content-center p-5" align="center">
-                                    <Link className="col-xl-6">
-                                        <div className="justify-content-center item-catalogo">
-                                            <h3>Cadastre seus serviços</h3>
-                                            <hr/>
-                                            <p>Dê o primeiro passo e cadastre seus serviços!</p>
-                                        </div>
-                                    </Link>
-                                    <Link className="col-xl-6">
-                                        <div className="justify-content-center item-catalogo">
-                                            <h3>Cadastre seus serviços</h3>
-                                            <hr/>
-                                            <p>Dê o primeiro passo e cadastre seus serviços!</p>
-                                        </div>
-                                    </Link>
                                 </div>
                             </section>
                         </div>
@@ -74,7 +78,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <Footer/>
+                <Footer />
             </div>
         )
     };

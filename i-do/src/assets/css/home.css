@@ -6,26 +6,30 @@
 
 #title {
   color: #FF9900;
-  font: 16pt Quicksand, sans-serif;
-  font-size: 400%;
+  font: 18pt Quicksand, sans-serif;
+  font-size: 70px;
 }
 
 #text {
-  color: #B0ACAC;
+  color: #FF9900;
   font-family: 16pt Quicksand, sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .item-catalogo {
   color: #FF9900;
-  border: 2px solid transparent;
+  border: 2px solid #FF9900;
   border-radius: 15px;
   text-decoration: none;
   font-family: 16pt Quicksand, sans-serif;
+  font-size: 20px;
 }
 .item-catalogo:hover {
-  border: 2px solid #FF9900;
+  border: 2px solid #000423;
+  background-color: #000423;
+  color: white;
   transition: 0.1s ease-in-out;
+  text-decoration: none;
 }
 
 #light {

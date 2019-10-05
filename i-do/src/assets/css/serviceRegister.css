@@ -1,9 +1,39 @@
+select, textarea, input {
+  border: 2px solid #FF9900;
+  outline: none;
+}
+
 #firstStep {
   background-color: #34326E;
   color: #B0ACAC;
   font-family: Quicksand, sans-serif;
   font-size: 20pt;
   padding-bottom: 1%;
+}
+
+label {
+  font-family: Quicksand, sans-serif;
+  font-weight: 600;
+}
+
+select, textarea, input {
+  border: 2px solid #FF9900;
+  outline: none;
+}
+
+input {
+  border-radius: 50px;
+  padding: 1%;
+}
+
+textarea {
+  border-radius: 20px;
+  padding: 2%;
+}
+
+select {
+  border-radius: 20px;
+  padding: 1%;
 }
 
 /*# sourceMappingURL=serviceRegister.css.map */
