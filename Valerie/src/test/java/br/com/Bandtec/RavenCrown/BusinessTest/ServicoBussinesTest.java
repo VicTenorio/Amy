@@ -1,5 +1,6 @@
 package br.com.Bandtec.RavenCrown.BusinessTest;
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.DALTest.TodasCategoriasDALTest;
 import br.com.Bandtec.RavenCrown.Entity.ImagemServicoEntity;
 import br.com.Bandtec.RavenCrown.Entity.ServicoEntity;
@@ -61,12 +62,12 @@ public class ServicoBussinesTest {
         model = new ServicoEntity();
 
         model.setDescricao("Alteração de pisos e azuleijos da sua cozinha, montamos pias de arrumamos calhas");
-        model.setPrestador(userDAL.getOne(11));
+        model.setPrestador(userDAL.save(new Construtores().getUser()));
         model.setNome("O Famoso Pedreiro");
         model.setLocalizacaoFixa(false);
         model.setPreco(33.33);
         model.setImagens(null);
-        model.setCategoria(catDAL.getOne(1));
+        model.setCategoria(new Construtores().getCategoria());
 
         Time timer = new Time(Time.valueOf("10:00:00").getTime());
         java.sql.Date date = new java.sql.Date(timer.getTime());

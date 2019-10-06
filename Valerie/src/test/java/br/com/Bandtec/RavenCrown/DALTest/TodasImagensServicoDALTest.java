@@ -20,7 +20,6 @@ import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
-
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -43,11 +42,6 @@ public class TodasImagensServicoDALTest {
     @Before
     public void setters(){
         construtores = new Construtores();
-        construtores.setEndereco();
-        construtores.setUser();
-        construtores.setService();
-        construtores.setContrato();
-        construtores.setImagemServico();
 
         //persistencias
         userDAL.save(construtores.getUser());

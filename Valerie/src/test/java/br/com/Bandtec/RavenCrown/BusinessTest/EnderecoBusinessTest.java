@@ -1,10 +1,13 @@
 package br.com.Bandtec.RavenCrown.BusinessTest;
 
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.EnderecoEntity;
+import br.com.Bandtec.RavenCrown.Entity.UsuarioEntity;
 import br.com.Bandtec.RavenCrown.Infra.Business.EnderecoBussiness;
 import br.com.Bandtec.RavenCrown.Infra.Business.UsuarioBusiness;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosEnderecosDAL;
+import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,7 +31,7 @@ public class EnderecoBusinessTest {
     TodosEnderecosDAL enderecosDAL;
 
     @Autowired
-    UsuarioBusiness userBusiness;
+    TodosUsuariosDAL userDAL;
 
     private EnderecoEntity endereco;
 
@@ -43,7 +46,7 @@ public class EnderecoBusinessTest {
         endereco.setNumero("302");
         endereco.setPais("Brazil");
         endereco.setEstado("SP");
-        endereco.setUsuario(userBusiness.getUser(11));
+        endereco.setUsuario(new Construtores().getUser());
 
         endereco = enderecosDAL.save(endereco);
     }
