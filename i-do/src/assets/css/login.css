@@ -1,5 +1,5 @@
 .bg-login {
-  background-image: linear-gradient(117deg, #34326E 0%, #34326E 100%), url("../img/bg-img.png");
+  background-image: url("../images/e3c78ef5-e48b-4c34-b2b3-efcaed81aa39.jpg");
   background-size: cover;
 }
 
@@ -8,6 +8,8 @@
 }
 .container input {
   border: 2px solid #FF9900;
+  color: #FF9900;
+  font-family: Quicksand, sans-serif;
   border-radius: 50px;
   background: transparent;
   width: 300px;

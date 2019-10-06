@@ -1,4 +1,4 @@
-select, textarea, input {
+.img-service, select, textarea, input {
   border: 2px solid #FF9900;
   outline: none;
 }
@@ -16,11 +16,6 @@ label {
   font-weight: 600;
 }
 
-select, textarea, input {
-  border: 2px solid #FF9900;
-  outline: none;
-}
-
 input {
   border-radius: 50px;
   padding: 1%;
@@ -34,6 +29,28 @@ textarea {
 select {
   border-radius: 20px;
   padding: 1%;
+}
+
+.img-service {
+  height: 90%;
+  border-radius: 20px;
+  display: block;
+}
+
+#btnServiceRegister {
+  border-radius: 20px;
+  background-color: #34326E;
+  color: #cecece;
+  font-size: 22px;
+  border: none;
+  box-shadow: 3px 1px 3px 2px gray;
+  outline: none;
+  padding: 1%;
+  height: 40px;
+}
+#btnServiceRegister:hover {
+  background-color: #252357;
+  color: white;
 }
 
 /*# sourceMappingURL=serviceRegister.css.map */
