@@ -1,0 +1,36 @@
+.navbar-container {
+  background-color: #34326E;
+  padding: 4%;
+}
+
+.link-gray {
+  font: 12pt Quicksand, sans-serif;
+  color: #B0ACAC;
+}
+
+.link-orange {
+  font: 12pt Quicksand, sans-serif;
+  color: #FF9900;
+  text-decoration: none;
+}
+.link-orange :hover {
+  text-decoration: none;
+  color: #FF9900;
+}
+
+.register-nav-text {
+  padding: 0 2% 2% 0;
+}
+
+.register-nav-title {
+  font: 2em Quicksand, sans-serif;
+  letter-spacing: 5px;
+  color: #FF9900;
+}
+
+.register-nav-subtitle {
+  font: 1.7em Quicksand, sans-serif;
+  color: #B0ACAC;
+}
+
+/*# sourceMappingURL=navbarregister.css.map */

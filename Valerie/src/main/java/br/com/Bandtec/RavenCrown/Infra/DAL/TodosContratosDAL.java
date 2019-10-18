@@ -10,9 +10,9 @@ import java.util.List;
 @Repository
 public interface TodosContratosDAL  extends JpaRepository<ContratoEntity,Integer> {
 
-    @Query("from ContratoEntity where id_usuario_consumidor = ?1")
+    @Query("from ContratoEntity where idUsuarioConsumidor = ?1")
     List<ContratoEntity> GetByConsumer(int id);
 
-    @Query("from ContratoEntity where id_usuario_prestador = ?1")
+    @Query("from ContratoEntity where idUsuarioPrestador = ?1")
     List<ContratoEntity> GetByProvider(int id);
 }

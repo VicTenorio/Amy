@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/home.css';
 import Navbar from '../components/navbar-home';
+import Footer from '../components/footer';
 import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
@@ -12,65 +13,33 @@ class Home extends React.Component {
                         <Navbar />
                         <div id="content" className="justify-content-center mt-4">
                             <section name="start">
-                                <div className="justify-content-center mt-4">
-                                    <div className="col-xl-12 p-3" align="center">
+                                <div className="row w-100">
+                                    <div className="col-xl-6" align="center">
                                         <h1 id="title">Vamos começar?</h1>
+                                        <div align="center">
+                                            <p id="text">Explore o lugar perfeito para realizar seus serviços e gerenciá-los com facilidade.</p>
+                                        </div>
                                     </div>
-                                    <div align="center">
-                                        <p id="text">Explore a variedade de serviços com a facilidade de divisão por categorias.</p>
+                                    <div className="col-xl-6 p-3">
+                                        <div className="row">
+                                            <Link to="/cadastroDeServico" className="col">
+                                                <div className="p-3 justify-content-center item-catalogo">
+                                                    <h4>Cadastre seus serviços</h4>
+                                                    <hr />
+                                                    <p>Encontre quem precisa da sua ajuda e aumente seu portfólio. Dê o primeiro passo cadastrando seus serviços!</p>
+                                                </div>
+                                            </Link>
+                                            <Link className="col">
+                                                <div className="p-3 justify-content-center item-catalogo">
+                                                    <h4>Meus serviços</h4>
+                                                    <hr />
+                                                    <p>Acesse seus serviços cadastrados no sistema e acompanhe os que já estão agendados.</p>
+                                                </div>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="justify-content-center p-5" align="center">
-                                    <div className="row w-100">
-                                        <div className="col-xl-6">
-                                            <div className="row">
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-automobile display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-child display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-bathtub display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-code display-1"></i>
-                                                    </div>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                        <div className="col-xl-6">
-                                            <div className="row">
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-cog display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-cutlery display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-futbol-o display-1"></i>
-                                                    </div>
-                                                </Link>
-                                                <Link to="#" className="p-1 col-3" align="center">
-                                                    <div className="item-catalogo col">
-                                                        <i class="fa fa-graduation-cap display-1"></i>
-                                                    </div>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="row w-100 justify-content-center p-5" align="center">
                                 </div>
                             </section>
                         </div>
@@ -109,26 +78,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <section name="aboutUs">
-                    <footer className="us row w-100">
-                        <div className="col">
-                            <p className="description mt-3 mb-5 p-5">Somos Amy! idealizada a contornar
-                                as dificuldades de comunicação, organização e
-                                tempo na hora de prestar serviços ou contratar um prestador
-                                de modo ágil.
-                            </p>
-                        </div>
-                        <div className="col">
-                            <div className="social mt-3 mb-5 p-5">
-                                <h1>Redes Socias</h1>
-                                <i className="icons-social fa fa-facebook-square p-1"></i>
-                                <i className="icons-social fa fa-instagram p-1"></i>
-                                <i className="icons-social fa fa-linkedin-square p-1"></i>
-                                <i className="icons-social fa fa-tumblr-square p-1"></i>
-                            </div>
-                        </div>
-                    </footer>
-                </section>
+                <Footer />
             </div>
         )
     };

@@ -1,0 +1,13 @@
+@import '../scss/styleDefault.scss';
+
+.navLogged {
+    background-color: $color-background;
+    button {
+        background: none;
+        border: none;
+        color: $color-primary;
+        font-size: 19pt;
+        font-family: $font;
+        font-weight: 500;
+    }
+}

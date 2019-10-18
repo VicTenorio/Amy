@@ -29,30 +29,31 @@ public class TodosEnderecosDALTest {
 
     @Autowired
     private TodosEnderecosDAL todosEnderecosDAL;
-    private EnderecoEntity endereco;
-    private UsuarioEntity user;
     private Construtores construtores = new Construtores();
+    private UsuarioEntity user;
 
     @Autowired
     private TodosUsuariosDAL userDAL;
 
 
     @Before
-    public void setter(){
-        construtores.setEndereco();
-        construtores.setUser();
+    public void setUser(){
+        user = construtores.getUser();
+        user = userDAL.save(user);
     }
 
     @Test
     public void obterEndereco(){
-        List<EnderecoEntity> endereco  = todosEnderecosDAL.findAll();
+        EnderecoEntity enderecoEntity = todosEnderecosDAL.save(construtores.getEndereco());
+        EnderecoEntity endereco  = todosEnderecosDAL.getOne(enderecoEntity.getId());
 
-        assertFalse(endereco.isEmpty());
+        assertFalse(endereco.getId() == 0);
     }
 
     @Test
     public void persitirEndereco(){
 
+        construtores.getEndereco().setUsuario(user);
         todosEnderecosDAL.save(construtores.getEndereco());
         EnderecoEntity enderecoSalvo = todosEnderecosDAL.getOne(construtores.getEndereco().getId());
 

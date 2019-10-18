@@ -5,6 +5,7 @@ import br.com.Bandtec.RavenCrown.Entity.ContratoEntity;
 import br.com.Bandtec.RavenCrown.Entity.DemandaEntity;
 import br.com.Bandtec.RavenCrown.Entity.EnderecoEntity;
 import br.com.Bandtec.RavenCrown.Infra.DAL.*;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +20,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-
+@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -38,15 +39,10 @@ public class TodosContratosDALTest {
     @Autowired
     TodosUsuariosDAL userDAL;
 
-    Construtores construtores;
+    Construtores construtores = new Construtores();
 
     @Before
     public void setters(){
-        construtores = new Construtores();
-        construtores.setEndereco();
-        construtores.setUser();
-        construtores.setService();
-        construtores.setContrato();
 
         //persistencias
         userDAL.save(construtores.getUser());
@@ -108,6 +104,6 @@ public class TodosContratosDALTest {
     public void buscarTodosContratosTest(){
         List<ContratoEntity> contratos = contratosDAL.findAll();
 
-        assertFalse(contratos.isEmpty());
+        Assert.assertTrue(!contratos.isEmpty());
     }
 }

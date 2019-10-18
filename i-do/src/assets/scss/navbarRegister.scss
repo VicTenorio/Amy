@@ -1,0 +1,36 @@
+@import '../scss/styleDefault.scss';
+
+.navbar-container{
+    background-color: $color-background;
+    padding: 4%;
+}
+
+.link-gray {
+    font: 12pt $font;
+    color: $color-gray;
+}
+
+.link-orange {
+    font: 12pt $font;
+    color: $color-primary;
+    text-decoration: none;
+    :hover {
+        text-decoration: none;
+        color: $color-primary;
+      }
+}
+
+.register-nav-text {
+    padding: 0 2% 2% 0;
+}
+
+.register-nav-title { 
+    font: 2em $font;
+    letter-spacing: 5px;
+    color: $color-primary;
+}
+
+.register-nav-subtitle { 
+    font: 1.7em $font;
+    color: $color-gray;
+}

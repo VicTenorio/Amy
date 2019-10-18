@@ -24,6 +24,7 @@ import java.util.List;
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
 
+@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -39,27 +40,18 @@ public class TodasDemandasDALTest {
     @Autowired
     TodosServicosDAL servicosDAL;
 
-    Construtores construtores;
+    Construtores construtores = new Construtores();
 
     @Before
     public void setters(){
-        construtores = new Construtores();
-        construtores.setEndereco();
-        construtores.setUser();
-        construtores.setService();
-        construtores.setContrato();
-        construtores.setImagemServico();
-
-        //persistencias
-        userDAL.save(construtores.getUser());
-        servicosDAL.save(construtores.getService());
+       construtores.setUser(userDAL.save(construtores.getUser()));
+       construtores.getService().setPrestador(construtores.getUser());
+       construtores.setService(servicosDAL.save(construtores.getService()));
     }
 
     @Test
     public void PersistirDemandaTest() {
-
         demanda = new DemandaEntity();
-
         demanda.setDescricao("Dar um jeito na pia quebrada");
         demanda.setNome("Pia Quebrada");
         demanda.setValorPrevisto(100.00);

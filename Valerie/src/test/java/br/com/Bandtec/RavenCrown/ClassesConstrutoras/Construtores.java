@@ -1,9 +1,6 @@
 package br.com.Bandtec.RavenCrown.ClassesConstrutoras;
 
-
 import br.com.Bandtec.RavenCrown.Entity.*;
-import br.com.Bandtec.RavenCrown.Web.Model.*;
-
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -11,46 +8,125 @@ import java.time.LocalTime;
 
 public class Construtores {
 
-    UsuarioEntity user;
-    EnderecoEntity endereco;
-    ServicoEntity service;
-    CategoriaEntity categoria;
-    ImagemUsuarioEntity imagemUsuario;
-    ImagemServicoEntity imagemServico;
-    DemandaEntity demanda;
-    DataServicoEntity data;
-    ContratoEntity contrato;
-    ComentarioEntity comentario;
+    private UsuarioEntity user;
+    private EnderecoEntity endereco;
+    private ServicoEntity service;
+    private CategoriaEntity categoria;
+    private ImagemUsuarioEntity imagemUsuario;
+    private ImagemServicoEntity imagemServico;
+    private DemandaEntity demanda;
+    private DataServicoEntity data;
+    private ContratoEntity contrato;
+    private ComentarioEntity comentario;
 
+    public Construtores(){
+        CreateUser();
+        CreateEndereco();
+        CreateService();
+        CreateCategoria();
+        CreateImagemUsuario();
+        CreateImagemServico();
+        CreateDemanda();
+        CreateData();
+        CreateContrato();
+        CreateComentario();
+    }
 
-    public void setUser(){
+    public UsuarioEntity getUser() {
+        return user;
+    }
+
+    public void setUser(UsuarioEntity user) {
+        this.user = user;
+    }
+
+    public EnderecoEntity getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(EnderecoEntity endereco) {
+        this.endereco = endereco;
+    }
+
+    public ServicoEntity getService() {
+        return service;
+    }
+
+    public void setService(ServicoEntity service) {
+        this.service = service;
+    }
+
+    public CategoriaEntity getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(CategoriaEntity categoria) {
+        this.categoria = categoria;
+    }
+
+    public ImagemUsuarioEntity getImagemUsuario() {
+        return imagemUsuario;
+    }
+
+    public void setImagemUsuario(ImagemUsuarioEntity imagemUsuario) {
+        this.imagemUsuario = imagemUsuario;
+    }
+
+    public ImagemServicoEntity getImagemServico() {
+        return imagemServico;
+    }
+
+    public void setImagemServico(ImagemServicoEntity imagemServico) {
+        this.imagemServico = imagemServico;
+    }
+
+    public DemandaEntity getDemanda() {
+        return demanda;
+    }
+
+    public void setDemanda(DemandaEntity demanda) {
+        this.demanda = demanda;
+    }
+
+    public DataServicoEntity getData() {
+        return data;
+    }
+
+    public void setData(DataServicoEntity data) {
+        this.data = data;
+    }
+
+    public ContratoEntity getContrato() {
+        return contrato;
+    }
+
+    public void setContrato(ContratoEntity contrato) {
+        this.contrato = contrato;
+    }
+
+    public ComentarioEntity getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(ComentarioEntity comentario) {
+        this.comentario = comentario;
+    }
+
+    private void CreateUser(){
         user = new UsuarioEntity();
         user.setSenha("teste123");
-        user.setEmail("teste@teste");
+        user.setEmail("teste@teste"+LocalDateTime.now().hashCode());
         user.setNome("teste");
         user.setEstadoCivil("Solteiro");
-        user.setCpfCnpj("2534234234");
-        user.setEndereco(getEndereco());
+        user.setCpfCnpj("253423"+LocalDateTime.now().hashCode());
         user.setTelefone("97070-7070");
         user.setRG("54.456.456.7");
         user.setSexo('M');
         user.setDataNascimento(LocalDate.now());
-        user.setImagem(null);
-        user.setDatasConsumir(null);
-        user.setServicosConsumir(null);
-        user.setServicosPrestar(null);
-        user.setDatasPrestar(null);
-
     }
 
-    public UsuarioEntity getUser(){
-            return user;
-    }
-
-    public void setEndereco() {
+    private void CreateEndereco() {
         endereco = new EnderecoEntity();
-
-        endereco.setUsuario(getUser());
         endereco.setReferencia("referencia teste");
         endereco.setBairro("Bairro teste");
         endereco.setCep("cep Teste");
@@ -61,118 +137,47 @@ public class Construtores {
         endereco.setNumero("20");
         endereco.setPais("Brasil");
     }
-
-    public EnderecoEntity getEndereco() {
-        return endereco;
-    }
-
-    public void setService() {
+    private void CreateService() {
         service = new ServicoEntity();
         service.setDescricao("teste");
         service.setLocalizacaoFixa(true);
         service.setNome("Teste");
         service.setPreco(324.345);
-        service.setPrestador(getUser());
         service.setTempoExecucao(LocalTime.now());
-        service.setCategoria(getCategoria());
-        service.setEndereco(getEndereco());
-        service.setImagens(null);
-        service.setComentarios(null);
-        service.setDatas(null);
     }
-
-    public ServicoEntity getService(){
-        return service;
-    }
-
-    public void setCategoria() {
+    private void CreateCategoria() {
         categoria = new CategoriaEntity();
         categoria.setNome("Teste");
-        categoria.setServicos(null);
     }
-
-    public CategoriaEntity getCategoria(){
-        return categoria;
-    }
-
-    public void setImagemUsuario() {
+    private void CreateImagemUsuario() {
         imagemUsuario = new ImagemUsuarioEntity();
-        imagemUsuario.setUsuario(getUser());
         imagemUsuario.setUrl("/caminho/teste");
     }
-
-    public ImagemUsuarioEntity getImagemUsuario(){
-        return imagemUsuario;
-    }
-
-    public void setImagemServico() {
+    private void CreateImagemServico() {
         imagemServico = new ImagemServicoEntity();
-        imagemServico.setServico(getService());
-        imagemServico.setUsuario(getUser());
-        imagemServico.setUrl("/caminho/teste");
+        imagemServico.setUrl("/caminho/teste.png");
     }
-
-    public ImagemServicoEntity getImagemServico(){
-        return imagemServico;
-    }
-
-    public void setDemanda() {
+    private void CreateDemanda() {
         demanda = new DemandaEntity();
-        demanda.setContratante(getUser());
         demanda.setDescricao("Teste");
-        demanda.setEndereco(getEndereco());
         demanda.setNome("Teste");
         demanda.setValorPrevisto(20.0);
     }
-
-    public DemandaEntity getDemanda(){
-        return demanda;
-    }
-
-    public void setData(){
+    private void CreateData(){
         data = new DataServicoEntity();
-        data.setServico(getService());
-        data.setConsumidor(getUser());
         data.setDtAgendamento(LocalDateTime.now());
         data.setTipoReserva('M');
-        data.setPrestador(getUser());
-        data.setContrato(getContrato());
-        data.setDemanda(getDemanda());
     }
-
-    public DataServicoEntity getData(){
-        return data;
-    }
-
-    public void setContrato(){
+    private void CreateContrato(){
         contrato = new ContratoEntity();
         contrato.setAprovadoConsumidor(true);
         contrato.setAprovadoPrestador(true);
-        contrato.setConsumidor(getUser());
-        contrato.setEndereco(getEndereco());
-        contrato.setPrestador(getUser());
         contrato.setValorFinal(10.0);
-        contrato.setServico(getService());
-        contrato.setDatas(null);
         contrato.setPago(true);
-        contrato.setDemanda(getDemanda());
     }
-
-    public ContratoEntity getContrato(){
-        return contrato;
-    }
-
-
-    public void setComentario(){
+    private void CreateComentario(){
         comentario = new ComentarioEntity();
         comentario.setData(Date.valueOf(LocalDate.now()));
         comentario.setDeComentario("teste");
-        comentario.setServico(getService());
-        comentario.setUsuario(getUser());
     }
-
-    public ComentarioEntity getComentario(){
-        return comentario;
-    }
-
 }

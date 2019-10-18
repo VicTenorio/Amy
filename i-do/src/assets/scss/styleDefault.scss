@@ -1,0 +1,11 @@
+$color-background:  #34326E;
+$color-gray:  #B0ACAC;
+$color-primary: #FF9900;
+$font: Quicksand, sans-serif;
+
+//CRIANDO PLACEHOLDER
+%style-inputs {
+    border: 2px solid $color-primary;
+    outline: none;
+}
+

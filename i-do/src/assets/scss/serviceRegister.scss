@@ -1,0 +1,58 @@
+@import '../scss/styleDefault.scss';
+
+#firstStep {
+    background-color: $color-background;
+    color: #B0ACAC;
+    font-family: $font;
+    font-size: 20pt;
+    padding-bottom: 1%;
+}
+
+label {
+    font: {
+        family: $font;
+        weight: 600;
+    }
+}
+
+//USANDO "@extend" PARA CHAMAR PLACEHOLDER
+input {
+    @extend %style-inputs;
+    border-radius: 50px;
+    padding: 1%;
+}
+
+textarea {
+    @extend %style-inputs;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+select {
+    @extend %style-inputs;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+.img-service {
+    @extend %style-inputs;
+    height: 90%;
+    border-radius: 20px;
+    display: block;
+}
+
+#btnServiceRegister {
+    border-radius: 20px;
+    background-color: #34326E;
+    color: rgb(206, 206, 206);
+    font-size: 22px;
+    border: none;
+    box-shadow: 3px 1px 3px 2px gray;
+    outline: none;
+    padding: 1%;
+    height: 40px;
+    &:hover {
+        background-color: rgb(37, 35, 87);
+        color: white;
+    }
+}

@@ -69,7 +69,7 @@ public class TodosUsuariosDALTest {
 
         user.setSenha("rv2058");
         user.setNome("Regina");
-        user.setEmail("vitoria@outlook.com"+LocalDateTime.now().toString());
+        user.setEmail("vitoria@outlook.com");
         user.setCpfCnpj("111.111.111.11");
         user.setEstadoCivil("Casada");
         user.setPrestador(false);

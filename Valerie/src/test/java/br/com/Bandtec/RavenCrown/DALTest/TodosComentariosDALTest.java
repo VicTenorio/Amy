@@ -8,6 +8,7 @@ import br.com.Bandtec.RavenCrown.Infra.DAL.TodosComentariosDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosServicosDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -47,17 +48,10 @@ public class TodosComentariosDALTest {
     @Autowired
     private UsuarioBusiness business;
 
-    Construtores construtores;
+    Construtores construtores = new Construtores();
 
     @Before
     public void setters(){
-        construtores = new Construtores();
-        construtores.setEndereco();
-        construtores.setUser();
-        construtores.setService();
-        construtores.setContrato();
-
-        //persistencias
         userDAL.save(construtores.getUser());
         servicosDAL.save(construtores.getService());
     }
@@ -67,7 +61,7 @@ public class TodosComentariosDALTest {
     public void ComentarioGetTest(){
 
         List<ComentarioEntity> comentario = todosComentariosDAL.findAll();
-        assertTrue(comentario.size() > 0);
+        Assert.assertFalse(comentario.isEmpty());
     }
 
     @Test

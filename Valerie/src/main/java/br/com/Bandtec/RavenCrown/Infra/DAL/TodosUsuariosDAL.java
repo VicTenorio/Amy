@@ -10,10 +10,10 @@ import java.util.List;
 @Repository
 public interface TodosUsuariosDAL extends JpaRepository<UsuarioEntity, Integer> {
 
-    @Query("from UsuarioEntity where Email_Usuario = ?1 and Senha = ?2")
+    @Query("from UsuarioEntity where email = ?1 and senha = ?2")
     public UsuarioEntity getByUserAndPass(String email, String senha);
 
-    @Query("from UsuarioEntity where Email_Usuario = ?1")
+    @Query("from UsuarioEntity where email = ?1")
     public UsuarioEntity getByEmail(String email);
 
 }
