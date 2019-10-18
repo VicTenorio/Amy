@@ -1,9 +1,12 @@
 package br.com.Bandtec.RavenCrown.DALTest;
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.ImagemUsuarioEntity;
 import br.com.Bandtec.RavenCrown.Entity.UsuarioEntity;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosImagemUsuairoDAL;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,6 +23,7 @@ import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -28,37 +32,39 @@ public class TodasImagensUsuarioDALTest {
 
     @Autowired
     TodosImagemUsuairoDAL imagemUsuarioDAL;
-    ImagemUsuarioEntity imagem;
-
     @Autowired
-    TodosUsuariosDAL usuariosDAL;
-    UsuarioEntity usuario;
+    TodosUsuariosDAL userDAL;
 
-//    @Test
-//    public void A_PersistirImagemUsuario(){
-//
-//        ImagemUsuarioEntity oldImage = imagemUsuarioDAL.GetImagemByUser(10);
-//        if(oldImage != null)
-//            imagemUsuarioDAL.deleteById(oldImage.getImagem_Id());
-//
-//        imagem = new ImagemUsuarioEntity();
-//
-//        imagem.setImagem_Url("https://i.pinimg.com/originals/8a/3d/a2/8a3da20e55bd36a2f29f8f3ab4d0c5b5.jpg");
-//        imagem.setUsuario(usuariosDAL.getOne(10));
-//
-//        imagemUsuarioDAL.save(imagem);
-//
-//        ImagemUsuarioEntity imagemPerssitido = imagemUsuarioDAL.getOne(imagem.getImagem_Id());
-//
-//        assertTrue(imagemPerssitido != imagem);
-//    }
+    Construtores construtores = new Construtores();
+
+    @Before
+    public void begin(){
+        construtores.setUser(userDAL.save(construtores.getUser()));
+    }
 
     @Test
-    public void B_ObterImagemUsuarioTest(){
+    public void A_PersistirImagemUsuario(){
 
-        ImagemUsuarioEntity ImagemDoUsuario  = imagemUsuarioDAL.GetImagemByUser(10);
+        ImagemUsuarioEntity oldImage = imagemUsuarioDAL.GetImagemByUser(construtores.getUser().getId());
+        if(oldImage != null)
+            imagemUsuarioDAL.deleteById(oldImage.getId());
 
-        assertEquals(ImagemDoUsuario.getUsuario().getId() ,10);
+        ImagemUsuarioEntity imagem = new ImagemUsuarioEntity();
+
+        imagem.setUrl("https://i.pinimg.com/originals/8a/3d/a2/8a3da20e55bd36a2f29f8f3ab4d0c5b5.jpg");
+        imagem.setUsuario(construtores.getUser());
+
+        imagem = imagemUsuarioDAL.save(imagem);
+
+        ImagemUsuarioEntity imagemPerssitido = imagemUsuarioDAL.getOne(imagem.getId());
+
+        Assert.assertEquals(imagemPerssitido, imagem);
     }
+
+    //@Test
+    //public void B_ObterImagemUsuarioTest(){
+    //   ImagemUsuarioEntity ImagemDoUsuario  = imagemUsuarioDAL.GetImagemByUser(construtores.getUser().getId());
+    //    assertEquals(ImagemDoUsuario.getUsuario().getId() ,construtores.getUser().getId());
+    //}
 
 }

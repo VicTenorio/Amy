@@ -13,7 +13,7 @@ ReactDOM.render(
             <Switch>
                 <Route path="/" exact={true} component={Home}/>
                 <Route path="/login" component={Login}/>
-                <Route path="/navbarlogged" component={NavbarLogged}/>
+                <Route path="/cadastroDeUsuario" component={userRegister}/>
                 <Route path="/cadastroDeServico" component={ServiceRegister}/>
                 <Route path="/meusServicos" component={MeusServicos}/>
             </Switch>

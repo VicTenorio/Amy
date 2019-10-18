@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TodosImagemUsuairoDAL extends JpaRepository<ImagemUsuarioEntity,Integer> {
 
-    @Query("from ImagemUsuarioEntity where id_usuario = ?1")
+    @Query("from ImagemUsuarioEntity where id_Usuario = ?1")
     ImagemUsuarioEntity GetImagemByUser(int Id_usuario);
 
 }

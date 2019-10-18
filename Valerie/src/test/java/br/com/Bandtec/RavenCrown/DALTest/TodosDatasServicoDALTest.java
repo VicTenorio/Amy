@@ -39,15 +39,8 @@ public class TodosDatasServicoDALTest {
     TodosUsuariosDAL usuariosDAL;
     UsuarioEntity usuario;
 
-    Construtores construtores;
+    Construtores construtores = new Construtores();
 
-    @Before
-    public void setters(){
-        construtores = new Construtores();
-        construtores.setEndereco();
-        construtores.setUser();
-        construtores.setService();
-    }
 
     @Test
     public void persistirData(){
@@ -61,7 +54,7 @@ public class TodosDatasServicoDALTest {
         dataServico.setConsumidor(construtores.getUser());
         dataServico.setTipoReserva('T');
 
-        datasServicoDAL.save(dataServico);
+        construtores.setService(datasServicoDAL.save(dataServico).getServico());
 
         DataServicoEntity dataPersistida = datasServicoDAL.getOne(dataServico.getId());
 
@@ -70,6 +63,14 @@ public class TodosDatasServicoDALTest {
 
     @Test
     public void verirficarDatasEmServico(){
-        assertFalse(servicosDAL.getOne(1).getDatas().isEmpty());
+        construtores.getService().setPrestador(construtores.getUser());
+        construtores.setService(servicosDAL.save(construtores.getService()));
+        construtores.getData().setServico(construtores.getService());
+
+        DataServicoEntity data =  datasServicoDAL.save(construtores.getData());
+
+        ServicoEntity servicoComData = servicosDAL.getOne(data.getServico().getId());
+
+        assertEquals(data.getServico().getDatas(),servicoComData.getDatas());
     }
 }

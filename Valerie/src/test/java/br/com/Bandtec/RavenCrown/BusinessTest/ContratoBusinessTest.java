@@ -1,6 +1,7 @@
 package br.com.Bandtec.RavenCrown.BusinessTest;
 
 
+import br.com.Bandtec.RavenCrown.ClassesConstrutoras.Construtores;
 import br.com.Bandtec.RavenCrown.Entity.ContratoEntity;
 import br.com.Bandtec.RavenCrown.Entity.DataServicoEntity;
 import br.com.Bandtec.RavenCrown.Entity.EnderecoEntity;
@@ -9,6 +10,7 @@ import br.com.Bandtec.RavenCrown.Infra.Business.ContratoBussiness;
 import br.com.Bandtec.RavenCrown.Infra.Business.ServicoBussiness;
 import br.com.Bandtec.RavenCrown.Infra.Business.UsuarioBusiness;
 import br.com.Bandtec.RavenCrown.Infra.DAL.TodosCategoriasDAL;
+import br.com.Bandtec.RavenCrown.Infra.DAL.TodosUsuariosDAL;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -48,6 +50,9 @@ public class ContratoBusinessTest {
     @Autowired
     TodosCategoriasDAL catDAL;
 
+    @Autowired
+    TodosUsuariosDAL userDAL;
+
     ServicoEntity servicoSalvo;
 
     @Before
@@ -55,12 +60,12 @@ public class ContratoBusinessTest {
         ServicoEntity model = new ServicoEntity();
 
         model.setDescricao("Alteração de pisos e azuleijos da sua cozinha, montamos pias de arrumamos calhas");
-        model.setPrestador(userBusiness.getUser(11));
+        model.setPrestador(userDAL.save(new Construtores().getUser()));
         model.setNome("O Famoso Pedreiro");
         model.setLocalizacaoFixa(false);
         model.setPreco(33.33);
         model.setImagens(null);
-        model.setCategoria(catDAL.getOne(1));
+        model.setCategoria(catDAL.save(new Construtores().getCategoria()));
 
         Time timer = new Time(Time.valueOf("10:00:00").getTime());
         java.sql.Date date = new java.sql.Date(timer.getTime());
@@ -73,8 +78,8 @@ public class ContratoBusinessTest {
     public void AgendarServicoTest(){
         ContratoEntity contrato = new ContratoEntity();
 
+        contrato.setConsumidor(userDAL.save(new Construtores().getUser()));
         contrato.setServico(servicoSalvo);
-        contrato.setConsumidor(userBusiness.getUser(10));
         contrato.setEndereco(new EnderecoEntity(0,"Rua do teste","00000-000",null,"100",null,"Todos os Teste","Sampa","SP","Brazil",contrato.getConsumidor()));
         contrato.setValorFinal(servicoSalvo.getPreco());
 
