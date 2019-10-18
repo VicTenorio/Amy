@@ -6,6 +6,7 @@ import Home from '../src/Pages/home';
 import Login from '../src/Pages/login';
 import NavbarLogged from '../src/components/navbarLogged';
 import ServiceRegister from '../src/Pages/serviceRegister';
+import MeusServicos from '../src/Pages/my-services';
 
 ReactDOM.render(
         <BrowserRouter>
@@ -14,6 +15,7 @@ ReactDOM.render(
                 <Route path="/login" component={Login}/>
                 <Route path="/navbarlogged" component={NavbarLogged}/>
                 <Route path="/cadastroDeServico" component={ServiceRegister}/>
+                <Route path="/meusServicos" component={MeusServicos}/>
             </Switch>
         </BrowserRouter>
     , document.getElementById('root'));

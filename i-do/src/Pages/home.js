@@ -29,7 +29,7 @@ class Home extends React.Component {
                                                     <p>Encontre quem precisa da sua ajuda e aumente seu portfólio. Dê o primeiro passo cadastrando seus serviços!</p>
                                                 </div>
                                             </Link>
-                                            <Link className="col">
+                                            <Link to="/meusServicos" className="col">
                                                 <div className="p-3 justify-content-center item-catalogo">
                                                     <h4>Meus serviços</h4>
                                                     <hr />

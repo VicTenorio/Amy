@@ -8,14 +8,14 @@ class NavbarLogged extends React.Component {
             <div className="navLogged">
                 <nav id="navLogged" className="navbar navbar-expand-lg bg-transparent">
                     <Link to="/" className="navbar-brand">Logo</Link>
-                    <form className="row w-100 form-inline justify-content-center p-3">
-                        <Link to="#">
+                    <form id="form" className="row w-100 form-inline justify-content-center p-3">
+                        <Link to="/meusServicos">
                             <button id="btnMeusServicos" className="btnNavLogged">Meus serviços</button>
                         </Link>
                         <Link to="#">
                             <button id="btnAgendamentos" className="btnNavLogged pr-5 pl-5">Meus agendamentos</button>
                         </Link>
-                        <Link to="#">
+                        <Link to="/cadastroDeServico">
                             <button id="btnCadastroServico" className="btnNavLogged">Cadastre seus serviços</button>
                         </Link>
                     </form>

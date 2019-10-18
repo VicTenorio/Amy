@@ -1,0 +1,9 @@
+@import '../scss/styleDefault.scss';
+
+input {
+    padding: 2%;
+}
+
+#yourServices {
+    @extend %phraseMotivation;
+}

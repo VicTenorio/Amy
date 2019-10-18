@@ -9,5 +9,9 @@
         font-size: 19pt;
         font-family: $font;
         font-weight: 500;
+        &:hover {
+            color: lighten($color: $color-primary, $amount: 25);
+            transition: 0.1s ease-in-out;
+        }
     }
 }

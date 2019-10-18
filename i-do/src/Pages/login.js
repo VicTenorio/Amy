@@ -1,11 +1,12 @@
 import React from 'react';
 import '../assets/css/login.css';
+import '../Requests/loginRequest'
 
 class Login extends React.Component {
     render() {
         return (
             <div class="bg-login">
-                <div class="container">
+                <form class="container" id="form">
                     <div class="row">
                         <input type="text" id="user-input" placeholder="usuário"></input>
                     </div>
@@ -13,7 +14,7 @@ class Login extends React.Component {
                         <input type="text" id="password-input" placeholder="senha"></input>
                     </div>
                     <div class="row mt-4">
-                        <button id="btn-login">entrar</button>
+                        <button id="btn-login" type="submit" onClick="loginRequest">entrar</button>
                     </div>
                     <div class="row mt-2">
                         <p>Esqueceu sua senha? Clique aqui!</p>
@@ -21,7 +22,7 @@ class Login extends React.Component {
                     <div class="row mt-2 ml-1">
                         <p>Sem login? <span>Cadastre-se aqui!</span></p>
                     </div>
-                </div>
+                </form>
             </div>
 
     )}   
