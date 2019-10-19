@@ -1,6 +1,6 @@
 #btnLoginNavbar {
   color: #FF9900;
-  border: 2px solid #FCB05A;
+  border: 2px solid #FF9900;
   border-radius: 50px;
   font-size: 25px;
   width: 140px;
@@ -12,10 +12,14 @@
 }
 
 #btnCadastroNavbar {
-  color: #FCB05A;
+  color: #FF9900;
   border: none;
   background-color: transparent;
   font-size: 25px;
+}
+#btnCadastroNavbar:hover {
+  color: #ffcc80;
+  transition: 0.1s ease-in-out;
 }
 
 /*# sourceMappingURL=navbar.css.map */

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/login.css';
-import '../Requests/loginRequest'
+import '../Requests/loginRequest';
+import {Link} from 'react-router-dom';
 
 class Login extends React.Component {
     render() {
@@ -20,12 +21,17 @@ class Login extends React.Component {
                         <p>Esqueceu sua senha? Clique aqui!</p>
                     </div>
                     <div class="row mt-2 ml-1">
-                        <p>Sem login? <span>Cadastre-se aqui!</span></p>
+                        <p>Sem login?
+                            <Link to="/cadastroDeUsuario">
+                                <span>Cadastre-se aqui!</span>
+                            </Link>
+                        </p>
                     </div>
                 </form>
             </div>
 
-    )}   
+        )
+    }
 }
 
 export default Login;

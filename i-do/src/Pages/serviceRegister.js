@@ -7,7 +7,7 @@ class ServiceRegister extends React.Component {
         return (
             <div>
                 <NavbarLogged />
-                <label id="firstStep" className="w-100" align="center">Dê os primeiros passo e cadastre seus serviços</label>
+                <label id="firstStep" className="w-100" align="center">Dê os primeiros passos e cadastre seus serviços</label>
                 <div className="row w-100">
                     <div className="col-xl-7 ml-5 p-5">
                         <div className="row p-2">

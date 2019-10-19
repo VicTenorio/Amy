@@ -6,8 +6,17 @@
   padding-bottom: 1%;
 }
 
+#noRegister {
+  font-family: Quicksand, sans-serif;
+  font-size: 18pt;
+}
+
 input {
   padding: 2%;
+}
+
+#noRegister {
+  padding: 1%;
 }
 
 /*# sourceMappingURL=my-services.css.map */

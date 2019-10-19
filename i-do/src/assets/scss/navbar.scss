@@ -2,7 +2,7 @@
 
 #btnLoginNavbar {
     color: $color-primary;
-    border: 2px solid #FCB05A;
+    border: 2px solid $color-primary;
     border-radius: 50px;
     font-size: 25px;
     width: 140px;
@@ -15,8 +15,12 @@
 }
 
 #btnCadastroNavbar {
-    color: #FCB05A;
+    color: $color-primary;
     border: none;
     background-color: transparent;
     font-size: 25px;
+    &:hover {
+        color: lighten($color: $color-primary, $amount: 25);
+        transition: 0.1s ease-in-out;
+    }
 }

@@ -1,0 +1,24 @@
+@import '../scss/styleDefault.scss';
+
+#scheduleServices {
+    @extend %phraseMotivation;
+}
+
+Link {
+    text-decoration: none;
+}
+
+#noRegister {
+    @extend %noRegister;
+}
+
+#applyFilter {
+    @extend %buttonStyle;
+    background-color: $color-background;
+    color: white;
+    border: 2px solid $color-background;
+    outline: none;
+        &:hover {
+            background-color: lighten($color: $color-background, $amount: 20);
+        }
+}

@@ -12,7 +12,7 @@ class NavbarLogged extends React.Component {
                         <Link to="/meusServicos">
                             <button id="btnMeusServicos" className="btnNavLogged">Meus serviços</button>
                         </Link>
-                        <Link to="#">
+                        <Link to="/servicosAgendados">
                             <button id="btnAgendamentos" className="btnNavLogged pr-5 pl-5">Meus agendamentos</button>
                         </Link>
                         <Link to="/cadastroDeServico">

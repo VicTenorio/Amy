@@ -15,7 +15,9 @@ class Navbar extends React.Component {
                         <form className="row w-100 form-inline justify-content-end p-3">
                             <div className="row" align="center">
                                 <div className="col-7">
-                                    <button id="btnCadastroNavbar" className="form-control mr-sm-2">Cadastre-se!</button>
+                                    <Link to="/cadastroDeUsuario">
+                                        <button id="btnCadastroNavbar" className="form-control mr-sm-2">Cadastre-se!</button>
+                                    </Link>
                                 </div>
                                 <div className="col-5">
                                     <Link to="/login">

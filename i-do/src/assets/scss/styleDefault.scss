@@ -1,5 +1,6 @@
 $color-background:  #34326E;
 $color-gray:  #B0ACAC;
+$color-turtle: #A7007B;
 $color-primary: #FF9900;
 $font: Quicksand, sans-serif;
 
@@ -17,3 +18,12 @@ $font: Quicksand, sans-serif;
     padding-bottom: 1%;
 }
 
+%noRegister {
+    font-family: $font;
+    font-size: 18pt;
+}
+
+%buttonStyle {
+    border: 2px solid;
+    border-radius: 50px;
+}

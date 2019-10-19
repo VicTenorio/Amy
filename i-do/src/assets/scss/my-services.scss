@@ -7,3 +7,8 @@ input {
 #yourServices {
     @extend %phraseMotivation;
 }
+
+#noRegister {
+    @extend %noRegister;
+    padding: 1%;
+}
