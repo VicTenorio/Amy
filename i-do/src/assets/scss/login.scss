@@ -1,7 +1,8 @@
 @import '../scss/styleDefault.scss';
 
-body {
-    // overflow: hidden;
+.container {
+    animation-name: fade;
+    animation-duration: 0.8s;
 }
 
 .bg-login {

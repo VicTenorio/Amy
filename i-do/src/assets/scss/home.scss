@@ -7,18 +7,24 @@
 }
 
 #title {
+    animation-name: fade;
+    animation-duration: 0.6s;
     color: $color-primary;
     font: 18pt $font;
     font-size: 70px;
 }
 
 #text {
+    animation-name: fade;
+    animation-duration: 0.9s;
     color: $color-primary;
     font-family: 16pt $font;
     font-size: 25px;
 }
 
 .item-catalogo {
+    animation-name: fade;
+    animation-duration: 1.5s;
     color:$color-primary;
     border: 2px solid $color-primary;
     border-radius: 15px;

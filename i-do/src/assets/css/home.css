@@ -1,3 +1,13 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 #body {
   background-image: url(../images/6edbdb59-c5c8-4c54-82f5-0fab8db89cd7.jpg);
   background-size: cover;
@@ -5,18 +15,24 @@
 }
 
 #title {
+  animation-name: fade;
+  animation-duration: 0.6s;
   color: #FF9900;
   font: 18pt Quicksand, sans-serif;
   font-size: 70px;
 }
 
 #text {
+  animation-name: fade;
+  animation-duration: 0.9s;
   color: #FF9900;
   font-family: 16pt Quicksand, sans-serif;
   font-size: 25px;
 }
 
 .item-catalogo {
+  animation-name: fade;
+  animation-duration: 1.5s;
   color: #FF9900;
   border: 2px solid #FF9900;
   border-radius: 15px;
