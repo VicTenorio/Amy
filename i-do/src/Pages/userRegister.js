@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/serviceRegister.css';
+import '../assets/css/userRegister.css';
 import NavbarRegister from '../components/navbar-register';
 import { cep } from './apiCorreios';
 
@@ -8,10 +8,23 @@ class userRegister extends React.Component {
         return (
             <div>
             <NavbarRegister />
-            <input id='cep' placeholder='cep'/>
-            <input id='rua' placeholder='rua'/>
-            <input id="bairro" placeholder='bairro'/>
-            <button onClick={cep(document.getElementById("cep"))}>eu</button>
+            <form>
+                <div class="row title-register">
+                    <p> Dados Pessoais </p>
+                </div>
+                <div class="row">
+                    <p>Nome</p>
+                </div>
+                <div class="row">
+                    <input class="input-name"/>
+                </div>
+                <div class="row title-register">
+                    <p> Dados de Acesso e Contato </p>
+                </div>
+                <div class="row title-register">
+                    <p> Endereço </p>
+                </div>
+            </form>
             </div>
         )
     }

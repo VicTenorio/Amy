@@ -58,7 +58,7 @@
 
 #iNeed, #iDo {
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #6b6b6b;
   border-radius: 10px 10px 0px 30px;
   box-shadow: 1px 1px 0px 0px #6b6b6b;
 }

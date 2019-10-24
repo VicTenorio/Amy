@@ -1,0 +1,21 @@
+@import '../scss/styleDefault.scss';
+
+.title-register {
+
+    p {
+       font: 1.7em $font;
+       font-weight: 500;
+       padding: 2%;
+    }
+}
+
+form {
+    margin-left: 10%;
+}
+
+.input-name {
+    margin-left: 2%;
+    width: 70%;
+    height: 2px;
+}
+

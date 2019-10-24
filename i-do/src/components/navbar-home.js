@@ -1,13 +1,16 @@
 import React from 'react';
 import '../assets/css/navbar.css';
 import { Link } from 'react-router-dom';
+import logoCinza from '../assets/images/ido-preto.png';
 
 class Navbar extends React.Component {
     render() {
         return (
             <div>
                 <nav id="navbar" className="navbar navbar-expand-lg bg-transparent">
-                    <Link to="/" className="navbar-brand">Logo</Link>
+                    <Link to="/" className="navbar-brand">
+                        <img id="logoHome" src={logoCinza} />
+                    </Link>
                     <button className="navbar-toggler border-warning" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

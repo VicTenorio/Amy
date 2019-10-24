@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/navbarRegister.css';
 import { Link } from 'react-router-dom';
+import logoCinza from '../assets/images/ido-cinza.png';
 
 class NavbarRegister extends React.Component {
     render() {

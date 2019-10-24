@@ -9,10 +9,10 @@ class Login extends React.Component {
             <div class="bg-login">
                 <form class="container" id="form">
                     <div class="row">
-                        <input type="text" id="user-input" placeholder="usuário"></input>
+                        <input type="text" id="txtUser" placeholder="usuário"></input>
                     </div>
                     <div class="row mt-4">
-                        <input type="text" id="password-input" placeholder="senha"></input>
+                        <input type="text" id="txtPass" placeholder="senha"></input>
                     </div>
                     <div class="row mt-4">
                         <button id="btn-login" type="submit" onClick="loginRequest">entrar</button>

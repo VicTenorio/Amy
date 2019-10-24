@@ -28,6 +28,12 @@ $font: Quicksand, sans-serif;
     border-radius: 50px;
 }
 
+%logoStyle {
+    height: 130px;
+    width: 130px;
+    color: $color-primary;
+}
+
 //EFEITO DE TRANSIÇÃO
 @keyframes fade {
     from {

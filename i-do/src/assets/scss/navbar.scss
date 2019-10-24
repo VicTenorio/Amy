@@ -1,4 +1,8 @@
-@import '../scss/styleDefault.scss';
+;@import '../scss/styleDefault.scss';
+
+#logoHome{
+    @extend %logoStyle;
+}
 
 #btnLoginNavbar {
     color: $color-primary;
