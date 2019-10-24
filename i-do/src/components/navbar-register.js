@@ -9,7 +9,7 @@ class NavbarRegister extends React.Component {
             <div className="navbar-container">
                 <div className="row justify-content-end">
                     <div className="register-nav-text">
-                    <span class="link-gray">Já tem uma conta?</span>
+                    <span class="link-gray justify-content-center">Já tem uma conta?</span>
                     <span class="link-orange">
                         <Link class="link-orange" to="/login"> Faça login aqui!
                         </Link>

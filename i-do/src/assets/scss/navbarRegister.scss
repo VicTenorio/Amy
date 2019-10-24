@@ -1,8 +1,12 @@
 @import '../scss/styleDefault.scss';
 
+#logoUserRegister {
+    @extend %logoStyle;
+}
+
 .navbar-container{
     background-color: $color-background;
-    padding: 4%;
+    padding: 2%;
 }
 
 .link-gray {
