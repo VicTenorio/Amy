@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadastroEnderecoUsuario"></activity>
+        <activity android:name=".GridCategorias"></activity>
+        <activity android:name=".CadastroEnderecoUsuario" />
         <activity android:name=".CadastroUsuarioAcessoConta" />
         <activity android:name=".CadastroUsuarioDadosPessoaisActivity" />
         <activity android:name=".CadastroActivity" />
