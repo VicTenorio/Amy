@@ -51,7 +51,7 @@
             android:textColor="#ff9900" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/campoNomeCompleto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
@@ -66,7 +66,7 @@
             android:textColor="#ff9900" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/campoRG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
@@ -81,7 +81,7 @@
             android:textColor="#ff9900" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/campoCPF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
@@ -96,7 +96,7 @@
             android:textColor="#ff9900" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/campoDtNasc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
@@ -110,15 +110,33 @@
             android:text="@string/cadastro_estado_Civil"
             android:textColor="#ff9900" />
 
-        <ListView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:background="#ffffff" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:paddingRight="10dp"
+                android:text="Solteiro"
+                android:background="#ffffff" />
+            <CheckBox
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Casado"
+                android:background="#ffffff" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
     <Button
         android:id="@+id/btProximo"
+        android:onClick="bt_proximo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="246dp"

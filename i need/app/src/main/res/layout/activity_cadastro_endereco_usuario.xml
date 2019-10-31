@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroUsuarioDadosPessoaisActivity"
+    tools:context=".CadastroEnderecoUsuario"
     android:background="#34326e">
 
 
@@ -66,7 +66,7 @@
             android:textColor="#ff9900" />
 
         <EditText
-            android:id="@+id/referencia"
+            android:id="@+id/campoNumeroMoradia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:background="#ffffff"
             android:ems="10"
-            android:inputType="date" />
+            android:inputType="date"/>
 
         <TextView
             android:id="@+id/Bairro"
@@ -167,6 +167,7 @@
 
     <Button
         android:id="@+id/btCadastra"
+        android:onClick="cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="246dp"
