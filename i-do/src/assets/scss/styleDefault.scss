@@ -34,6 +34,12 @@ $font: Quicksand, sans-serif;
     color: $color-primary;
 }
 
+%cardContainer {
+    height: 480px;
+    border-radius: 10px;
+    padding: 1%;
+}
+
 //EFEITO DE TRANSIÇÃO
 @keyframes fade {
     from {

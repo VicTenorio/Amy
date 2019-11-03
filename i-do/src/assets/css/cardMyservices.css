@@ -1,0 +1,66 @@
+.cardContainer {
+  height: 480px;
+  border-radius: 10px;
+  padding: 1%;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.cardContainer {
+  border: 2px solid #34326E;
+  transition: 0.2s ease-in-out;
+}
+.cardContainer:hover {
+  transition: 0.2s ease-in-out;
+  box-shadow: 2px 3px 10px 2px;
+}
+
+#ServiceName {
+  font-size: 14pt;
+  padding: 3%;
+}
+
+#ServiceDescription {
+  font-style: italic;
+  font-size: 10pt;
+  padding: 2%;
+}
+
+#ServicePrice {
+  padding: 3%;
+  font-size: 20pt;
+}
+
+#btnEditService {
+  padding: 3%;
+  background-color: #34326E;
+  color: white;
+  border: #34326E;
+  transition: 0.1s ease-in-out;
+}
+#btnEditService:hover {
+  background-color: #4d4aa3;
+  transition: 0.1s ease-in-out;
+}
+
+#btnDeleteService {
+  padding: 3%;
+  background-color: #dc3545;
+  border: #dc3545;
+  color: white;
+  transition: 0.1s ease-in-out;
+}
+#btnDeleteService:hover {
+  background-color: #e04b59;
+  transition: 0.1s ease-in-out;
+}
+
+/*# sourceMappingURL=cardMyservices.css.map */
