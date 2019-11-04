@@ -24,4 +24,24 @@ form {
   height: 2px;
 }
 
-/*# sourceMappingURL=userregister.css.map */
+.txt-input {
+  font: 1.5em Quicksand, sans-serif;
+  font-weight: 500;
+  margin-left: 3%;
+}
+
+.input-inp {
+  height: 60px;
+  width: 100%;
+}
+
+.input-btn {
+  border: 2px solid #FF9900;
+  outline: none;
+  border-radius: 50px;
+  width: 100%;
+  height: 60px;
+  margin-left: 18%;
+}
+
+/*# sourceMappingURL=userRegister.css.map */
