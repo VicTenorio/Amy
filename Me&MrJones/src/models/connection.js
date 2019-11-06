@@ -1,9 +1,9 @@
 
 const config = {
-    user: 'placebo',
-    password: 'info@211',
-    server: 'bosco.database.windows.net',
-    database: 'musical',
+    user: '',
+    password: '',
+    server: '',
+    database: '',
     options: {
         encrypt: true
     }
