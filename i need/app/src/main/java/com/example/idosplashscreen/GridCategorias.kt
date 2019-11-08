@@ -14,7 +14,7 @@ import com.example.idosplashscreen.Model.MyModel
 import kotlinx.android.synthetic.main.activity_grid_categorias.*
 
 
-class MainActivity : AppCompatActivity() {
+class GridCategorias : AppCompatActivity() {
 
     lateinit var adapter: MyAdapter
     lateinit var itemList:MutableList<MyModel>
@@ -22,13 +22,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_grid_categorias)
 
-        changeToLogin()
-        //InitData()
-        //setData()
+        //changeToLogin()
+        InitData()
+        setData()
     }
-/*
+
     private fun setData() {
         adapter = MyAdapter(this,itemList)
 
@@ -50,12 +50,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         recycler_view.layoutManager = layoutManager
-        recycler_view.addItemDecoration(SpacesItemDescoration(8))
+        recycler_view.addItemDecoration(SpacesItemDescoration(6))
         recycler_view.adapter = adapter
 
-    }*/
+    }
 
-   /* private fun InitData(){
+    private fun InitData(){
 
         itemList = ArrayList()
 
@@ -67,9 +67,9 @@ class MainActivity : AppCompatActivity() {
         itemList.add(MyModel(R.drawable.calendar, "calendar"))
         //itemList.add(MyItems(R.drawable.me_time, "MW"))
         //itemList.add(MyItems(R.drawable.me_time, "MW"))
-    }*/
+    }
 
-    fun changeToLogin()  {
+   /* fun changeToLogin()  {
 
         val intent = Intent(this, LoginActivity::class.java)
 
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
         startActivity(this)
         finish()
-    }
+    }*/
 
 }
 

@@ -13,9 +13,8 @@ class CadastroUsuarioAcessoConta : AppCompatActivity() {
         setContentView(R.layout.activity_cadastro_usuario_acesso_conta)
     }
 
-    fun bt_proximo(v:View){
+    fun bt_proximo_view(v:View){
         var cad = Intent(this, CadastroUsuarioDadosPessoaisActivity::class.java)
-
 
         var campoEmail = findViewById(R.id.campoEmail) as EditText
         var campoTelefone = findViewById(R.id.campoTelefone) as EditText
