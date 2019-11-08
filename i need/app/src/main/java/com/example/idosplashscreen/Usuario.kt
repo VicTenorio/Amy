@@ -11,35 +11,34 @@ data class Usuario (var id_usuario: Int,
                     var senha: String,
                     var sexo: String,
                     var telefone: String,
-                    var endereco: String
+                    var endereco: Endereco
 ){
     constructor():this(0,
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-                        false,
-                        "",
-                        "",
-                        "",
-                        "")
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        false,
+        "",
+        "",
+        "",
+         Endereco()
+    )
 
     fun toJson() : String{
-        return(
-        """"{"nome" : "${this.nome}",
+        return("""{"nome" : "${this.nome}",
             "email" : "${this.email}",
             "senha" : "${this.senha}",
-            "id" : ${this.id_usuario},
-            "endereco" : ${this.endereco},
+            "endereco" : ${this.endereco.toJson()},
             "imagem" : null,
             "cpfCnpj" : "${this.cpf_cnpj}",
             "RG" : "${this.rg}",
             "telefone" : "${this.telefone}",
-            "prestador" : false,
-            "sexo" : "M",
-            "estadoCivil" : "Solteiro",
+            "prestador" : ${prestador},
+            "sexo" : "${sexo}",
+            "estadoCivil" : "${this.estado_civil}",
             "dataNascimento" : "${this.data_nascimento}"}""")
 
     }

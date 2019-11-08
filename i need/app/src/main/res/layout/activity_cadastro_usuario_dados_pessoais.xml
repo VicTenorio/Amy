@@ -136,7 +136,7 @@
 
     <Button
         android:id="@+id/btProximo"
-        android:onClick="bt_proximo"
+        android:onClick="bt_proximo_view2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="246dp"

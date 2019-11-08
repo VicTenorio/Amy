@@ -20,6 +20,8 @@ import javax.net.ssl.HttpsURLConnection
 
 import java.math.BigInteger
 import java.security.MessageDigest
+import android.os.StrictMode
+import kotlinx.android.synthetic.main.activity_cadastro_endereco_usuario.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -27,6 +29,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
 
         tcadastro.setOnClickListener {
             val tela2 = Intent(this, CadastroUsuarioAcessoConta::class.java)
@@ -37,16 +42,24 @@ class LoginActivity : AppCompatActivity() {
     fun goToCadastro(v:View) {
         var editTextLogin = findViewById(R.id.tLogin) as EditText
         var editTextSenha = findViewById(R.id.tsenha) as EditText
-        var login = editTextLogin.getText().toString()
+        var email = editTextLogin.getText().toString()
         var senha = editTextSenha.getText().toString()
 
-        var reqParam = URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(login, "UTF-8")
-        reqParam += "&" + URLEncoder.encode("senha", "UTF-8") + "=" + URLEncoder.encode(senha, "UTF-8")
+        //var reqParam = URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(login, "UTF-8")
+        //reqParam += "&" + URLEncoder.encode("senha", "UTF-8") + "=" + URLEncoder.encode(senha, "UTF-8")
 
-        Login().execute(reqParam)
+        val http = Http()
+        var url ="http://10.0.2.2:3000/usuario/login"
+
+        var login:Login = Login(email,senha)
+
+        handleJson(http.post(url,login.toJson()))
+        //println(http.post(url,login.toJson()))
+
+        //Login().execute(reqParam)
 
         if(UsuarioLogado.idUsuario > 0){
-            var home = Intent(this, HomeActivity::class.java)
+            var home = Intent(this, GridCategorias::class.java)
 
             // enviando valores para a outra activity
             home.putExtra("idUsuario", UsuarioLogado.idUsuario)
@@ -62,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
         return BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')
     }
 
-    inner class Login : AsyncTask<String, String, String>() {
+   /* inner class Login : AsyncTask<String, String, String>() {
         override fun doInBackground(vararg parts: String): String? {
             //val requestURL = parts.first()
             var requestURL ="http://10.0.2.2:3000/usuario/login"
@@ -114,25 +127,28 @@ class LoginActivity : AppCompatActivity() {
 
             handleJson(result)
         }
-    }
+    }*/
 
     private fun handleJson(jsonString: String?) : Usuario{
 
         var jsonObject = JSONObject(jsonString)
 
+        var endereco = Endereco(
+        )
+
         var usuario = Usuario(
-                jsonObject.getInt("idUsuario"),
-                jsonObject.getString("RG"),
-                jsonObject.getString("CpfCnpj"),
-                jsonObject.getString("dataNascimento"),
-                jsonObject.getString("email"),
-                jsonObject.getString("estadoCivil"),
-                jsonObject.getString("nome"),
-                jsonObject.getBoolean("prestador"),
-                jsonObject.getString("senha"),
-                jsonObject.getString("sexo"),
-                jsonObject.getString("telefone"),
-                "0"//id endereco
+            jsonObject.getInt("idUsuario"),
+            jsonObject.getString("RG"),
+            jsonObject.getString("CpfCnpj"),
+            jsonObject.getString("dataNascimento"),
+            jsonObject.getString("email"),
+            jsonObject.getString("estadoCivil"),
+            jsonObject.getString("nome"),
+            jsonObject.getBoolean("prestador"),
+            jsonObject.getString("senha"),
+            jsonObject.getString("sexo"),
+            jsonObject.getString("telefone"),
+            endereco//id endereco
         )
 
         UsuarioLogado(usuario.id_usuario,usuario.nome)
