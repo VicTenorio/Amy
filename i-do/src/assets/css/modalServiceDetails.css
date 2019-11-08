@@ -1,3 +1,8 @@
+#btnAprovar, #btnReprovar {
+  border: 2px solid;
+  border-radius: 50px;
+}
+
 @keyframes fade {
   from {
     opacity: 0;
@@ -30,19 +35,28 @@
   background-color: #34326E;
 }
 
-#DayOfService {
-  font-size: 35pt;
+.dataClient {
+  color: #34326E;
 }
 
-#btnDetailsService {
-  background-color: #34326E;
-  border: 1px solid #34326E;
+#btnReprovar {
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
   color: white;
-  transition: 0.1s ease-in-out;
 }
-#btnDetailsService:hover {
-  background-color: #4d4aa3;
-  transition: 0.1s ease-in-out;
+#btnReprovar:hover {
+  background-color: #e4606d;
+  transition: 0.2s ease-in-out;
 }
 
-/*# sourceMappingURL=cardScheduleServices.css.map */
+#btnAprovar {
+  background-color: #FF9900;
+  border: 1px solid #FF9900;
+  color: white;
+}
+#btnAprovar:hover {
+  background-color: #ffad33;
+  transition: 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=modalservicedetails.css.map */
