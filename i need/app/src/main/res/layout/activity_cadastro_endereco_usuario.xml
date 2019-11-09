@@ -162,6 +162,20 @@
             android:background="#ffffff"
             android:ems="10"
             android:inputType="date" />
+        <TextView
+            android:id="@+id/pais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastro_pais"
+            android:textColor="#ff9900" />
+
+        <EditText
+            android:id="@+id/campoPais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:ems="10"
+            android:inputType="date" />
 
     </LinearLayout>
 

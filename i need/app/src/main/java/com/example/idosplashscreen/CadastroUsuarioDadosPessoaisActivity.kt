@@ -19,7 +19,7 @@ class CadastroUsuarioDadosPessoaisActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cadastro_usuario_dados_pessoais)
     }
 
-    fun bt_proximo(v: View){
+    fun bt_proximo_view2(v: View){
         var cad = Intent(this, CadastroEnderecoUsuario::class.java)
 
         val email = intent.getStringExtra("email")
@@ -47,7 +47,7 @@ class CadastroUsuarioDadosPessoaisActivity : AppCompatActivity() {
         cad.putExtra("CPF", CPF)
         cad.putExtra("dtNasc", dtNasc)
 
-
+/*
         var user = Usuario()
 
         user.id_usuario = 0
@@ -62,39 +62,8 @@ class CadastroUsuarioDadosPessoaisActivity : AppCompatActivity() {
         user.sexo = "Indefinido"
         user.telefone = telefone
         user.endereco = ""
-
-        sendPostRequest(user)
-
+*/
         startActivity(cad)
     }
 
-    fun sendPostRequest(usuario:Usuario) {
-
-        var reqParam = URLEncoder.encode("user", "UTF-8") + "=" + URLEncoder.encode(usuario.toJson(), "UTF-8")
-        val mURL = URL("https://ravenamy.azurewebsites.net/cadastro")
-
-        with(mURL.openConnection() as HttpURLConnection) {
-            // optional default is GET
-            requestMethod = "POST"
-
-            val wr = OutputStreamWriter(getOutputStream());
-            wr.write(reqParam);
-            wr.flush();
-
-            println("URL : $url")
-            println("Response Code : $responseCode")
-
-            BufferedReader(InputStreamReader(inputStream)).use {
-                val response = StringBuffer()
-
-                var inputLine = it.readLine()
-                while (inputLine != null) {
-                    response.append(inputLine)
-                    inputLine = it.readLine()
-                }
-                it.close()
-                println("Response : $response")
-            }
-        }
-    }
 }
