@@ -1,0 +1,51 @@
+@import '../scss/styleDefault.scss';
+
+.cardContainer {
+    @extend %cardContainer;
+    border: 2px solid $color-background;
+    transition: 0.2s ease-in-out;
+    &:hover {
+        transition: 0.2s ease-in-out;
+        box-shadow: 2px 3px 10px 2px;
+    }
+}
+
+#ServiceName {
+    font-size: 14pt;
+    padding: 3%;
+}
+
+#ServiceDescription {
+    font-style: italic;
+    font-size: 10pt;
+    padding: 2%;
+}
+
+#ServicePrice {
+    padding: 3%;
+    font-size: 20pt;
+}
+
+#btnEditService {
+    padding: 3%;
+    background-color: $color-background;
+    color: white;
+    border: $color-background;
+    transition: 0.1s ease-in-out;
+    &:hover {
+        background-color: lighten($color: $color-background, $amount: 15);
+        transition: 0.1s ease-in-out;
+    }
+}
+
+#btnDeleteService {
+    padding: 3%;
+    background-color: #dc3545;
+    border: #dc3545;
+    color: white;
+    transition: 0.1s ease-in-out;
+    &:hover {
+        background-color: lighten($color: #dc3545, $amount: 5);
+        transition: 0.1s ease-in-out;
+    }
+}

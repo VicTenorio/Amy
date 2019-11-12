@@ -8,6 +8,8 @@ import ServiceRegister from '../src/Pages/serviceRegister';
 import MeusServicos from '../src/Pages/my-services';
 import UserRegister from '../src/Pages/userRegister';
 import ScheduledServices from '../src/Pages/scheduledServices';
+import CardMyServices from '../src/components/cardMyServices';
+import cardScheduleServices from '../src/components/cardScheduleServices';
 
 ReactDOM.render(
         <BrowserRouter>
@@ -18,6 +20,8 @@ ReactDOM.render(
                 <Route path="/cadastroDeServico" component={ServiceRegister}/>
                 <Route path="/meusServicos" component={MeusServicos}/>
                 <Route path="/servicosAgendados" component={ScheduledServices}/>
+                <Route path="/cardMyServices" component={CardMyServices} />
+                <Route path="/cardScheduleServices" component={cardScheduleServices} />
             </Switch>
         </BrowserRouter>
     , document.getElementById('root'));

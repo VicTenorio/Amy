@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/scheduledServices.css';
-import Navbar from '../components/navbarLogged'
+import Navbar from '../components/navbarLogged';
+import CardScheduleServices from '../components/cardScheduleServices';
 
 class ScheduledServices extends React.Component {
     render() {
@@ -25,7 +26,8 @@ class ScheduledServices extends React.Component {
                         <button id="applyFilter" type="submit" className="btn">Aplicar filtro</button>
                     </div>
                 </div>
-                <label id="noRegister" className="w-100" align="center">Usuário, você ainda não possui serviços agendados.</label>
+                {/* <label id="noRegister" className="w-100" align="center">Usuário, você ainda não possui serviços agendados.</label> */}
+                <CardScheduleServices/>
             </div>
         )
     }
