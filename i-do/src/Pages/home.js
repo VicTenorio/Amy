@@ -22,18 +22,18 @@ class Home extends React.Component {
                                     </div>
                                     <div className="col-xl-6 p-3">
                                         <div className="row">
-                                            <Link to="/cadastroDeServico" className="col">
+                                            <Link to="/cadastroDeServico" className="col link">
                                                 <div className="p-3 justify-content-center item-catalogo">
-                                                    <h4>Cadastre seus serviços</h4>
+                                                    <h4 class="link">Cadastre seus serviços</h4>
                                                     <hr />
-                                                    <p>Encontre quem precisa da sua ajuda e aumente seu portfólio. Dê o primeiro passo cadastrando seus serviços!</p>
+                                                    <p class="link">Encontre quem precisa da sua ajuda e aumente seu portfólio. Dê o primeiro passo cadastrando seus serviços!</p>
                                                 </div>
                                             </Link>
-                                            <Link to="/meusServicos" className="col">
+                                            <Link to="/meusServicos" className="col link">
                                                 <div className="p-3 justify-content-center item-catalogo">
-                                                    <h4>Meus serviços</h4>
+                                                    <h4 class="link">Meus serviços</h4>
                                                     <hr />
-                                                    <p>Acesse seus serviços cadastrados no sistema e acompanhe os que já estão agendados.</p>
+                                                    <p class="link">Acesse seus serviços cadastrados no sistema e acompanhe os que já estão agendados.</p>
                                                 </div>
                                             </Link>
                                         </div>
