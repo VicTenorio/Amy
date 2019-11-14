@@ -13,24 +13,24 @@ class ServiceRegister extends React.Component {
                         <div className="row p-2">
                             <div className="col">
                                 <label className="row">Nome</label>
-                                <input id="txtName" className="row w-100" type="text" />
+                                <input id="txtName" className="row w-100" type="text" placeholder="Ex: Encanador" />
                             </div>
                             <div className="col">
                                 <label className="row">Preço</label>
-                                <input id="txtPrice" className="row w-50" />
+                                <input id="txtPrice" className="row w-50" placeholder="R$ 100,00"/>
                             </div>
                         </div>
                         <div className="row p-2">
                             <div className="col">
                                 <label className="row w-75">Descrição</label>
-                                <textarea id="txtDescription" className="row w-75" />
+                                <textarea id="txtDescription" className="row w-75" placeholder="Faço trabalhos de encanador, conserto pias"/>
                             </div>
                         </div>
                         <div className="col mt-2">
                             <label className="row">Local de atendimento</label>
                         </div>
                         <div className="row p-3">
-                            <input type="radio" name="localServico" />
+                            <input type="radio" name="localServico" checked />
                             <label>Atendimento a domicílio</label>
 
                             <input type="radio" name="localServico" />
@@ -39,7 +39,7 @@ class ServiceRegister extends React.Component {
                         <div className="row p-2">
                             <div className="col">
                                 <label className="row">Estimativa de tempo</label>
-                                <input id="txtTime" className="row" type="text" />
+                                <input id="txtTime" className="row" type="text" placeholder="2 horas" />
                             </div>
                             <div className="col">
                                 <label className="row">Selecione a categoria</label>
