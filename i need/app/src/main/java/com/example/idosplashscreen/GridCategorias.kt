@@ -24,7 +24,6 @@ class GridCategorias : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grid_categorias)
 
-        //changeToLogin()
         InitData()
         setData()
     }
@@ -65,25 +64,9 @@ class GridCategorias : AppCompatActivity() {
         itemList.add(MyModel(R.drawable.team_time, "team"))
         itemList.add(MyModel(R.drawable.friends, "friends"))
         itemList.add(MyModel(R.drawable.calendar, "calendar"))
-        //itemList.add(MyItems(R.drawable.me_time, "MW"))
-        //itemList.add(MyItems(R.drawable.me_time, "MW"))
+        itemList.add(MyModel(R.drawable.me_time, "MW"))
+        itemList.add(MyModel(R.drawable.me_time, "MW"))
     }
-
-   /* fun changeToLogin()  {
-
-        val intent = Intent(this, LoginActivity::class.java)
-
-        Handler().postDelayed({
-            intent.change()
-        },2000)
-
-    }
-    fun Intent.change(){
-
-
-        startActivity(this)
-        finish()
-    }*/
 
 }
 
