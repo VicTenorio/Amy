@@ -34,9 +34,22 @@ class ModalServiceDetails extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer justify-content-center">
-                                <input type="button" className="w-25" id="btnReprovar" data-dismiss="modal" value="Reprovar" />
-                                <input type="button" className="w-25" id="btnAprovar" value="Aprovar" />
+                            <div id="modalFooter">
+                                <div class="modal-footer justify-content-center" id="AproveButtons">
+                                    <input type="button" className="w-25" id="btnReprovar" data-dismiss="modal" value="Reprovar" />
+                                    <input type="button" className="w-25" id="btnAprovar" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" value="Aprovar" />
+                                </div>
+                            </div>
+                            <div class="collapse" id="confirmAprove">
+                                <div class="card card-body">
+                                    <label>
+                                        Você tem certeza que quer confirmar este agendamento?
+                                    </label>
+                                    <div className="justify-content-center row w-100">
+                                        <input type="button" className="col-xl-4" id="btnRate" value="Avaliar melhor" />
+                                        <input type="button" className="col-xl-4" id="btnConfirm" value="Confirmar!" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
