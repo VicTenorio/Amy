@@ -46,4 +46,63 @@ form {
   height: 2px;
 }
 
+.input-rua {
+  width: 100%;
+  height: 50px;
+}
+
+.input-meio {
+  height: 50px;
+  width: 80%;
+}
+
+.input-number {
+  width: 120%;
+  height: 50px;
+  margin-left: 30%;
+}
+
+.txt-input {
+  font: 1.5em Quicksand, sans-serif;
+  font-weight: 500;
+  margin-left: 3%;
+}
+
+.input-inp {
+  height: 60px;
+  width: 100%;
+}
+
+.input-btn {
+  border: 2px solid #FF9900;
+  outline: none;
+  border-radius: 50px;
+  width: 100%;
+  height: 60px;
+  margin-left: 18%;
+}
+
+.btn-cadastrar {
+  background-color: #34326E;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  width: 55%;
+  padding: 2%;
+  font: 1.5em Quicksand, sans-serif;
+  font-weight: 500;
+  color: #B0ACAC;
+}
+
+.btn-wrapper {
+  padding: 2%;
+  margin-left: 40%;
+}
+
+.footer-register {
+  background-color: #FF9900;
+  height: 90px;
+  width: 120%;
+  margin-left: -18%;
+}
+
 /*# sourceMappingURL=userRegister.css.map */

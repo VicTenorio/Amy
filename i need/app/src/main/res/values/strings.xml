@@ -61,5 +61,18 @@
     <string name="bt_cancelar">Cancelar</string>
     <string name="bt_proximo">Proximo</string>
 
+    <!--Categorias-->
+
+    <string name="grid_categoria">CATEGORIAS</string>
+    <string name="grid_auto">Auto</string>
+    <string name="grid_construção">Construção</string>
+    <string name="grid_entregasEncomendas">Entregas   e encomendas</string>
+    <string name="grid_Domesticos">Domésticos</string>
+    <string name="grid_exteticaModa">Extetica e Moda</string>
+    <string name="grid_informaticaTecnologia">Informatica e Tecnologia</string>
+    <string name="grid_educacao">Educação</string>
+    <string name="grid_eventosMusicasDecoracoes">Eventos Musicas e Decorações</string>
+
+
 
 </resources>

@@ -24,7 +24,6 @@ class GridCategorias : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grid_categorias)
 
-        //changeToLogin()
         InitData()
         setData()
     }
@@ -59,31 +58,15 @@ class GridCategorias : AppCompatActivity() {
 
         itemList = ArrayList()
 
-        itemList.add(MyModel(R.drawable.me_time, "Me"))
-        itemList.add(MyModel(R.drawable.family_time, "family"))
-        itemList.add(MyModel(R.drawable.lovely_time, "lovely"))
-        itemList.add(MyModel(R.drawable.team_time, "team"))
-        itemList.add(MyModel(R.drawable.friends, "friends"))
-        itemList.add(MyModel(R.drawable.calendar, "calendar"))
-        //itemList.add(MyItems(R.drawable.me_time, "MW"))
-        //itemList.add(MyItems(R.drawable.me_time, "MW"))
+        itemList.add(MyModel(R.drawable.car, getString(R.string.grid_auto)))
+        itemList.add(MyModel(R.drawable.website, getString(R.string.grid_informaticaTecnologia)))
+        itemList.add(MyModel(R.drawable.house, getString(R.string.grid_Domesticos)))
+        itemList.add(MyModel(R.drawable.brickwall, getString(R.string.grid_construção)))
+        itemList.add(MyModel(R.drawable.mortarboard, getString(R.string.grid_educacao)))
+        itemList.add(MyModel(R.drawable.box, getString(R.string.grid_entregasEncomendas)))
+        itemList.add(MyModel(R.drawable.salon, getString(R.string.grid_exteticaModa)))
+        itemList.add(MyModel(R.drawable.calendario, getString(R.string.grid_eventosMusicasDecoracoes)))
     }
-
-   /* fun changeToLogin()  {
-
-        val intent = Intent(this, LoginActivity::class.java)
-
-        Handler().postDelayed({
-            intent.change()
-        },2000)
-
-    }
-    fun Intent.change(){
-
-
-        startActivity(this)
-        finish()
-    }*/
 
 }
 

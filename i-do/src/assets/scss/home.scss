@@ -24,20 +24,27 @@
 
 .item-catalogo {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     color:$color-primary;
-    border: 2px solid $color-primary;
-    border-radius: 15px;
+    border: 1px solid $color-primary;
+    border-radius: 10px 10px 10px 0px;
     text-decoration: none;
     font-family: 16pt Quicksand, sans-serif;
     font-size: 20px;
     &:hover {
-        border: 2px solid #000423;
-        background-color: darken($color: $color-primary, $amount: 1);
-        color: white;
+        border: 1px solid $color-gray;
+        background-color: darken($color: #000423, $amount: 1);
+        color: $color-gray;
         transition: 0.1s ease-in-out;
         text-decoration: none;
     }
+}
+
+.link {
+    text-decoration: none;
+    &:hover {
+    text-decoration: none;
+  }
 }
 
 #light {
@@ -50,9 +57,9 @@
 
 #iNeed, #iDo {
     background-color: white;
-    border: 1px solid rgb(107, 107, 107);
+    border: 1px solid $color-gray;
     border-radius: 10px 10px 0px 30px;
-    box-shadow: 1px 1px 0px 0px rgb(107, 107, 107);
+    box-shadow: 2px 4px 0px 0px rgb(107, 107, 107);
 }
 
 #titleIneed, #titleIdo {

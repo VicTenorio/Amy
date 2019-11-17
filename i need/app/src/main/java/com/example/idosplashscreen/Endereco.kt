@@ -33,19 +33,6 @@ data class Endereco (private var id: Int,
         null,
         null)
 
-    /*fun toJson() : String{
-        return(
-                """"{"rua" : "${this.rua}",
-            "cep" : "${this.cep}",
-            "complemento" : "${this.complemento}",
-            "numero" : ${this.numero},
-            "referencia" : ${this.referencia},
-            "bairro" : "${this.bairro}",
-            "cidade" : "${this.cidade}",
-            "estado" : "${this.estado}",
-            "pais" : "${this.pais}"}""")
-
-    }*/
 
     fun toJson() : String{
         return(
