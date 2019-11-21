@@ -48,6 +48,10 @@ class LoginActivity : AppCompatActivity() {
         handleJson(http.post(url,login.toJson()))
         //println(http.post(url,login.toJson()))
 
+        var url2 = "http://ravenamy.azurewebsites.net/Servicos/Categoria?categoria=47&login=69"
+
+        println(http.get(url2))
+
         //Login().execute(reqParam)
 
         if(UsuarioLogado.idUsuario > 0){
