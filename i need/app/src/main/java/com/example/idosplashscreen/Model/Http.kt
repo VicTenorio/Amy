@@ -1,9 +1,8 @@
-package com.example.idosplashscreen
+package com.example.idosplashscreen.Model
 
 import java.io.*
 import java.net.HttpURLConnection
 import java.net.URL
-import java.nio.charset.StandardCharsets
 
 class Http {
 

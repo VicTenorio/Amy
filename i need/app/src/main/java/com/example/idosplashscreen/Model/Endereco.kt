@@ -1,4 +1,4 @@
-package com.example.idosplashscreen
+package com.example.idosplashscreen.Model
 
 data class Endereco (private var id: Int,
 

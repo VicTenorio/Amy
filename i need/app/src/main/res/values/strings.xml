@@ -74,5 +74,13 @@
     <string name="grid_eventosMusicasDecoracoes">Eventos Musicas e Decorações</string>
 
 
+    <!--==============================APIS================================-->
+    <!--Login-->
+    <string name="api_login">http://10.0.2.2:3000/usuario/login</string>
+    <!--Cadastro Usuario-->
+    <string name="api_cadastro_usuario">https://10.0.2.2:8080/cadastro</string>
+    <!--Servicos-->
+    <string name="api_servicos"></string>
+
 
 </resources>

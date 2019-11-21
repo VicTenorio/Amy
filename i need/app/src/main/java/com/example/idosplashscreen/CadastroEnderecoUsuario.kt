@@ -1,20 +1,13 @@
 package com.example.idosplashscreen
 
-import android.content.Intent
-import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.View
 import android.widget.EditText
-import org.json.JSONObject
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.io.OutputStream
-import java.io.OutputStreamWriter
-import java.net.HttpURLConnection
-import java.net.URL
-import java.net.URLEncoder
+import com.example.idosplashscreen.Model.Endereco
+import com.example.idosplashscreen.Model.Http
+import com.example.idosplashscreen.Model.Usuario
 
 class CadastroEnderecoUsuario : AppCompatActivity() {
 
@@ -57,12 +50,38 @@ class CadastroEnderecoUsuario : AppCompatActivity() {
         var estado = campoEstado.text.toString()
         var pais = campoPais.text.toString()
 
-        var endereco:Endereco = Endereco(0,rua,CEP,complemento,numeroMoradia,referencia,bairro,cidade,estado,pais)
-        var usuario:Usuario = Usuario(0,RG,CPF,dtNasc,email,"estado_civil",nomeCompleto,true,senha,"M",telefone,endereco)
+        var endereco: Endereco =
+            Endereco(
+                0,
+                rua,
+                CEP,
+                complemento,
+                numeroMoradia,
+                referencia,
+                bairro,
+                cidade,
+                estado,
+                pais
+            )
+        var usuario: Usuario =
+            Usuario(
+                0,
+                RG,
+                CPF,
+                dtNasc,
+                email,
+                "estado_civil",
+                nomeCompleto,
+                true,
+                senha,
+                "M",
+                telefone,
+                endereco
+            )
 
         val http = Http()
 
-        var url = "https://10.0.2.2:8080/cadastro"
+        var url = getString(R.string.api_cadastro_usuario)
 
         print("usuario>>>"+usuario.toJson())
         //print("ALGUMACOISA>>>>>"+http.post(url,usuario.toJson()))

@@ -1,4 +1,4 @@
-package com.example.idosplashscreen
+package com.example.idosplashscreen.Model
 
 data class Login (
     var email:String?,
