@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface TodosImagemServicoDAL extends JpaRepository<ImagemServicoEntity,Integer> {
 
-    @Query("from ImagemServicoEntity where idServico = ?1")
+    @Query("from ImagemServicoEntity where id_Servico = ?1")
     List<ImagemServicoEntity> GetAllByServiceId(int id);
 }

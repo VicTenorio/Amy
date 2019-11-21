@@ -2,8 +2,15 @@ import React from 'react';
 import NavbarLogged from '../components/navbarLogged';
 import '../assets/css/my-services.css';
 import CardMyServices from '../components/cardMyServices';
+import {getAllByUser} from '../Models/ModelService';
 
 class MyServices extends React.Component {
+
+    componentWillMount(){
+        const servico = getAllByUser(165);
+        console.log(servico);
+    }
+   
     render() {
         return (
             <div>

@@ -4,7 +4,7 @@ import '../assets/css/footer.css'
 class Footer extends React.Component {
     render() {
         return (
-            <div>
+            <div className="us w-100">
                 <footer className="us row w-100">
                     <div className="col">
                         <p className="description p-5">Somos Amy! idealizada a contornar

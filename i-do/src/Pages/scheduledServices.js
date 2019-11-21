@@ -4,6 +4,9 @@ import Navbar from '../components/navbarLogged';
 import CardScheduleServices from '../components/cardScheduleServices';
 
 class ScheduledServices extends React.Component {
+    
+
+
     render() {
         return (
             <div>

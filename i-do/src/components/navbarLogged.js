@@ -11,7 +11,7 @@ class NavbarLogged extends React.Component {
                     <Link to="/" className="navbar-brand">
                         <img id="logoServices" src={logoCinza} />
                     </Link>
-                    <form id="form" className="row w-100 form-inline justify-content-center p-3">
+                    <form id="form" className="row w-100 form-inline justify-content-center p-1">
                         <Link to="/meusServicos">
                             <button id="btnMeusServicos" className="btnNavLogged">Meus serviços</button>
                         </Link>

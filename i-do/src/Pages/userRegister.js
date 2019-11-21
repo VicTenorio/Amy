@@ -66,9 +66,114 @@ class userRegister extends React.Component {
                     <div class="row title-register">
                         <p>Dados de Acesso e Contato</p>
                     </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p class="txt-input">Email</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="txt-input">Telefone</p>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-5">
+                            <input class="input-meio" />
+                        </div>
+                        <div class="col-5">
+                            <input class="input-meio" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5">
+                            <p class="txt-input">Senha</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="txt-input">Confirmar senha</p>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-5">
+                            <input class="input-meio" />
+                        </div>
+                        <div class="col-5">
+                            <input class="input-meio" />
+                        </div>
+                    </div>
+
                     <div class="row title-register">
                         <p>Endereço</p>
                     </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="txt-input">Rua</p>
+                        </div>
+                        <div class="col-2 ml-5">
+                            <p class="txt-input">Número</p>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-6">
+                            <input class="input-rua" />
+                        </div>
+                        <div class="col-2">
+                            <input class="input-number" />
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <p class="txt-input">Referência</p>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-9">
+                            <input class="input-inp" />
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <p class="txt-input">Complemento</p>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-9">
+                            <input class="input-inp" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p class="txt-input">CEP</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="txt-input">Bairro</p>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-5">
+                            <input class="input-meio" />
+                        </div>
+                        <div class="col-5">
+                            <input class="input-meio" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p class="txt-input">Cidade</p>
+                        </div>
+                        <div class="col-5">
+                            <p class="txt-input">Estado</p>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-5">
+                            <input class="input-meio" />
+                        </div>
+                        <div class="col-5">
+                            <input class="input-meio" />
+                        </div>
+                    </div>
+                    <div class="row btn-wrapper">
+                        <button class='btn-cadastrar'>Cadastrar</button>
+                    </div>
+                    <div class="footer-register">
+
+                    </div>
+
                 </form>
             </div>
         )

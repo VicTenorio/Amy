@@ -54,19 +54,26 @@
 
 .item-catalogo {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   color: #FF9900;
-  border: 2px solid #FF9900;
-  border-radius: 15px;
+  border: 1px solid #FF9900;
+  border-radius: 10px 10px 10px 0px;
   text-decoration: none;
   font-family: 16pt Quicksand, sans-serif;
   font-size: 20px;
 }
 .item-catalogo:hover {
-  border: 2px solid #000423;
-  background-color: #fa9600;
-  color: white;
+  border: 1px solid #B0ACAC;
+  background-color: #00031e;
+  color: #B0ACAC;
   transition: 0.1s ease-in-out;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
+.link:hover {
   text-decoration: none;
 }
 
@@ -80,9 +87,9 @@
 
 #iNeed, #iDo {
   background-color: white;
-  border: 1px solid #6b6b6b;
+  border: 1px solid #B0ACAC;
   border-radius: 10px 10px 0px 30px;
-  box-shadow: 1px 1px 0px 0px #6b6b6b;
+  box-shadow: 2px 4px 0px 0px #6b6b6b;
 }
 
 #titleIneed, #titleIdo {
