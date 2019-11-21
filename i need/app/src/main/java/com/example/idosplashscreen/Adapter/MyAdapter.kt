@@ -1,21 +1,20 @@
 package com.example.idosplashscreen.Adapter
 
 import android.content.Context
-import android.service.autofill.OnClickAction
+import android.content.Intent
 import android.view.LayoutInflater
-import android.view.OrientationEventListener
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idosplashscreen.Common.Common
 import com.example.idosplashscreen.Interface.IcardIntemClickListener
 import com.example.idosplashscreen.Model.MyModel
 import com.example.idosplashscreen.R
-import kotlinx.android.synthetic.main.layout_card_square.view.*
-import java.security.AccessControlContext
+import com.example.idosplashscreen.ServiceActivity
 
 class MyAdapter(internal var  context: Context,
                 internal var myItems: List<MyModel>):RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
@@ -34,9 +33,19 @@ class MyAdapter(internal var  context: Context,
         p0.img_icon.setImageResource(myItems[p1].icon)
         p0.txt_description.text = myItems[p1].description
 
+
+        //==========================================
+        // Define o OnClick dos items no gridView
+        //==========================================
         p0.setEvent(object :IcardIntemClickListener{
             override fun onCartItemClick(view: View, position: Int) {
-                Toast.makeText(context,"Clicked:"+ myItems[position].description,Toast.LENGTH_SHORT).show()}
+                Toast.makeText(context,"Clicked:"+ myItems[position].idServico,Toast.LENGTH_SHORT).show()
+
+                if(myItems[position].idServico == 1){
+                    var cad = Intent(view.context,ServiceActivity::class.java)
+                    ContextCompat.startActivity(view.context,cad,null)
+                }
+            }
         })
     }
 

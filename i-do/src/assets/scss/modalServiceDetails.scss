@@ -4,7 +4,7 @@
     color: $color-background;
 }
 
-#btnReprovar {
+#btnReprovar, #btnRate {
     @extend %buttonStyle;
     background-color: #dc3545;
     border: 1px solid #dc3545;
@@ -23,5 +23,15 @@
     &:hover {
         background-color: lighten($color: $color-primary, $amount: 10);
         transition: 0.2s ease-in-out;
+    }
+}
+
+#btnConfirm {
+    @extend %buttonStyle;
+    background-color: $color-background;
+    border: $color-background;
+    color: white;
+    &:hover {
+        background-color: lighten($color: $color-background, $amount: 10)
     }
 }
