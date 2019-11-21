@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/serviceRegister.css';
 import NavbarLogged from '../components/navbarLogged';
+import Request from '../Requests/serviceRegisterRequest'
 
 class ServiceRegister extends React.Component {
     render() {
@@ -57,7 +58,7 @@ class ServiceRegister extends React.Component {
 
                         </div>
                         <div className="row w-100 justify-content-center">
-                            <button id="btnServiceRegister" className="mt-3 w-50" type="submit" onClick="serviceRegisterRequest">Cadastrar</button>
+                            <button id="btnServiceRegister" className="mt-3 w-50" type="submit" onClick={Request}>Cadastrar</button>
                         </div>
                     </div>
                 </div>

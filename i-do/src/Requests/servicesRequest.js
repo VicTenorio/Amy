@@ -30,7 +30,6 @@ export function getServicesByUser(userId) {
         });
 }
 
-
 function populate(data) {
     let listServices = []
     data.forEach(element => {
