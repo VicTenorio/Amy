@@ -1,4 +1,6 @@
-package com.example.idosplashscreen
+package com.example.idosplashscreen.Model
+
+import com.example.idosplashscreen.Model.Endereco
 
 data class Usuario (var id_usuario: Int,
                     var rg: String,
@@ -24,7 +26,7 @@ data class Usuario (var id_usuario: Int,
         "",
         "",
         "",
-         Endereco()
+        Endereco()
     )
 
     fun toJson() : String{

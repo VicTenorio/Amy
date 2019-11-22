@@ -6,22 +6,13 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_login.*
 
 import android.view.View
-import java.net.HttpURLConnection
-import java.net.URL
-import java.net.URLEncoder
-import android.os.AsyncTask
 import android.widget.EditText
-import kotlinx.android.synthetic.main.activity_login.*
-import org.json.JSONArray
 import org.json.JSONObject
-import java.io.*
-import java.nio.charset.StandardCharsets
-import javax.net.ssl.HttpsURLConnection
 
 import java.math.BigInteger
 import java.security.MessageDigest
 import android.os.StrictMode
-import kotlinx.android.synthetic.main.activity_cadastro_endereco_usuario.*
+import com.example.idosplashscreen.Model.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -49,12 +40,17 @@ class LoginActivity : AppCompatActivity() {
         //reqParam += "&" + URLEncoder.encode("senha", "UTF-8") + "=" + URLEncoder.encode(senha, "UTF-8")
 
         val http = Http()
-        var url ="http://10.0.2.2:3000/usuario/login"
+        var url = getString(R.string.api_login)
 
-        var login:Login = Login(email,senha)
+        var login: Login =
+            Login(email, senha)
 
         handleJson(http.post(url,login.toJson()))
         //println(http.post(url,login.toJson()))
+
+        var url2 = "http://ravenamy.azurewebsites.net/Servicos/Categoria?categoria=47&login=69"
+
+        println(http.get(url2))
 
         //Login().execute(reqParam)
 
@@ -129,7 +125,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }*/
 
-    private fun handleJson(jsonString: String?) : Usuario{
+    private fun handleJson(jsonString: String?) : Usuario {
 
         var jsonObject = JSONObject(jsonString)
 
@@ -151,7 +147,7 @@ class LoginActivity : AppCompatActivity() {
             endereco//id endereco
         )
 
-        UsuarioLogado(usuario.id_usuario,usuario.nome)
+        UsuarioLogado(usuario.id_usuario, usuario.nome)
         return usuario
     }
 

@@ -12,47 +12,56 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idosplashscreen.Common.Common
 import com.example.idosplashscreen.Interface.IcardIntemClickListener
-import com.example.idosplashscreen.Model.MyModel
+import com.example.idosplashscreen.Model.Service
 import com.example.idosplashscreen.R
 import com.example.idosplashscreen.ServiceActivity
+import com.squareup.picasso.Picasso
 
-class MyAdapter(internal var  context: Context,
-                internal var myItems: List<MyModel>):RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class ServiceAdapter(internal var  context: Context,
+                internal var myItems: ArrayList<Service>):RecyclerView.Adapter<ServiceAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
         val itemView = LayoutInflater.from(context)
-            .inflate(R.layout.layout_card_square,p0,false)
+            .inflate(R.layout.list_item_service,p0,false)
         return MyViewHolder(itemView)
     }
 
+    // lets ListView know how many items to display, or in other words, it returns the size of your data source.
     override fun getItemCount(): Int {
         return myItems.size
     }
 
-    override fun onBindViewHolder(p0: MyViewHolder, p1: Int) {
-        p0.img_icon.setImageResource(myItems[p1].icon)
-        p0.txt_description.text = myItems[p1].description
+    //  the getItemId() method that defines a unique ID for each row in the list.
+    //  For simplicity, you just use the position of the item as its ID.
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
+    }
 
+    override fun onBindViewHolder(p0: MyViewHolder, p1: Int) {
+        //p0.img_icon.setImageResource(myItems[p1].icon)
+        //p0.txt_description.text = myItems[p1].description
+
+        p0.descricao.text = myItems[p1].descricao
+
+        Picasso
+            .get()//.with(context)
+            .load(myItems[p1].imagem)//service.Imagem
+            .placeholder(R.mipmap.ic_launcher)
+            .into(p0.imagem)
 
         //==========================================
         // Define o OnClick dos items no gridView
         //==========================================
         p0.setEvent(object :IcardIntemClickListener{
             override fun onCartItemClick(view: View, position: Int) {
-                Toast.makeText(context,"Clicked:"+ myItems[position].idServico,Toast.LENGTH_SHORT).show()
-
-                if(myItems[position].idServico == 1){
-                    var cad = Intent(view.context,ServiceActivity::class.java)
-                    ContextCompat.startActivity(view.context,cad,null)
-                }
             }
         })
     }
 
 
     class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView),View.OnClickListener {
-        internal var img_icon:ImageView
-        internal var txt_description:TextView
+        internal var imagem:ImageView
+        internal var descricao:TextView
         internal  lateinit var iCardItemClikListener:IcardIntemClickListener
 
         fun setEvent(icardIntemClickListener: IcardIntemClickListener)
@@ -61,8 +70,8 @@ class MyAdapter(internal var  context: Context,
         }
 
         init {
-            img_icon =itemView.findViewById<View>(R.id.img_icon) as ImageView
-            txt_description = itemView.findViewById(R.id.txt_descripition) as TextView
+            imagem =itemView.findViewById<View>(R.id.service_image) as ImageView
+            descricao = itemView.findViewById(R.id.service_description) as TextView
 
             itemView.setOnClickListener(this)
 

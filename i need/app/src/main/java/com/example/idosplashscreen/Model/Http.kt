@@ -1,13 +1,36 @@
-package com.example.idosplashscreen
+package com.example.idosplashscreen.Model
 
 import java.io.*
 import java.net.HttpURLConnection
 import java.net.URL
-import java.nio.charset.StandardCharsets
 
 class Http {
 
-    fun get(){
+    fun get(vararg parts: String):String?{
+        var requestURL = parts.first()
+        val mURL = URL(requestURL)
+
+        with(mURL.openConnection() as HttpURLConnection) {
+            // optional default is GET
+            requestMethod = "GET"
+
+            println("URL : $url")
+            println("Response Code : $responseCode")
+
+            BufferedReader(InputStreamReader(inputStream)).use {
+                val response = StringBuffer()
+
+                var inputLine = it.readLine()
+                while (inputLine != null) {
+                    response.append(inputLine)
+                    inputLine = it.readLine()
+                }
+                it.close()
+                //println("Response : $response")
+
+                return response.toString()
+            }
+        }
 
     }
 
