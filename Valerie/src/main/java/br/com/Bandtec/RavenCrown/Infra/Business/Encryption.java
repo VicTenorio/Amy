@@ -2,6 +2,7 @@ package br.com.Bandtec.RavenCrown.Infra.Business;
 
 import org.springframework.stereotype.Component;
 
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -9,21 +10,30 @@ import java.security.NoSuchAlgorithmException;
 public class Encryption {
 
     private static String GenerateStringHash(String password, int salt) throws NoSuchAlgorithmException {
-        String compoundPassword = password + salt;
-        MessageDigest md = MessageDigest.getInstance("MD5");
-        md.update(compoundPassword .getBytes());
-        byte[] passwordByte = md.digest();
-        StringBuilder s = new StringBuilder();
-        for (int i = 0; i < passwordByte.length; i++) {
-            int highPart = ((passwordByte[i] >> 4) & 0xf) << 4;
-            int lowPart = passwordByte[i] & 0xf;
-            if (highPart == 0) {
-                s.append('0');
-            }
-            s.append(Integer.toHexString(highPart | lowPart));
-        }
-        return s.toString();
+        try {
 
+            // Static getInstance method is called with hashing MD5
+            MessageDigest md = MessageDigest.getInstance("MD5");
+
+            // digest() method is called to calculate message digest
+            //  of an input digest() return array of byte
+            byte[] messageDigest = md.digest(password.getBytes());
+
+            // Convert byte array into signum representation
+            BigInteger no = new BigInteger(1, messageDigest);
+
+            // Convert message digest into hex value
+            String hashtext = no.toString(16);
+            while (hashtext.length() < 32) {
+                hashtext = "0" + hashtext;
+            }
+            return hashtext;
+        }
+
+        // For specifying wrong message digest algorithms
+        catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String Encript(String string){

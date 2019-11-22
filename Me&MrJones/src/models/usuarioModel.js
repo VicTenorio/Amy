@@ -1,5 +1,6 @@
 const sql = require("mssql")
 var config = require("../models/connection");
+var md5 = require("md5");
 
 module.exports = class Usuario {
 
@@ -60,6 +61,8 @@ module.exports = class Usuario {
 
     login(email, senha, res) {
         const user = new Usuario();
+        senha = md5(senha)
+        console.log(">>>"+senha)
         sql.connect(config).then(async () => {
             var resultado = await sql.query`select * from usuario where email = ${email} and senha = ${senha}`            
             resultado.recordset.forEach(x => {

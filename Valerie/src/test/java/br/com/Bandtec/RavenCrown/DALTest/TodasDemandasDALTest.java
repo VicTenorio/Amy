@@ -24,7 +24,7 @@ import java.util.List;
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-@Commit
+//@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -64,7 +64,7 @@ public class TodasDemandasDALTest {
         assertEquals(demandaPerssitido, demanda);
     }
 
-    @Test
+    //@Test
     public void ObterDemandaTest() {
         List<DemandaEntity> todasDamandas = demandasDAL.findAll();
 

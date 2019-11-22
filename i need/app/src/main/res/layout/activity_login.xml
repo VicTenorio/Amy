@@ -49,7 +49,7 @@
             android:id="@+id/tLogin"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="teste@teste-331512853"
+            android:text="top@outlook.com"
             android:background="#ffffff"
             android:ems="10"
             android:inputType="textPersonName"

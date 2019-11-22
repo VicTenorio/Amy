@@ -28,7 +28,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-@Commit
+//@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -57,7 +57,7 @@ public class TodosComentariosDALTest {
     }
 
 
-    @Test
+    //@Test
     public void ComentarioGetTest(){
 
         List<ComentarioEntity> comentario = todosComentariosDAL.findAll();
