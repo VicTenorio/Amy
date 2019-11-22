@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
 
         var url2 = "http://ravenamy.azurewebsites.net/Servicos/Categoria?categoria=47&login=69"
 
-        println(http.get(url2))
+        //println(http.get(url2))
 
         //Login().execute(reqParam)
 
