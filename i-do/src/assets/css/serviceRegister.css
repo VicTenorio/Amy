@@ -56,7 +56,6 @@ input {
 textarea {
   border-radius: 20px;
   padding: 2%;
-  overflow-y: hidden;
 }
 
 select {
