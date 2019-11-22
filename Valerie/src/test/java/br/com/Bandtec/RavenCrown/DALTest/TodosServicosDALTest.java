@@ -92,7 +92,7 @@ public class TodosServicosDALTest {
         assertEquals(servicoPersitido,servico);
     }
 
-    @Test
+    //@Test
     public void ObterServicoTest(){
 
         List<ServicoEntity> todosServicos  = servicosDAL.findAll();

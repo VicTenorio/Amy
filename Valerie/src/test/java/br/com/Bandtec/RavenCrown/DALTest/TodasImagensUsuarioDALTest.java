@@ -23,7 +23,7 @@ import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-@Commit
+//@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)

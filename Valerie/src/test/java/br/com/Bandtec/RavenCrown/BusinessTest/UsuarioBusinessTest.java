@@ -29,7 +29,7 @@ import java.time.LocalDateTime;
 
 import static org.junit.Assert.assertTrue;
 
-@Commit
+//@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)

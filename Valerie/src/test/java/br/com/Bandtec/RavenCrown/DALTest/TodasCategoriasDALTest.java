@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
-@Commit
+//@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -32,7 +32,7 @@ public class TodasCategoriasDALTest {
         Assert.assertEquals(categoria, categoriaSalva);
     }
 
-    @Test
+    //@Test
     public void ObterCategoria(){
         List<CategoriaEntity> lista = categoriasDAL.findAll();
         Assert.assertTrue(lista.size() > 0);

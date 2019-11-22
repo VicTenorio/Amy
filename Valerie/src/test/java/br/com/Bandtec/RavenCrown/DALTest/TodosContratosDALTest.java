@@ -20,7 +20,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-@Commit
+//@Commit
 @Transactional
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -100,7 +100,7 @@ public class TodosContratosDALTest {
         assertEquals(contrato,contratoPersistido);
     }
 
-    @Test
+    //@Test
     public void buscarTodosContratosTest(){
         List<ContratoEntity> contratos = contratosDAL.findAll();
 

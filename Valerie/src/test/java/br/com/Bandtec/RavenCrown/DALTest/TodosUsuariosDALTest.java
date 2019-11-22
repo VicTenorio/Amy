@@ -43,7 +43,7 @@ public class TodosUsuariosDALTest {
 
     UsuarioModel UserModel;
 
-    @Test
+    //@Test
     public void GetUsersTest(){
         List<UsuarioEntity> list = userDAL.findAll();
 
