@@ -1,13 +1,26 @@
 import axios from 'axios';
 
-export function cep(cep) {
+export default function Cep() {
+    const cep = document.getElementById("txtCep").value;
 
-    while (cep != null) {
-        axios.get("https://viacep.com.br/ws/" + cep + "/json/")
+    const bairro = document.getElementById("txtBairro");
+    const cidade = document.getElementById("txtCidade");
+    const rua = document.getElementById("txtRua");
 
-            .then(response => (
-                console.log("res", response)
-            )
-        )
+    if(cep != "") {
+        axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(Response => {
+                console.log(Response)
+                var dados = Response.data
+                if(Response.status === 200) {
+                    bairro.value = dados.bairro;
+                    cidade.value = dados.localidade;
+                    rua.value = dados.logradouro;
+                }
+            })
+            .catch(Error => {
+                console.log(Error)
+            })
     }
+
 }

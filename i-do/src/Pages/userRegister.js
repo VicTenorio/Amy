@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/css/userRegister.css';
 import NavbarRegister from '../components/navbar-register';
-import { cep } from './apiCorreios';
+import Cep from '../Pages/apiCorreios';
 import Request from '../Requests/userRequest'
 
 class userRegister extends React.Component {
@@ -140,6 +140,7 @@ class userRegister extends React.Component {
                 <div class="row w-100">
                     <div class="col-5">
                         <input id="txtCep" class="input-meio" />
+                        <input type="button" id="findCep" value="Buscar" onClick={Cep}/>
                     </div>
                     <div class="col-5">
                         <input id="txtBairro" class="input-meio" />
