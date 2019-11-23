@@ -3,7 +3,6 @@ import '../assets/css/userRegister.css';
 import NavbarRegister from '../components/navbar-register';
 import { cep } from './apiCorreios';
 import Request from '../Requests/userRequest'
-import { request } from 'http';
 
 class userRegister extends React.Component {
     render() {

@@ -8,7 +8,7 @@ export default function userRequest() {
     const estadoCivil = document.getElementById("estadoCivil")
     const option = estadoCivil.selectedIndex;
     const optionFinal = estadoCivil.options[option].text
-    
+
     var escolhaSexo;
     const genero = document.getElementsByName("sexo")
     for (var i = 0; i < genero.length; i++) {
@@ -27,7 +27,7 @@ export default function userRequest() {
     const cep = document.getElementById("txtCep").value
     const bairro = document.getElementById("txtBairro").value
     const cidade = document.getElementById("txtCidade").value
-    const estado = document.getElementById("txtEstado").value 
+    const estado = document.getElementById("txtEstado").value
 
     const params = {
         nome,

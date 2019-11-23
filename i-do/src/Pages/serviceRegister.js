@@ -31,10 +31,10 @@ class ServiceRegister extends React.Component {
                             <label className="row">Local de atendimento</label>
                         </div>
                         <div className="row p-3">
-                            <input type="radio" id="rd" name="localServico" value="false" checked />
+                            <input type="radio" id="rd" name="localServico" value="domicilio" checked />
                             <label>Atendimento a domicílio</label>
 
-                            <input type="radio" name="localServico" value="true" />
+                            <input type="radio" name="localServico" value="meuEndereco" />
                             <label>Atendimento no meu endereço</label>
                         </div>
                         <div className="row p-2">
