@@ -15,26 +15,26 @@ export default function serviceRegisterRequest() {
     }
 
     const params = {
-        idServico: null,
-        idUsuario: 10,
-        idCategoria: 1,
+        idUsuario: 11,
+        idCategoria: 4,
         nome,
         preco,
         descricao,
         tempoExecucao,
+        localizacaoFixa: true,
         endereco: {
             rua: "Rua Das Orquideas",
             cep: "0000-000",
-            complemento: null,
+            complemento: "aa",
             pais: "A Terra do REU",
             id_Endereco: 224,
             numero: "69",
-            referencia: null,
+            referencia: "aa",
             bairro: "Jardim das Flores",
             cidade: "Porto Real",
             estado: "UK"
         },
-        imagem: null
+        imagem: ""
     }
 
     console.log(params)
