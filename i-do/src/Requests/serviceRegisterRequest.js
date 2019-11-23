@@ -15,7 +15,7 @@ export default function serviceRegisterRequest() {
     }
 
     const params = {
-        idUsuario: 11,
+        idUsuario: 888,
         idCategoria: 4,
         nome,
         preco,
@@ -27,14 +27,13 @@ export default function serviceRegisterRequest() {
             cep: "0000-000",
             complemento: "aa",
             pais: "A Terra do REU",
-            id_Endereco: 224,
             numero: "69",
             referencia: "aa",
             bairro: "Jardim das Flores",
             cidade: "Porto Real",
             estado: "UK"
         },
-        imagem: ""
+        imagem: [ null  ]
     }
 
     console.log(params)
