@@ -16,19 +16,12 @@ export default function serviceRegisterRequest() {
       reader.onerror = reject
       reader.readAsDataURL(blob)
     }))
-  
-    var image = async () =>  await toDataURL(blob)
+
+    toDataURL(blob)
     .then(dataUrl => {
-      return dataUrl
+    localStorage.setItem("imagemServico", dataUrl.substring(23, dataUrl.length))
     })
-
-    var ImageValue = ""
-
-    image().then(Response => {
-        ImageValue = Response
-        console.log(ImageValue.substring(23, ImageValue.length))
-    })
-
+    const image = localStorage.getItem("imagemServico")
     var escolhaLocalizacao = '';
     var localizacao = document.getElementsByName('localServico');
     for (var i = 0; i < localizacao.length; i++) {
@@ -63,10 +56,12 @@ export default function serviceRegisterRequest() {
                 id: null,
                 idUsuario: 882,
                 url: " ",
-                image: " "
+                image
             }
         ] 
     }
+
+    console.log("params", params)
 
     Axios.post('https://ravenamy.azurewebsites.net/Servico', params)
         .then(Response => {
