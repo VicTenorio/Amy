@@ -45,11 +45,15 @@ class ServiceRegister extends React.Component {
                             </div>
                             <div className="col">
                                 <label className="row">Selecione a categoria</label>
-                                <select className="row w-50">
-                                    <option value="Reformas">Reformas</option>
-                                    <option value="Culinária">Culinária</option>
-                                    <option value="Técnico">Técnico</option>
-                                    <option value="Eventos">Eventos</option>
+                                <select id="categorias" className="row w-50">
+                                    <option value="1">Auto</option>
+                                    <option value="2">Tecnologia e Informática</option>
+                                    <option value="3">Doméstico</option>
+                                    <option value="4">Construção</option>
+                                    <option value="5">Educação</option>]
+                                    <option value="6">Entregas e Encomendas</option>
+                                    <option value="7">Estética e Moda</option>
+                                    <option value="8">Eventos, Música e Decorações</option>
                                 </select>
                             </div>
                         </div>

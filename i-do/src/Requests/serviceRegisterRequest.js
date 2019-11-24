@@ -5,6 +5,9 @@ export default function serviceRegisterRequest() {
     const preco = document.getElementById("txtPrice").value;
     const descricao = document.getElementById("txtDescription").value;
     const tempoExecucao = document.getElementById("txtTime").value;
+    const categoria = document.getElementById("categorias");
+    const option = categoria.selectedIndex;
+    const categoriaSelecionada = categoria.options[option].value;
 
     const blob = document.getElementById("foto").src
 
@@ -29,6 +32,8 @@ export default function serviceRegisterRequest() {
         console.log(ImageValue.substring(23, ImageValue.length))
     })
 
+    console.log(ImageValue)
+
     var escolhaLocalizacao = '';
     var localizacao = document.getElementsByName('localServico');
     for (var i = 0; i < localizacao.length; i++) {
@@ -40,7 +45,7 @@ export default function serviceRegisterRequest() {
     const params = {
         id: null,
         idUsuario: 882,
-        idCategoria: 1,
+        idCategoria: categoriaSelecionada,
         nome,
         preco,
         descricao,
