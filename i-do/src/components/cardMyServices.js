@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/css/cardMyservices.css';
+import '../Requests/cardMyServices'
 
 class cardMyServices extends React.Component {
     render() {
@@ -10,7 +11,7 @@ class cardMyServices extends React.Component {
                         <img src="#" alt="imgService"/>
                     </div>
                         <label id="ServiceName">Nome do serviço</label>
-                        <label id="ServiceDescription">Faço serviços de num sei o que e bla bla bla e bla bla bla</label><br/>
+                        <label id="ServiceDescription"></label><br/>
                         <hr />
                         <strong id="ServicePrice">R$100,00</strong>
                         <div className="row p-2">

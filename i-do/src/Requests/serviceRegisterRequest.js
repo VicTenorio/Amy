@@ -37,7 +37,7 @@ export default function serviceRegisterRequest() {
         imagem: ""
     }
 
-    console.log(params)
+    console.log('Carregando...')
 
     Axios.post('https://ravenamy.azurewebsites.net/Servico', params)
         .then(Response => {
