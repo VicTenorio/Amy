@@ -1,7 +1,8 @@
 import React from 'react';
 import '../assets/css/serviceRegister.css';
 import NavbarLogged from '../components/navbarLogged';
-import Request from '../Requests/serviceRegisterRequest'
+import ServiceRequest from '../Requests/serviceRegisterRequest'
+import uploadFile from '../Requests/uploadFile';
 
 class ServiceRegister extends React.Component {
     render() {
@@ -44,21 +45,27 @@ class ServiceRegister extends React.Component {
                             </div>
                             <div className="col">
                                 <label className="row">Selecione a categoria</label>
-                                <select className="row w-50">
-                                    <option value="Reformas">Reformas</option>
-                                    <option value="Culinária">Culinária</option>
-                                    <option value="Técnico">Técnico</option>
-                                    <option value="Eventos">Eventos</option>
+                                <select id="categorias" className="row w-50">
+                                    <option value="1">Auto</option>
+                                    <option value="2">Tecnologia e Informática</option>
+                                    <option value="3">Doméstico</option>
+                                    <option value="4">Construção</option>
+                                    <option value="5">Educação</option>]
+                                    <option value="6">Entregas e Encomendas</option>
+                                    <option value="7">Estética e Moda</option>
+                                    <option value="8">Eventos, Música e Decorações</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div className="col-xl-4 p-5">
                         <div className="img-service">
-
+                            <img id="foto"></img>
+                            <label align="center" className="mt-2 w-100">Adicione uma foto</label>
+                        <input type="file" id="fileInput" className="form-control" placeholder="Escolher arquivo" onChange={uploadFile}/>
                         </div>
                         <div className="row w-100 justify-content-center">
-                            <button id="btnServiceRegister" className="mt-3 w-50" type="submit" onClick={Request}>Cadastrar</button>
+                            <button id="btnServiceRegister" className="mt-3 w-50" type="submit" onClick={ServiceRequest}>Cadastrar</button>
                         </div>
                     </div>
                 </div>

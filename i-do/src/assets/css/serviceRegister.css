@@ -65,6 +65,7 @@ select {
 
 .img-service {
   height: 90%;
+  max-height: 90%;
   border-radius: 20px;
   display: block;
 }
@@ -83,6 +84,10 @@ select {
 #btnServiceRegister:hover {
   background-color: #252357;
   color: white;
+}
+
+#fileInput {
+  border: none;
 }
 
 /*# sourceMappingURL=serviceRegister.css.map */

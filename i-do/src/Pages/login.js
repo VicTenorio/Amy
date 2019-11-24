@@ -1,13 +1,13 @@
 import React from 'react';
 import '../assets/css/login.css';
-import '../Requests/loginRequest';
 import {Link} from 'react-router-dom';
+import login from '../Requests/loginRequest';
 
 class Login extends React.Component {
     render() {
         return (
             <div class="bg-login">
-                <form class="container" id="form">
+                <div class="container" id="form">
                     <div class="row">
                         <input type="text" id="txtUser" placeholder="usuário"></input>
                     </div>
@@ -15,7 +15,7 @@ class Login extends React.Component {
                         <input type="text" id="txtPass" placeholder="senha"></input>
                     </div>
                     <div class="row mt-4">
-                        <button id="btn-login" type="submit" onClick="loginRequest">entrar</button>
+                        <button id="btn-login" onClick={login}>entrar</button>
                     </div>
                     <div class="row mt-2">
                         <p>Esqueceu sua senha? Clique aqui!</p>
@@ -27,7 +27,7 @@ class Login extends React.Component {
                             </Link>
                         </p>
                     </div>
-                </form>
+                </div>
             </div>
 
         )

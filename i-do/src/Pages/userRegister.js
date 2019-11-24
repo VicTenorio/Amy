@@ -2,7 +2,7 @@ import React from 'react';
 import '../assets/css/userRegister.css';
 import NavbarRegister from '../components/navbar-register';
 import Cep from '../Pages/apiCorreios';
-import Request from '../Requests/userRequest'
+import UserRequest from '../Requests/userRequest'
 
 class userRegister extends React.Component {
     render() {
@@ -163,7 +163,7 @@ class userRegister extends React.Component {
                     </div>
                 </div>
                 <div class="row btn-wrapper">
-                    <button class='btn-cadastrar' onClick={Request}>Cadastrar</button>
+                    <button class='btn-cadastrar' onClick={UserRequest}>Cadastrar</button>
                 </div>
                 <div class="footer-register">
 

@@ -33,6 +33,7 @@ select {
 .img-service {
     @extend %style-inputs;
     height: 90%;
+    max-height: 90%;
     border-radius: 20px;
     display: block;
 }
@@ -51,4 +52,8 @@ select {
         background-color: rgb(37, 35, 87);
         color: white;
     }
+}
+
+#fileInput {
+    border: none;
 }
