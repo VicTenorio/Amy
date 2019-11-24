@@ -1,0 +1,16 @@
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Amy.Infra.deps.json
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Amy.Infra.dll
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Workspace\Amy\Rehab\Amy.Infra\obj\Debug\netcoreapp2.2\Amy.Infra.csprojAssemblyReference.cache
+C:\Workspace\Amy\Rehab\Amy.Infra\obj\Debug\netcoreapp2.2\Amy.Infra.csproj.CoreCompileInputs.cache
+C:\Workspace\Amy\Rehab\Amy.Infra\obj\Debug\netcoreapp2.2\Amy.Infra.AssemblyInfoInputs.cache
+C:\Workspace\Amy\Rehab\Amy.Infra\obj\Debug\netcoreapp2.2\Amy.Infra.AssemblyInfo.cs
+C:\Workspace\Amy\Rehab\Amy.Infra\obj\Debug\netcoreapp2.2\Amy.Infra.csproj.CopyComplete
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Amy.Infra.pdb
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Amy.Model.dll
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Amy.Model.pdb
+C:\Workspace\Amy\Rehab\Amy.Infra\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml
+C:\Workspace\Amy\Rehab\Amy.Infra\obj\Debug\netcoreapp2.2\Amy.Infra.dll
+C:\Workspace\Amy\Rehab\Amy.Infra\obj\Debug\netcoreapp2.2\Amy.Infra.pdb

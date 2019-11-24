@@ -1,0 +1,14 @@
+C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Core.deps.json
+C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Core.dll
+C:\Workspace\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.csprojAssemblyReference.cache
+C:\Workspace\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.csproj.CoreCompileInputs.cache
+C:\Workspace\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.AssemblyInfoInputs.cache
+C:\Workspace\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.AssemblyInfo.cs
+C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Core.pdb
+C:\Workspace\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.dll
+C:\Workspace\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.pdb
+C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Workspace\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.csproj.CopyComplete
+C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Model.dll
+C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Model.pdb

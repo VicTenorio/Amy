@@ -1,0 +1,27 @@
+﻿.presantationImage {
+    max-width: 20%;
+    max-height: 20%;
+    width: auto;
+    height: auto;
+    margin-left: 40%;
+}
+
+.logoImage {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.login-form {
+    width: 100%;
+    margin-left: 35%;
+}
+
+.txtInput {
+    width: 30%;
+}
+
+.login-buttom {
+    margin-top: 20px
+}

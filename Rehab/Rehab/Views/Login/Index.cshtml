@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Entrar";
+    @model Rehab.Models.LoginFormModel    
+}
+<link rel="stylesheet" type="text/css" href="~/css/login.css" />
+
+<h5 class="text-center">Bem vindo Analista!</h5>
+<form asp-action="doLogin" name="doLogin" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 presantationImage">
+                <img src="~/images/logo.jpg" class="logoImage" alt="Amy.Inc" />
+            </div>
+
+            <div class="col-12">
+                <div class="login-form">
+                    <label for="txtEmail">Email</label>
+                    <input type="email" id="txtEmail" name="Email" class="txtEmail form-control txtInput" />
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="login-form">
+                    <label for="txtPassword">Senha</label>
+                    <input type="password" id="txtPassword" name="Password" class="txtPassword form-control txtInput" />
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="login-form login-buttom">
+                    <button type="submit" id="btnSingIn" name="btnSingIn" class="btnSingIn btn btn-danger txtInput">Entrar</button>
+                </div>
+            </div>
+
+            @if(ViewBag["autenticated"] == false)
+            {
+                <label>Usuario ou Senha Incorretos</label>
+            }
+        </div>
+    </div>
+</form>
