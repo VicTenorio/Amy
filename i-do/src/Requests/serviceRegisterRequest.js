@@ -21,7 +21,14 @@ export default function serviceRegisterRequest() {
     .then(dataUrl => {
       return dataUrl
     })
-console.log("image", image())
+
+    var ImageValue = ""
+
+    image().then(Response => {
+        ImageValue = Response
+        console.log(ImageValue.substring(23, ImageValue.length))
+    })
+
     var escolhaLocalizacao = '';
     var localizacao = document.getElementsByName('localServico');
     for (var i = 0; i < localizacao.length; i++) {
@@ -60,8 +67,6 @@ console.log("image", image())
             }
         ] 
     }
-
-    console.log('Carregando...')
 
     Axios.post('https://ravenamy.azurewebsites.net/Servico', params)
         .then(Response => {
