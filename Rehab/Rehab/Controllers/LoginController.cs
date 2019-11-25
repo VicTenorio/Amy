@@ -12,24 +12,28 @@ namespace Rehab.Controllers
     public class LoginController : Controller
     {
         private readonly AmyDataContext _context;
-        private readonly Authenticated authentication;
+        private readonly Authenticated _authentication;
 
-        public LoginController(AmyDataContext context, HttpContextAccessor processor)
+        public LoginController(AmyDataContext context, IHttpContextAccessor processor)
         {
             _context = context;
-            authentication = new Authenticated(processor);
+            _authentication = new Authenticated(processor);
         }
         public IActionResult Index()
         {
             return View();
         }
 
+        private IActionResult Index(LoginFormModel credentials)
+        {
+            return View("../Login", credentials);
+        }
+
         public IActionResult doLogin(LoginFormModel credentials)
         {
             if(string.IsNullOrEmpty(credentials.Email) || string.IsNullOrEmpty(credentials.Password))
-            {
-                ViewBag["autenticated"] = false;
-                return View();
+            {                
+                return Index(credentials);
             }
 
             using (MD5 md5Hash = MD5.Create())
@@ -41,15 +45,15 @@ namespace Rehab.Controllers
 
             if(user != null)
             {
-                authentication.SetSession((User)user);
+                _authentication.SetSession((User)user);
+                return Redirect("../Home");
+
             }
             else
-            {
-                ViewBag["autenticated"] = false;
-                return View();
+            {               
+                return Index(credentials);
             }
 
-            return View();
 
         }
     }

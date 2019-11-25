@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Entrar";
-    @model Rehab.Models.LoginFormModel    
+    @model Rehab.Models.LoginFormModel
+
 }
 <link rel="stylesheet" type="text/css" href="~/css/login.css" />
 
@@ -32,9 +33,11 @@
                 </div>
             </div>
 
-            @if(ViewBag["autenticated"] == false)
-            {
-                <label>Usuario ou Senha Incorretos</label>
+            @{bool auth = Model == null ;
+                if (auth == false)
+                {
+                    <label> Usuario ou Senha Incorretos </label>
+                }
             }
         </div>
     </div>

@@ -47,7 +47,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[3.0.1, )"
+              "version": "[2.2.0, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",

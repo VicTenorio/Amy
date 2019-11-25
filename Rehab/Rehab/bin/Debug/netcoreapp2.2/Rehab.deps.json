@@ -27,7 +27,6 @@
           "Amy.Core": "1.0.0",
           "Amy.Infra": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
-          "Microsoft.AspNetCore.Http.Features": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -510,7 +509,8 @@
       },
       "Amy.Infra/1.0.0": {
         "dependencies": {
-          "Amy.Model": "1.0.0"
+          "Amy.Model": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.2.0"
         },
         "runtime": {
           "Amy.Infra.dll": {}

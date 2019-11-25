@@ -21,5 +21,21 @@ namespace Amy.Infra
         {
             _httpContextAccessor.HttpContext.Session.Set("userData", Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(user)));
         }
+
+        public User GetSession()
+        {
+            User user = null;
+            byte[] userBinary;
+
+            _httpContextAccessor.HttpContext.Session.TryGetValue("userData",out userBinary);
+
+            if(userBinary != null)
+            {
+                string jsonUser = Encoding.ASCII.GetString(userBinary);
+                user = JsonConvert.DeserializeObject<User>(jsonUser);
+            }
+
+            return user;
+        }
     }
 }
