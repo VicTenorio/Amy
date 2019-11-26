@@ -3,6 +3,7 @@ import '../assets/css/userRegister.css';
 import NavbarRegister from '../components/navbar-register';
 import Cep from '../Pages/apiCorreios';
 import UserRequest from '../Requests/userRequest'
+import uploadFile from '../Requests/uploadFile';
 
 class userRegister extends React.Component {
     render() {
@@ -11,6 +12,10 @@ class userRegister extends React.Component {
                 <NavbarRegister />
                 <div class="row title-register">
                     <p>Dados Pessoais</p>
+                </div>
+                <div class="fotoupload">
+                <img id="foto"></img>
+                    <input id="fileInput" type="file" placeholder="Escolher arquivo" onChange={uploadFile}/>
                 </div>
                 <div className="row">
                     <div class="row w-100">
