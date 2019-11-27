@@ -1,28 +1,25 @@
 package com.example.idosplashscreen
 
-import android.content.Intent
-import android.os.AsyncTask
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.StrictMode
 import android.view.View
 import android.widget.EditText
-import org.json.JSONObject
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.io.OutputStream
-import java.io.OutputStreamWriter
-import java.net.HttpURLConnection
-import java.net.URL
-import java.net.URLEncoder
+import androidx.appcompat.app.AppCompatActivity
+import com.example.idosplashscreen.Model.Endereco
+import com.example.idosplashscreen.Model.Http
+import com.example.idosplashscreen.Model.Usuario
 
-class CadastroEnderecoUsuario : AppCompatActivity() {
+class CadastroDadosUsuario : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastro_endereco_usuario)
+        setContentView(R.layout.activity_cadastro_dados_usuario)
+
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
     }
 
-    fun cadastro(v:View){
+    fun cadastro(v: View) {
 
         val email = intent.getStringExtra("email")
         val telefone = intent.getStringExtra("telefone")
@@ -41,6 +38,7 @@ class CadastroEnderecoUsuario : AppCompatActivity() {
         var campoBairro = findViewById(R.id.campoBairro) as EditText
         var campoCidade = findViewById(R.id.campoCidade) as EditText
         var campoEstado = findViewById(R.id.campoEstado) as EditText
+        var campoPais = findViewById(R.id.campoPais) as EditText
 
         var rua = campoRua.text.toString()
         var numeroMoradia = campoNumeroMoradia.text.toString()
@@ -50,8 +48,45 @@ class CadastroEnderecoUsuario : AppCompatActivity() {
         var bairro = campoBairro.text.toString()
         var cidade = campoCidade.text.toString()
         var estado = campoEstado.text.toString()
+        var pais = campoPais.text.toString()
 
-        println(email)
+        var endereco: Endereco =
+                Endereco(
+                        0,
+                        rua,
+                        CEP,
+                        complemento,
+                        numeroMoradia,
+                        referencia,
+                        bairro,
+                        cidade,
+                        estado,
+                        pais
+                )
+        var usuario: Usuario =
+                Usuario(
+                        0,
+                        RG,
+                        CPF,
+                        dtNasc,
+                        email,
+                        "estado_civil",
+                        nomeCompleto,
+                        true,
+                        senha,
+                        "M",
+                        telefone,
+                        endereco
+                )
+
+        val http = Http()
+
+        var url = getString(R.string.api_cadastro_usuario)
+
+        print("usuario>>>" + usuario.toJson())
+        //print("ALGUMACOISA>>>>>"+http.post(url,usuario.toJson()))
+
+        /*println(email)
         println(telefone)
         println(senha)
         println(confirmarSenha)
@@ -66,7 +101,7 @@ class CadastroEnderecoUsuario : AppCompatActivity() {
         println(CEP)
         println(bairro)
         println(cidade)
-        println(estado)
+        println(estado)*/
 
     }
 }
