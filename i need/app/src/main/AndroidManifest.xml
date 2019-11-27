@@ -12,9 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ServiceActivity"></activity>
-        <activity android:name=".ServicesActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ServiceActivity" />
+        <activity android:name=".Home2Activity" />
         <activity android:name=".GridCategorias" />
         <activity android:name=".CadastroEnderecoUsuario" />
         <activity android:name=".CadastroUsuarioAcessoConta" />
