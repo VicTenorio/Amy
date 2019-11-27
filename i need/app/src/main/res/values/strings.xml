@@ -34,7 +34,7 @@
     <string name="dados_endereco">DADOS ENDEREÇO</string>
     <string name="Endereco">ENDEREÇO</string>
     <string name="cadastro_rua">Rua</string>
-    <string name="cadastro_numero_moradia">Número Moradia</string>
+    <string name="cadastro_numero_moradia">N° Moradia</string>
     <string name="cadastro_referencia_moradia">Referencia</string>
     <string name="cadastro_complemento_moradia">Complemento</string>
     <string name="cadastro_CEP">CEP</string>

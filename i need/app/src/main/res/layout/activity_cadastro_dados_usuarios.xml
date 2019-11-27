@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroDadosUsuarios"
+    android:background="@drawable/bgtop">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="121dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/dados_endereco"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="335dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/dadosAcessoContato"
+            android:layout_width="224dp"
+            android:layout_height="30dp"
+            android:text="@string/dados_acesso_contatoC"
+            android:textColor="#ffff" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoEmail"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="30px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#ff9900" />
+
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoTelefone"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_telefone"
+                android:inputType="phone"
+                android:textColorHint="#ff9900" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoSenha"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_senha"
+                android:inputType="textPassword"
+                android:textColorHint="#ff9900" />
+
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoConfirmaSenha"
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_confirma_senha"
+                android:inputType="textPassword"
+                android:textColorHint="#ff9900" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="342dp"
+        android:layout_height="194dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="123dp"
+            android:layout_height="30dp"
+            android:text="@string/dados_pessoais"
+            android:textColor="#ffff" />
+
+
+        <EditText
+            android:textColor="#ff9900"
+            android:id="@+id/campoNomeCompleto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_marginBottom="30px"
+            android:background="@drawable/def_boder_style"
+            android:ems="10"
+            android:hint="@string/cadastro_nome_completo"
+            android:inputType="textPersonName"
+            android:textColorHint="#ff9900" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoRG"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="30px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_RG"
+                android:inputType="number"
+                android:textColorHint="#ff9900" />
+
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoCPF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_cpf"
+                android:inputType="number"
+                android:textColorHint="#ff9900" />
+        </LinearLayout>
+
+
+        <EditText
+            android:textColor="#ff9900"
+            android:id="@+id/campoDtNasc"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_marginBottom="10px"
+            android:background="@drawable/def_boder_style"
+            android:ems="10"
+            android:hint="@string/cadastro_data_nascimento"
+            android:inputType="date"
+            android:textColorHint="#ff9900" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:paddingRight="10dp"
+                android:text="Solteiro" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/def_boder_style"
+                android:paddingRight="10dp"
+                android:text="Casado" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout2"
+        android:layout_width="333dp"
+        android:layout_height="228dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btCadastra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/endereco"
+            android:layout_width="123dp"
+            android:layout_height="30dp"
+            android:text="@string/Endereco"
+            android:textColor="#ffff" />
+
+
+        <EditText
+            android:textColor="#ff9900"
+            android:id="@+id/campoRua"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_marginBottom="30px"
+            android:background="@drawable/def_boder_style"
+            android:ems="10"
+            android:hint="@string/cadastro_rua"
+            android:inputType="textPersonName"
+            android:textColorHint="#ff9900" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoNumeroMoradia"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="30px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_numero_moradia"
+                android:inputType="number"
+                android:textColorHint="#ff9900" />
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoComplemento"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_complemento_moradia"
+                android:inputType="text"
+                android:textColorHint="#ff9900" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoCEP"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="30px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_CEP"
+                android:inputType="number"
+                android:textColorHint="#ff9900" />
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoReferecia"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_referencia_moradia"
+                android:inputType="text"
+                android:textColorHint="#ff9900" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoBairro"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="30px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_bairro"
+                android:inputType="text"
+                android:textColorHint="#ff9900" />
+
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoCidade"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_cidade"
+                android:inputType="text"
+                android:textColorHint="#ff9900" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/campoEstado"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_estado"
+                android:inputType="text"
+                android:textColor="#ff9900"
+                android:textColorHint="#ff9900" />
+
+
+            <EditText
+                android:textColor="#ff9900"
+                android:id="@+id/campoPais"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginBottom="10px"
+                android:background="@drawable/def_boder_style"
+                android:ems="10"
+                android:hint="@string/cadastro_pais"
+                android:inputType="text"
+                android:textColorHint="#ff9900" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btCadastra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="246dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/lost_boder_style"
+        android:onClick="cadastro"
+        android:text="@string/bt_cadastrar"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

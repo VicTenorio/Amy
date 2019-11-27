@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         StrictMode.setThreadPolicy(policy)
 
         tcadastro.setOnClickListener {
-            val tela2 = Intent(this, CadastroUsuarioAcessoConta::class.java)
+            val tela2 = Intent(this,CadastroDadosUsuarios ::class.java)
             startActivity(tela2)
         }
     }

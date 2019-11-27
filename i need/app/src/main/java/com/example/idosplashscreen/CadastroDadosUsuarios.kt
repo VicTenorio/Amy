@@ -1,25 +1,26 @@
 package com.example.idosplashscreen
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.View
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import com.example.idosplashscreen.Model.Endereco
 import com.example.idosplashscreen.Model.Http
 import com.example.idosplashscreen.Model.Usuario
 
-class CadastroEnderecoUsuario : AppCompatActivity() {
+class CadastroDadosUsuarios : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastro_endereco_usuario)
+        setContentView(R.layout.activity_cadastro_dados_usuarios)
 
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
     }
 
-    fun cadastro(v:View){
+    fun cadastro(v: View){
 
         val email = intent.getStringExtra("email")
         val telefone = intent.getStringExtra("telefone")
@@ -51,33 +52,33 @@ class CadastroEnderecoUsuario : AppCompatActivity() {
         var pais = campoPais.text.toString()
 
         var endereco: Endereco =
-            Endereco(
-                0,
-                rua,
-                CEP,
-                complemento,
-                numeroMoradia,
-                referencia,
-                bairro,
-                cidade,
-                estado,
-                pais
-            )
+                Endereco(
+                        0,
+                        rua,
+                        CEP,
+                        complemento,
+                        numeroMoradia,
+                        referencia,
+                        bairro,
+                        cidade,
+                        estado,
+                        pais
+                )
         var usuario: Usuario =
-            Usuario(
-                0,
-                RG,
-                CPF,
-                dtNasc,
-                email,
-                "estado_civil",
-                nomeCompleto,
-                true,
-                senha,
-                "M",
-                telefone,
-                endereco
-            )
+                Usuario(
+                        0,
+                        RG,
+                        CPF,
+                        dtNasc,
+                        email,
+                        "estado_civil",
+                        nomeCompleto,
+                        true,
+                        senha,
+                        "M",
+                        telefone,
+                        endereco
+                )
 
         val http = Http()
 
