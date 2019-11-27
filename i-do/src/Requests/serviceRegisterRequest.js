@@ -60,7 +60,7 @@ export default function serviceRegisterRequest() {
             {
                 id: null,
                 idUsuario: 882,
-                url: " ",
+                url: null,
                 image
             }
         ] 

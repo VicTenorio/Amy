@@ -1,17 +1,15 @@
 import React from 'react';
-import Axios from 'axios';
-import useState from 'react'
 import '../assets/css/cardMyservices.css';
-import Data from '../Requests/cardMyServices'
 
 class cardMyServices extends React.Component {
 
     state = {
         servico: []
-    }
+    };
 
-    constructor(props) {
-        this.state.servico = props
+    constructor(servico) {
+        super();
+        this.state.servico = servico;
     }
 
     render() {
@@ -22,14 +20,14 @@ class cardMyServices extends React.Component {
                         <img src="#" alt="imgService" />
                     </div>
                     <label id="ServiceName">
-                        {this.props.servico.nome}
+                        {console.log(this.state.servico.nome)}
                     </label>
                     <label id="ServiceDescription">
-                        {this.props.servico.descricao}    
+                        {console.log(this.state.servico.descricao)}
                     </label><br />
                     <hr />
                     <strong id="ServicePrice">
-                        {this.props.servico.preco}
+                        {console.log(this.state.servico.preco)}
                     </strong>
                     <div className="row p-2">
                         <div className="col-6">
