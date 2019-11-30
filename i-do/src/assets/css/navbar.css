@@ -38,7 +38,7 @@
 
 #btnLoginNavbar {
   color: #FF9900;
-  border: 1px solid #FF9900;
+  border: 2px solid #FF9900;
   border-radius: 50px;
   font-size: 25px;
   width: 140px;
@@ -46,7 +46,7 @@
 #btnLoginNavbar:hover {
   background-color: #010738;
   color: #B0ACAC;
-  border: 1px solid #010738;
+  border: 2px solid #010738;
   transition: 0.1s ease-in-out;
 }
 

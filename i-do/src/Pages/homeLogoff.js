@@ -9,7 +9,7 @@ class HomeLogoff extends React.Component {
             <div>
                 <div id="bodyLogoff">
                     <div className="col-xl-12" align="center">
-                        <img id="logoHomeLogoff" src={logoCinza} />
+                        <img id="logoHomeLogoff" src={logoCinza} alt="logo"/>
                         <h1 id="title">Vamos começar?</h1>
                         <div align="center">
                             <p id="text" style={{color: '#A7A7A7'}}>Explore o lugar perfeito para realizar seus serviços e gerenciá-los com facilidade.</p>

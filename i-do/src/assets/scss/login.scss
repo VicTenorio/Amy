@@ -1,17 +1,25 @@
 @import '../scss/styleDefault.scss';
 
+#tudo {
+    background-color: darken($color: black, $amount: 10)
+}
+
+#logoLogin {
+    width: 250px;
+}
+
 .container {
     animation-name: fade;
     animation-duration: 0.8s;
 }
 
 .bg-login {
-   background-image: url("../images/e3c78ef5-e48b-4c34-b2b3-efcaed81aa39.jpg");
+   background: url("../images/e3c78ef5-e48b-4c34-b2b3-efcaed81aa39.jpg");
    background-size: cover;
 }
 
 .container {
-    padding: 20% 0 20% 30%;
+    padding: 8% 0 10% 30%;
 
     input {
         border: 2px solid $color-primary;
@@ -38,6 +46,11 @@
         height: 50px;
         font: 20pt $font;
         font-weight: 500;
+        transition: 0.1s ease-in-out;
+        &:hover {
+            background-color: darken($color: #A7007B, $amount: 5);
+            transition: 0.1s ease-in-out;
+        }
     }
 
     p {

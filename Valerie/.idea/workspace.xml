@@ -2,19 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e36f1f58-ca3a-4b88-8cf0-5f0308b38ffb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Me&amp;MrJones/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Me&amp;MrJones/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Me&amp;MrJones/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Me&amp;MrJones/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Me&amp;MrJones/src/models/usuarioModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Me&amp;MrJones/src/models/usuarioModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/DAL/TodosContratosDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/DAL/TodosContratosDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/DAL/TodosImagemServicoDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/DAL/TodosImagemServicoDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/DAL/TodosServicosDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/DAL/TodosServicosDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/Interfaces/RepositoriesAdress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/Interfaces/RepositoriesAdress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/RavenCrownApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/RavenCrownApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/RavenCrown.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/Pages/homeLogoff.js" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/Pages/homeLogoff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/cardMyservices.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/cardMyservices.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/cardScheduleServices.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/cardScheduleServices.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/homeLogoff.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/homeLogoff.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/homeLogoff.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/homeLogoff.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/modalServiceDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/modalServiceDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/my-services.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/my-services.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/navbar-services.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/navbar-services.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/navbarLogged.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/navbarLogged.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/navbarRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/navbarRegister.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/scheduledServices.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/scheduledServices.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/serviceRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/serviceRegister.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/styleDefault.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/styleDefault.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/css/userRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/css/userRegister.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i-do/src/assets/scss/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../i-do/src/assets/scss/navbar.scss" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +43,8 @@
         <option value="Matheus Vicente" />
       </list>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -44,9 +53,16 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
   <component name="ProjectId" id="1QYvj8Ee5RuY55ZWHdYIO5qY10t" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567394306887" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -155,14 +171,64 @@
     </task>
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -178,16 +244,19 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/br/com/Bandtec/RavenCrown/DALTest/TodasImagensUsuarioDALTest.java</url>
           <line>41</line>
+          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/Interfaces/RepositoriesAdress.java</url>
           <line>32</line>
+          <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/br/com/Bandtec/RavenCrown/Infra/Interfaces/RepositoriesAdress.java</url>
           <line>41</line>
+          <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
