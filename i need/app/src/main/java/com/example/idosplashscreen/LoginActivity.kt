@@ -12,6 +12,7 @@ import org.json.JSONObject
 import java.math.BigInteger
 import java.security.MessageDigest
 import android.os.StrictMode
+import android.widget.Toast
 import com.example.idosplashscreen.Model.*
 
 
@@ -25,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         StrictMode.setThreadPolicy(policy)
 
         tcadastro.setOnClickListener {
-            val tela2 = Intent(this, CadastroUsuarioAcessoConta::class.java)
+            val tela2 = Intent(this,CadastroDadosUsuarios ::class.java)
             startActivity(tela2)
         }
     }
@@ -55,13 +56,15 @@ class LoginActivity : AppCompatActivity() {
         //Login().execute(reqParam)
 
         if(UsuarioLogado.idUsuario > 0){
-            var home = Intent(this, GridCategorias::class.java)
-
+            //var home = Intent(this, GridCategorias::class.java)
+            var home = Intent(this, HomeActivity::class.java)
             // enviando valores para a outra activity
             home.putExtra("idUsuario", UsuarioLogado.idUsuario)
             home.putExtra("nome", UsuarioLogado.nomeUsuario)
 
             startActivity(home)
+        }else{
+            Toast.makeText(this, "Usuário ou senha incorretos!!", Toast.LENGTH_SHORT).show()
         }
 
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="#34326e"
+    android:background="@drawable/bgtop"
     >
 
 
@@ -19,11 +19,13 @@
         android:layout_marginBottom="20dp"
         android:gravity="center"
         android:src="@mipmap/backgroud"
+        android:background="@drawable/boder_style"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="253dp"
@@ -40,33 +42,33 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="389dp"
+            android:layout_width="59dp"
             android:layout_height="wrap_content"
             android:text="@string/usuario"
-            android:textColor="#ff9900" />
+            android:textColor="#ffff" />
 
         <EditText
             android:id="@+id/tLogin"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="top@outlook.com"
-            android:background="#ffffff"
+            android:background="@drawable/def_boder_style"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="#ff9900" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="389dp"
+            android:layout_width="59dp"
             android:layout_height="wrap_content"
             android:text="@string/senha"
-            android:textColor="#ff9900" />
+            android:textColor="#ffff" />
 
         <EditText
             android:id="@+id/tsenha"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#ffffff"
+            android:background="@drawable/def_boder_style"
             android:ems="10"
             android:inputType="textPassword"
             android:textColor="#ff9900" />
@@ -81,25 +83,25 @@
         android:layout_marginTop="34dp"
         android:layout_marginBottom="125dp"
         android:text="@string/cadastro"
-        android:textColor="#ff9900"
+        android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btLogin"
-        tools:layout_editor_absoluteX="78dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tEsqueceu_a_senha"
-        android:layout_width="124dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="46dp"
+        android:layout_width="127dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/Esqueceu_a_senha"
-        android:textColor="#ff9900"
+        android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tcadastro"
-        app:layout_constraintTop_toBottomOf="@+id/btLogin"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tcadastro"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btLogin"
@@ -111,7 +113,7 @@
         android:layout_marginTop="27dp"
         android:layout_marginEnd="105dp"
         android:layout_marginBottom="18dp"
-        android:background="#ff9900"
+        android:background="@drawable/lost_boder_style"
         android:text="@string/login"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/tcadastro"

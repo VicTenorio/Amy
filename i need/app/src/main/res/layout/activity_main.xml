@@ -8,14 +8,13 @@
     android:background="#34326e">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="225dp"
+        android:layout_height="218dp"
         android:layout_marginStart="72dp"
-
-
         android:layout_marginTop="230dp"
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="230dp"
+        android:background="@drawable/boder_style"
         android:src="@mipmap/backgroud"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
