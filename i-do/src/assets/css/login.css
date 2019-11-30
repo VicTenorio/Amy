@@ -30,18 +30,26 @@
   background-color: #34326E;
 }
 
+#tudo {
+  background-color: black;
+}
+
+#logoLogin {
+  width: 250px;
+}
+
 .container {
   animation-name: fade;
   animation-duration: 0.8s;
 }
 
 .bg-login {
-  background-image: url("../images/e3c78ef5-e48b-4c34-b2b3-efcaed81aa39.jpg");
+  background: url("../images/e3c78ef5-e48b-4c34-b2b3-efcaed81aa39.jpg");
   background-size: cover;
 }
 
 .container {
-  padding: 20% 0 20% 30%;
+  padding: 8% 0 10% 30%;
 }
 .container input {
   border: 2px solid #FF9900;
@@ -66,6 +74,11 @@
   height: 50px;
   font: 20pt Quicksand, sans-serif;
   font-weight: 500;
+  transition: 0.1s ease-in-out;
+}
+.container button:hover {
+  background-color: #8e0068;
+  transition: 0.1s ease-in-out;
 }
 .container p {
   font: 14pt Quicksand, sans-serif;

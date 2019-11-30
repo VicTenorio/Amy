@@ -10,6 +10,7 @@ import UserRegister from '../src/Pages/userRegister';
 import ScheduledServices from '../src/Pages/scheduledServices';
 import CardMyServices from '../src/components/cardMyServices';
 import cardScheduleServices from '../src/components/cardScheduleServices';
+import HomeLogoff from '../src/Pages/homeLogoff';
 
 ReactDOM.render(
         <BrowserRouter>
@@ -22,6 +23,7 @@ ReactDOM.render(
                 <Route path="/servicosAgendados" component={ScheduledServices}/>
                 <Route path="/cardMyServices" component={CardMyServices} />
                 <Route path="/cardScheduleServices" component={cardScheduleServices} />
+                <Route path="/homeLogoff" component={HomeLogoff} />
             </Switch>
         </BrowserRouter>
     , document.getElementById('root'));

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalhesServico"
+    android:background="@drawable/bgtop">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="324dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mortarboard" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="342dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="69dp"
+        android:background="@drawable/def_boder_style"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/BtContratar"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:layout_width="321dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lost_boder_style"
+            android:text="DETALHES DO SERVIÇO"
+            android:textColor="#ffff"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="324dp" />
+
+        <TextView
+            android:layout_width="69dp"
+            android:layout_height="20dp"
+            android:text="Nome:"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="373dp" />
+
+        <TextView
+            android:layout_width="76dp"
+            android:layout_height="20dp"
+            android:text="Categoria:"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="433dp" />
+
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="20dp"
+            android:text="Preço:"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="465dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Tempo de Execução:"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="402dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Localização Fixa:"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="493dp" />
+
+        <TextView
+            android:layout_width="89dp"
+            android:layout_height="20dp"
+            android:text="Descrição:"
+            android:textColor="#000000"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="526dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BtContratar"
+        android:layout_width="236dp"
+        android:layout_height="49dp"
+        android:background="@drawable/lost_boder_style"
+        android:text="Ver Disponibilidade"
+        android:textColor="#ffff"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="611dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
