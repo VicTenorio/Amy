@@ -22,10 +22,10 @@ class Login extends React.Component {
                         <div class="row mt-4">
                             <button id="btn-login" onClick={login}>entrar</button>
                         </div>
-                        <div class="row mt-2 ml-1">
+                        <div class="row mt-4 ml-1">
                             <p>Sem login?
                             <Link to="/cadastroDeUsuario">
-                                    <span>Cadastre-se aqui!</span>
+                                    <span className="ml-2">Cadastre-se aqui!</span>
                                 </Link>
                             </p>
                         </div>
