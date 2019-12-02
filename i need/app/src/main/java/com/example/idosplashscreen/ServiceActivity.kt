@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.idosplashscreen.Adapter.ServiceAdapter
 import com.example.idosplashscreen.Common.Common
 import com.example.idosplashscreen.Common.SpacesItemDescoration
+import com.example.idosplashscreen.Model.Http
 import com.example.idosplashscreen.Model.Service
 import kotlinx.android.synthetic.main.activity_grid_categorias.*
 import kotlinx.android.synthetic.main.activity_service.*
@@ -61,13 +62,19 @@ class ServiceActivity : AppCompatActivity() {
     }
 
     private fun InitData(){
-
+/*
+        val http = Http()
+        var url = getString(R.string.api_raven_crown)
+        val array = http.get(url)
+*/
         val array = """[
             {
+                "id":4,
                 "imagem": "https://f.i.uol.com.br/fotografia/2019/03/15/15526795065c8c025270c53_1552679506_4x3_lg.jpg",
                 "descricao": "descricao1"
             },
             {
+                "id":5,
                 "imagem": "C:\\Users\\wesle\\Desktop\\background\\Rain\\a.jpg",
                 "descricao": "descricao2dfsdf"
             }
@@ -79,6 +86,7 @@ class ServiceActivity : AppCompatActivity() {
 // 3
         for (i in 0 until serviceList.size) {
             val service = serviceList[i]
+            listItems[i] = service.id.toString()
             listItems[i] = service.descricao
             listItems[i] = service.imagem
         }

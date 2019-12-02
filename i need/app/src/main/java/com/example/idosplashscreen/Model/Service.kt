@@ -1,21 +1,23 @@
 package com.example.idosplashscreen.Model
 
+import com.beust.klaxon.JsonObject
 import com.beust.klaxon.JsonReader
 import com.beust.klaxon.Klaxon
+import org.json.JSONObject
 import java.io.StringReader
 import java.util.*
 
 
-data class Service( val id: Int
-                   ,val idUsuario: Int
-                   ,val endereco: Endereco
-                   ,val idCategoria: Int
-                   ,val imagem: String
-                   ,val nome: String
-                   ,val descricao: String
-                   ,val tempoExecucao: Date?
-                   ,val preco: Double
-                   ,val localizacaoFixa: Boolean){
+data class Service( var id: Int
+                   ,var idUsuario: Int
+                   ,var endereco: Endereco
+                   ,var idCategoria: Int
+                   ,var imagem: String
+                   ,var nome: String
+                   ,var descricao: String
+                   ,var tempoExecucao: String
+                   ,var preco: Double
+                   ,var localizacaoFixa: Boolean){
 
     constructor():this(
         0,
@@ -25,7 +27,7 @@ data class Service( val id: Int
         "",
         "",
         "",
-        null,
+        "",
         0.0,
         false
     )
@@ -43,6 +45,29 @@ data class Service( val id: Int
 
     }
 
+
+    fun streamingJson(jsonString: String?) : Service {
+
+        var jsonObject = JSONObject(jsonString)
+
+        var endereco = Endereco(
+        )
+
+        var service = Service(
+            jsonObject.getInt("id"),
+            jsonObject.getInt("idUsuario"),
+            endereco,
+            jsonObject.getInt("idCategoria"),
+            jsonObject.getString("imagem"),
+            jsonObject.getString("nome"),
+            jsonObject.getString("descricao"),
+            jsonObject.getString("tempoExecucao"),
+            jsonObject.getDouble("preco"),
+            jsonObject.getBoolean("localizacaoFixa")
+        )
+
+        return service
+    }
 
 
     fun streamingArray(array:String):ArrayList<Service> {

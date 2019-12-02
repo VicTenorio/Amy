@@ -76,9 +76,11 @@
 
     <!--==============================APIS================================-->
     <!--Login-->
-    <string name="api_login">http://10.0.2.2:3000/usuario/login</string>
-    <!--Cadastro Usuario-->
-    <string name="api_cadastro_usuario">https://10.0.2.2:8080/cadastro</string>
+    <string name="api_login">http://ec2-3-87-223-198.compute-1.amazonaws.com:3000</string>
+    <!--RavenCrown-->
+    <string name="api_raven_crown">http://ec2-54-226-170-93.compute-1.amazonaws.com:8090/Valery</string>
+
+
     <!--Servicos-->
     <string name="api_servicos"></string>
     <string name="title_activity_home">HomeActivity</string>
