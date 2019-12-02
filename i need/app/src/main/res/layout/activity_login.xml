@@ -42,8 +42,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="59dp"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
             android:text="@string/usuario"
             android:textColor="#ffff" />
 
@@ -51,10 +52,10 @@
             android:id="@+id/tLogin"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="top@outlook.com"
             android:background="@drawable/def_boder_style"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="top@outlook.com"
             android:textColor="#ff9900" />
 
         <TextView
@@ -62,6 +63,7 @@
             android:layout_width="59dp"
             android:layout_height="wrap_content"
             android:text="@string/senha"
+            android:paddingLeft="5dp"
             android:textColor="#ffff" />
 
         <EditText
@@ -120,5 +122,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
