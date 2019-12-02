@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/navbarLogged.css';
-import logoCinza from '../assets/images/ido-preto.png';
+import logo from '../assets/images/ido-logo.png';
 
 class NavbarLogged extends React.Component {
     render() {
         return (
             <div className="navLogged">
-                <nav id="navLogged" className="navbar navbar-expand-lg bg-transparent">
-                    <Link to="/" className="navbar-brand">
-                        <img id="logoServices" src={logoCinza} />
-                    </Link>
-                    <form id="form" className="row w-100 form-inline justify-content-center p-1">
+                <nav id="navLogged" className="row w-100 navbar bg-transparent">
+                    <div className="col">
+                        <Link to="/">
+                            <img id="logoServices" src={logo} />
+                        </Link>
+                    </div>
+                    <form id="form" className="col-xl-9 justify-content-center">
                         <Link to="/meusServicos">
                             <button id="btnMeusServicos" className="btnNavLogged">Meus serviços</button>
                         </Link>

@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import service from './ConnectionString';
 
 export default function serviceRegisterRequest() {
     const nome = document.getElementById("txtName").value;
@@ -68,7 +69,7 @@ export default function serviceRegisterRequest() {
 
     console.log("params", params)
 
-    Axios.post('https://ravenamy.azurewebsites.net/Servico', params)
+    Axios.post(service() + 'Servico', params)
         .then(Response => {
             console.log(Response)
         })

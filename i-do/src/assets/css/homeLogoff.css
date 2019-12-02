@@ -37,7 +37,18 @@
 }
 
 #logoHomeLogoff {
-  width: 250px;
+  animation-name: fade;
+  animation-duration: 0.5s;
+  width: 350px;
+  height: 350px;
+}
+
+#title {
+  margin-top: -6%;
+}
+
+#btnsAccess {
+  padding-bottom: 4%;
 }
 
 /*# sourceMappingURL=homeLogoff.css.map */

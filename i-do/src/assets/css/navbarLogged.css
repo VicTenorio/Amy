@@ -52,4 +52,9 @@
   transition: 0.1s ease-in-out;
 }
 
+#logoServices {
+  width: 160px;
+  height: 130px;
+}
+
 /*# sourceMappingURL=navbarLogged.css.map */
