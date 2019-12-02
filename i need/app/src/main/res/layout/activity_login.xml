@@ -42,7 +42,7 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="70dp"
+            android:layout_width="109dp"
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
             android:text="@string/usuario"
@@ -60,10 +60,10 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="59dp"
+            android:layout_width="114dp"
             android:layout_height="wrap_content"
-            android:text="@string/senha"
             android:paddingLeft="5dp"
+            android:text="@string/senha"
             android:textColor="#ffff" />
 
         <EditText
