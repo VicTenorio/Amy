@@ -1,7 +1,8 @@
 package com.example.idosplashscreen
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
+import android.view.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.navigation.findNavController
@@ -13,9 +14,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import android.view.Menu
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -67,7 +65,7 @@ class HomeActivity : AppCompatActivity() {
         val navNameText = headerView.findViewById<View>(R.id.name_menu) as TextView
         val navEmailText = headerView.findViewById<View>(R.id.email_menu) as TextView
         navNameText.text = nome.toString()
-        navEmailText.text = id.toString()
+        navEmailText.text = "wesley@teste"
 
         InitData()
         setData()
@@ -125,5 +123,11 @@ class HomeActivity : AppCompatActivity() {
         itemList.add(MyModel(7,R.drawable.salon, getString(R.string.grid_exteticaModa)))
         itemList.add(MyModel(8,R.drawable.calendario, getString(R.string.grid_eventosMusicasDecoracoes)))
     }
-    
+
+
+    fun logout(item: MenuItem) {
+        val tela2 = Intent(this,LoginActivity::class.java)
+        startActivity(tela2)
+    }
+
 }

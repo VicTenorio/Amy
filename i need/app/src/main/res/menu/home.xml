@@ -5,17 +5,14 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="Portugue"
-        android:onClick=""
         app:showAsAction="never" />
     <item
         android:id="@+id/ingles"
-        android:onClick=""
         android:orderInCategory="100"
         android:title="Ingles"
         app:showAsAction="never" />
     <item
         android:id="@+id/espanhol"
-        android:onClick=""
         android:orderInCategory="100"
         android:title="Espanhol"
         app:showAsAction="never" />
