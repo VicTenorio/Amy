@@ -25,6 +25,7 @@ import com.example.idosplashscreen.Common.SpacesItemDescoration
 import com.example.idosplashscreen.Model.MyModel
 import kotlinx.android.synthetic.main.activity_grid_categorias.*
 import kotlinx.android.synthetic.main.activity_grid_categorias.recycler_view
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.content_home.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.nav_header_home.*
@@ -124,4 +125,5 @@ class HomeActivity : AppCompatActivity() {
         itemList.add(MyModel(7,R.drawable.salon, getString(R.string.grid_exteticaModa)))
         itemList.add(MyModel(8,R.drawable.calendario, getString(R.string.grid_eventosMusicasDecoracoes)))
     }
+    
 }
