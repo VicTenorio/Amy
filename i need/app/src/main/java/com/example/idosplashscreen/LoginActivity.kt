@@ -41,8 +41,6 @@ class LoginActivity : AppCompatActivity() {
         var url = getString(R.string.api_login) + "/usuario/login"
 
         var login: Login = Login(email, senha)
-
-
         var json = """{
                         "nome": "wesley",
                         "email": "wesley@teste",

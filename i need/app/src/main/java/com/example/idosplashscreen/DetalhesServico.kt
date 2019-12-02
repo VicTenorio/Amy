@@ -74,7 +74,6 @@ class DetalhesServico : AppCompatActivity() {
             .load(service.imagem)//service.Imagem
             .placeholder(R.mipmap.ic_launcher)
             .into(imagem_servico)
-
     }
 
 }
