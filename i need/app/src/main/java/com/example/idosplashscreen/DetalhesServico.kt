@@ -2,6 +2,7 @@ package com.example.idosplashscreen
 
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +10,9 @@ import com.example.idosplashscreen.Model.Service
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detalhes_servico.*
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import com.example.idosplashscreen.Model.UsuarioLogado
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -46,15 +49,17 @@ class DetalhesServico : AppCompatActivity() {
     }
 
     fun setData(){
+        var imagem = intent.getStringExtra("imagem")
+        var descricao = intent.getStringExtra("descricao")
         val data = """
             {
                 "id":4,
                 "idUsuario":4,
                 "endereco":null,
                 "idCategoria": 4,
-                "imagem": "https://f.i.uol.com.br/fotografia/2019/03/15/15526795065c8c025270c53_1552679506_4x3_lg.jpg",
+                "imagem": "${imagem}",
                 "nome": "Wesley",
-                "descricao": "descricao1",
+                "descricao": "${descricao}",
                 "tempoExecucao":"4horas",
                 "preco":"20.00",
                 "localizacaoFixa":True
@@ -74,6 +79,18 @@ class DetalhesServico : AppCompatActivity() {
             .load(service.imagem)//service.Imagem
             .placeholder(R.mipmap.ic_launcher)
             .into(imagem_servico)
+    }
+
+
+    fun agendar(view:View){
+        Toast.makeText(this, "Serviço agendado com sucesso!!!", Toast.LENGTH_LONG).show()
+
+        var home = Intent(this, HomeActivity::class.java)
+        // enviando valores para a outra activity
+        home.putExtra("idUsuario", UsuarioLogado.idUsuario)
+        home.putExtra("nome", UsuarioLogado.nomeUsuario)
+
+        startActivity(home)
     }
 
 }

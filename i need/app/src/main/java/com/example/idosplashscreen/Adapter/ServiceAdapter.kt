@@ -55,12 +55,13 @@ class ServiceAdapter(internal var  context: Context,
         //==========================================
         p0.setEvent(object :IcardIntemClickListener{
             override fun onCartItemClick(view: View, position: Int) {
-                Toast.makeText(context,"Clicked:"+ myItems[position].id,Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context,"Clicked:"+ myItems[position].id,Toast.LENGTH_SHORT).show()
 
-                if(myItems[position].id.toInt() == 4) {
-                    var detalhes = Intent(view.context, DetalhesServico::class.java)
-                    ContextCompat.startActivity(view.context, detalhes, null)
-                }
+                var detalhes = Intent(view.context, DetalhesServico::class.java)
+                detalhes.putExtra("imagem", myItems[position].imagem)
+                detalhes.putExtra("descricao", myItems[position].descricao)
+                ContextCompat.startActivity(view.context, detalhes, null)
+
             }
         })
     }

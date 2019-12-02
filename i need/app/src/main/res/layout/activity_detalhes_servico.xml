@@ -129,11 +129,11 @@
         android:layout_width="236dp"
         android:layout_height="49dp"
         android:background="@drawable/lost_boder_style"
-        android:text="Ver Disponibilidade"
+        android:text="Agendar"
         android:textColor="#ffff"
         android:gravity="center"
         android:layout_marginLeft = "90dp"
-        android:onClick="verDisponi"
+        android:onClick="agendar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="611dp" />
