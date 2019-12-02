@@ -109,9 +109,17 @@
         android:background="@drawable/lost_boder_style"
         android:text="Ver Disponibilidade"
         android:textColor="#ffff"
+        android:onClick="verDisponi"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="611dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvModal"
+        tools:ignore="MissingConstraints" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
