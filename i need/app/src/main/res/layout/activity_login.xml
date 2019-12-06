@@ -14,9 +14,9 @@
         android:layout_width="250dp"
         android:layout_height="196dp"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="104dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="1dp"
         android:gravity="center"
         android:src="@mipmap/ineedpurple"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -59,7 +59,7 @@
             android:inputType="textPersonName"
             android:fontFamily="@string/fontFamily"
             android:text="nome@email.com"
-            android:textColor="#D4F5F5" />
+            android:textColor="#BDD8D8" />
 
         <TextView
             android:id="@+id/textView3"
@@ -102,7 +102,7 @@
         android:id="@+id/tEsqueceu_a_senha"
         android:layout_width="200dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="70dp"
         android:text="@string/Esqueceu_a_senha"
         android:textAlignment="center"
         android:textColor="#ffff"

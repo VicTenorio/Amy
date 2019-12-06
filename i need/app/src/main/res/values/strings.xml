@@ -63,7 +63,7 @@
 
     <!--Categorias-->
 
-    <string name="grid_categoria">Categorias</string>
+    <string name="grid_categoria">Explore serviços por categorias</string>
     <string name="grid_auto">Auto</string>
     <string name="grid_construção">Construção</string>
     <string name="grid_entregasEncomendas">Entregas e encomendas</string>
@@ -71,7 +71,7 @@
     <string name="grid_exteticaModa">Estetica e Moda</string>
     <string name="grid_informaticaTecnologia">Informática e Tecnologia</string>
     <string name="grid_educacao">Educação</string>
-    <string name="grid_eventosMusicasDecoracoes">Eventos Musicais e Decorações</string>
+    <string name="grid_eventosMusicasDecoracoes">Eventos e Decorações</string>
 
 
     <!--==============================APIS================================-->
