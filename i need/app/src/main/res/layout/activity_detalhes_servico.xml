@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetalhesServico"
-    android:background="@drawable/bgtop">
+    android:background="@drawable/side_nav_bar">
 
 
     <LinearLayout
@@ -30,7 +30,7 @@
         android:layout_height="244dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="69dp"
-        android:background="@drawable/def_boder_style"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/BtContratar"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
@@ -40,9 +40,11 @@
         <TextView
             android:layout_width="321dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/lost_boder_style"
-            android:text="DETALHES DO SERVIÇO"
-            android:textColor="#ffff"
+            android:text="Detalhes do Serviço"
+            android:textColor="#DABEBE"
+            android:fontFamily="@string/fontFamily"
+            android:textSize="20dp"
+            android:textStyle="bold"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="125dp"
             tools:layout_editor_absoluteY="324dp" />
@@ -50,7 +52,8 @@
         <TextView
             android:layout_width="69dp"
             android:layout_height="20dp"
-            android:text="Nome:"
+            android:text="Nome"
+            android:fontFamily="@string/fontFamily"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
@@ -59,7 +62,8 @@
         <TextView
             android:layout_width="76dp"
             android:layout_height="20dp"
-            android:text="Categoria:"
+            android:fontFamily="@string/fontFamily"
+            android:text="Categoria"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
@@ -68,7 +72,8 @@
         <TextView
             android:layout_width="56dp"
             android:layout_height="20dp"
-            android:text="Preço:"
+            android:fontFamily="@string/fontFamily"
+            android:text="Preço"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
@@ -77,7 +82,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:text="Tempo de Execução:"
+            android:fontFamily="@string/fontFamily"
+            android:text="Tempo de Execução"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
@@ -86,7 +92,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:text="Localização Fixa:"
+            android:fontFamily="@string/fontFamily"
+            android:text="Local"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
@@ -95,7 +102,8 @@
         <TextView
             android:layout_width="89dp"
             android:layout_height="20dp"
-            android:text="Descrição:"
+            android:text="Descrição"
+            android:fontFamily="@string/fontFamily"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
@@ -108,7 +116,7 @@
         android:layout_height="49dp"
         android:background="@drawable/lost_boder_style"
         android:text="Ver Disponibilidade"
-        android:textColor="#ffff"
+        android:textColor="#E0BBBB"
         android:onClick="verDisponi"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"

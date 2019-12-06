@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_gravity="center_horizontal|center_vertical"
+
         android:padding="16dp"
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -15,9 +15,10 @@
 
         <ImageView
             android:id="@+id/service_image"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
             android:src="@drawable/icon_mecanica" />
 
         <TextView
@@ -27,7 +28,10 @@
             android:text="mecanica"
             android:textAlignment="center"
             android:textColor="@android:color/black"
+            android:fontFamily="@string/fontFamily"
             android:textSize="18sp"
+            android:layout_marginLeft="150sp"
+            android:layout_marginTop="-50dp"
             android:textStyle="bold"
 
             />

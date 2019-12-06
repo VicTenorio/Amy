@@ -5,24 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@drawable/bgtop"
+    android:background="@drawable/bg"
     >
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="212dp"
+        android:layout_width="250dp"
         android:layout_height="196dp"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="104dp"
         android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:src="@mipmap/backgroud"
-        android:background="@drawable/boder_style"
+        android:src="@mipmap/ineedpurple"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,11 +41,13 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="70dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
             android:text="@string/usuario"
-            android:textColor="#ffff" />
+            android:textSize="20dp"
+            android:fontFamily="@string/fontFamily"
+            android:textColor="#CFCCCC" />
 
         <EditText
             android:id="@+id/tLogin"
@@ -54,17 +55,21 @@
             android:layout_height="50dp"
             android:background="@drawable/def_boder_style"
             android:ems="10"
+            android:paddingLeft="16dp"
             android:inputType="textPersonName"
-            android:text="top@outlook.com"
-            android:textColor="#ff9900" />
+            android:fontFamily="@string/fontFamily"
+            android:text="nome@email.com"
+            android:textColor="#D4F5F5" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="59dp"
+            android:layout_width="100dp"
+            android:textSize="20dp"
             android:layout_height="wrap_content"
             android:text="@string/senha"
+            android:fontFamily="@string/fontFamily"
             android:paddingLeft="5dp"
-            android:textColor="#ffff" />
+            android:textColor="#D4F5F5"/>
 
         <EditText
             android:id="@+id/tsenha"
@@ -73,7 +78,7 @@
             android:background="@drawable/def_boder_style"
             android:ems="10"
             android:inputType="textPassword"
-            android:textColor="#ff9900" />
+            android:textColor="#D4F5F5" />
 
     </LinearLayout>
 
@@ -85,6 +90,7 @@
         android:layout_marginTop="34dp"
         android:layout_marginBottom="125dp"
         android:text="@string/cadastro"
+        android:textSize="15dp"
         android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,10 +100,11 @@
 
     <TextView
         android:id="@+id/tEsqueceu_a_senha"
-        android:layout_width="127dp"
+        android:layout_width="200dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="80dp"
         android:text="@string/Esqueceu_a_senha"
+        android:textAlignment="center"
         android:textColor="#ffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,6 +128,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tcadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="sans-serif-light"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
