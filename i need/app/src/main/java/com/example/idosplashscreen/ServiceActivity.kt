@@ -60,11 +60,9 @@ class ServiceActivity : AppCompatActivity() {
     }
 
     private fun InitData(){
+
+
 /*
-        val http = Http()
-        var url = getString(R.string.api_raven_crown)
-        val array = http.get(url)
-*/
         val array = """[
             {
                 "id":4,
@@ -164,16 +162,21 @@ class ServiceActivity : AppCompatActivity() {
             }
             
         ]"""
+*/
+
+        var idCategoriaHome = intent.getIntExtra("idCategoria", 0)
+        val http = Http()
+        var url = getString(R.string.api_raven_crown)+"/Servicos/Categoria?categoria="+idCategoriaHome+"&login=534"
+        var array = http.get(url)
 
         serviceList = Service().streamingArray(array)//json de servicos
 
         //listItems = arrayOfNulls<String>(serviceList.size)
         //listItems = ArrayList<Service>(serviceList.size)
-
         listItems = ArrayList()
 // 3
 
-        var idCategoriaHome = intent.getIntExtra("idCategoria", 0)
+
         for (i in 0 until serviceList.size) {
             val service = serviceList[i]
             if(service.idCategoria == idCategoriaHome){

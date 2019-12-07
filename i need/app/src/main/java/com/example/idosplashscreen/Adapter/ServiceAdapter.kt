@@ -42,14 +42,15 @@ class ServiceAdapter(internal var  context: Context,
         //p0.img_icon.setImageResource(myItems[p1].icon)
         //p0.txt_description.text = myItems[p1].description
 
-        p0.descricao.text = myItems[p1].descricao
-
+        p0.descricao.text = myItems[p1].nome
+        //p0.preco.text = myItems[p1].preco
+/*
         Picasso
             .get()//.with(context)
             .load(myItems[p1].imagem)//service.Imagem
             .placeholder(R.mipmap.ic_launcher)
             .into(p0.imagem)
-
+*/
         //==========================================
         // Define o OnClick dos items no gridView
         //==========================================
@@ -58,8 +59,9 @@ class ServiceAdapter(internal var  context: Context,
                 //Toast.makeText(context,"Clicked:"+ myItems[position].id,Toast.LENGTH_SHORT).show()
 
                 var detalhes = Intent(view.context, DetalhesServico::class.java)
-                detalhes.putExtra("imagem", myItems[position].imagem)
+                //detalhes.putExtra("imagem", myItems[position].imagem)
                 detalhes.putExtra("descricao", myItems[position].descricao)
+                detalhes.putExtra("nome", myItems[position].nome)
                 ContextCompat.startActivity(view.context, detalhes, null)
 
             }

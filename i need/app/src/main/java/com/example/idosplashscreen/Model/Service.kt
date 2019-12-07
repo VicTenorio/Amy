@@ -12,7 +12,7 @@ data class Service( var id: Int
                    ,var idUsuario: Int
                    ,var endereco: Endereco
                    ,var idCategoria: Int
-                   ,var imagem: String
+                   ,var imagem: ArrayList<String>
                    ,var nome: String
                    ,var descricao: String
                    ,var tempoExecucao: String
@@ -24,7 +24,7 @@ data class Service( var id: Int
         0,
          Endereco(),
         0,
-        "",
+         arrayListOf(),
         "",
         "",
         "",
@@ -58,7 +58,7 @@ data class Service( var id: Int
             jsonObject.getInt("idUsuario"),
             endereco,
             jsonObject.getInt("idCategoria"),
-            jsonObject.getString("imagem"),
+            arrayListOf(),
             jsonObject.getString("nome"),
             jsonObject.getString("descricao"),
             jsonObject.getString("tempoExecucao"),

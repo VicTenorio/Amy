@@ -49,8 +49,10 @@ class DetalhesServico : AppCompatActivity() {
     }
 
     fun setData(){
-        var imagem = intent.getStringExtra("imagem")
+        //var imagem = intent.getStringExtra("imagem")
+        var imagem = getDrawable(R.drawable.icon_mecanica)
         var descricao = intent.getStringExtra("descricao")
+        var nome = intent.getStringExtra("nome")
         val data = """
             {
                 "id":4,
@@ -58,9 +60,9 @@ class DetalhesServico : AppCompatActivity() {
                 "endereco":null,
                 "idCategoria": 4,
                 "imagem": "${imagem}",
-                "nome": "Wesley",
+                "nome": "${nome}",
                 "descricao": "${descricao}",
-                "tempoExecucao":"4horas",
+                "tempoExecucao":"3 horas",
                 "preco":"20.00",
                 "localizacaoFixa":True
             }"""
@@ -73,12 +75,12 @@ class DetalhesServico : AppCompatActivity() {
         tempo_servico.text = tempo_servico.text.toString()+" "+service.tempoExecucao
         localizacao_servico.text = localizacao_servico.text.toString()+" "+service.localizacaoFixa.toString()
         descricao_servico.text = descricao_servico.text.toString()+" "+service.descricao
-
+/*
         Picasso
             .get()//.with(context)
             .load(service.imagem)//service.Imagem
             .placeholder(R.mipmap.ic_launcher)
-            .into(imagem_servico)
+            .into(imagem_servico)*/
     }
 
 

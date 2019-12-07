@@ -78,9 +78,9 @@
 
     =!--=========================->======================================-->
     <!--Login-->
-    <string name="api_login">http://ec2-3-87-223-198.compute-1.amazonaws.com:3000</string>
+    <string name="api_login">http://ec2-3-87-223-198.compute-1.amazonaws.com:3001</string>
     <!--RavenCrown-->
-    <string name="api_raven_crown">http://ec2-54-226-170-93.compute-1.amazonaws.com:8090/Valery</string>
+    <string name="api_raven_crown">http://ec2-3-87-223-198.compute-1.amazonaws.com:8080/ValeryAPI/</string>
 
 
     <!--Servicos-->
