@@ -59,7 +59,6 @@ class GridCategorias : AppCompatActivity() {
 
     private fun InitData(){
         itemList = ArrayList()
-
         itemList.add(MyModel(1,R.drawable.car, getString(R.string.grid_auto)))
         itemList.add(MyModel(2,R.drawable.website, getString(R.string.grid_informaticaTecnologia)))
         itemList.add(MyModel(3,R.drawable.house, getString(R.string.grid_Domesticos)))

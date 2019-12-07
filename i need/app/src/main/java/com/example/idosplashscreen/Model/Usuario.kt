@@ -29,11 +29,12 @@ data class Usuario (var id_usuario: Int,
         Endereco()
     )
 
+    //usar ${this.endereco.toJson()} no endereço
     fun toJson() : String{
         return("""{"nome" : "${this.nome}",
             "email" : "${this.email}",
             "senha" : "${this.senha}",
-            "endereco" : ${this.endereco.toJson()},
+            "endereco" : null,
             "imagem" : null,
             "cpfCnpj" : "${this.cpf_cnpj}",
             "RG" : "${this.rg}",

@@ -39,12 +39,12 @@ class MyAdapter(internal var  context: Context,
         //==========================================
         p0.setEvent(object :IcardIntemClickListener{
             override fun onCartItemClick(view: View, position: Int) {
-                Toast.makeText(context,"Clicked:"+ myItems[position].idServico,Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context,"Clicked >>>>>:"+ myItems[position].idServico,Toast.LENGTH_SHORT).show()
 
-                if(myItems[position].idServico == 1){
-                    var cad = Intent(view.context,ServiceActivity::class.java)
-                    ContextCompat.startActivity(view.context,cad,null)
-                }
+                var cad = Intent(view.context,ServiceActivity::class.java)
+                cad.putExtra("idCategoria", myItems[position].idServico)
+                ContextCompat.startActivity(view.context,cad,null)
+
             }
         })
     }

@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="121dp"
-        android:layout_height="26dp"
+        android:layout_width="158dp"
+        android:layout_height="33dp"
         android:layout_marginStart="109dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="112dp"
@@ -135,7 +135,7 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="123dp"
+            android:layout_width="255dp"
             android:layout_height="30dp"
             android:text="@string/dados_pessoais"
             android:textColor="#ffff" />
@@ -214,7 +214,7 @@
                 android:layout_marginBottom="10px"
                 android:background="@drawable/def_boder_style"
                 android:paddingRight="10dp"
-                android:text="Solteiro" />
+                android:text="@string/Ch_solteiro" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -222,7 +222,7 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/def_boder_style"
                 android:paddingRight="10dp"
-                android:text="Casado" />
+                android:text="@string/Ch_casado" />
 
         </LinearLayout>
 

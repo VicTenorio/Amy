@@ -1,4 +1,5 @@
-<resources>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">I Need</string>
 
     <!--     strings tela de login   -->
@@ -76,9 +77,11 @@
 
     <!--==============================APIS================================-->
     <!--Login-->
-    <string name="api_login">http://10.0.2.2:3000/usuario/login</string>
-    <!--Cadastro Usuario-->
-    <string name="api_cadastro_usuario">https://10.0.2.2:8080/cadastro</string>
+    <string name="api_login">http://ec2-3-87-223-198.compute-1.amazonaws.com:3001</string>
+    <!--RavenCrown-->
+    <string name="api_raven_crown">http://ec2-3-87-223-198.compute-1.amazonaws.com:8080/ValeryAPI/</string>
+
+
     <!--Servicos-->
     <string name="api_servicos"></string>
     <string name="title_activity_home">HomeActivity</string>
@@ -95,6 +98,24 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <!--Detalhes de Servicos-->
+
+    <string name="detalhes_servico">DETALHES DO SERVIÇO</string>
+    <string name="nome_servico">Nome:</string>
+    <string name="categoria_servico">Categoria:</string>
+    <string name="preco_servico">Preço:</string>
+    <string name="tempo_servico">Tempo de Execução:</string>
+    <string name="localizacao_servico">Localização Fixa:</string>
+    <string name="descricao_servico">Descrição:</string>
+    <string name="ver_disponibilidade">Ver Disponibilidade</string>
+
+    <!--check box-->
+    <string name="Ch_solteiro">Solteiro</string>
+    <string name="Ch_casado">casado</string>
+
+
+
 
 
 </resources>
