@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/css/homeLogoff.css';
 import { Link } from 'react-router-dom';
-import logoCinza from '../assets/images/ido-preto.png';
+import logo from '../assets/images/ido-logo.png';
 
 class HomeLogoff extends React.Component {
     render() {
@@ -9,13 +9,13 @@ class HomeLogoff extends React.Component {
             <div>
                 <div id="bodyLogoff">
                     <div className="col-xl-12" align="center">
-                        <img id="logoHomeLogoff" src={logoCinza} />
+                        <img id="logoHomeLogoff" src={logo} alt="logo"/>
                         <h1 id="title">Vamos começar?</h1>
                         <div align="center">
-                            <p id="text" style={{color: '#A7A7A7'}}>Explore o lugar perfeito para realizar seus serviços e gerenciá-los com facilidade.</p>
+                            <p id="text">Explore o lugar perfeito para realizar seus serviços e gerenciá-los com facilidade.</p>
                         </div>
                     </div>
-                    <form className="row w-100 form-inline justify-content-center p-3">
+                    <form id="btnsAccess" className="row w-100 form-inline justify-content-center">
                         <div className="row" align="center">
                             <div className="col-7">
                                 <Link to="/cadastroDeUsuario">

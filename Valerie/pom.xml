@@ -16,6 +16,7 @@
   <properties>
     <java.version>1.8</java.version>
     <start-class>br.com.Bandtec.RavenCrown.RavenCrownApplication</start-class>
+    <skipTests>true</skipTests>
   </properties>
   <packaging>war</packaging>
   <dependencies>
@@ -44,11 +45,6 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
     <dependency>
@@ -63,7 +59,15 @@
     </dependency>
   </dependencies>
   <build>
-    <plugins>
+  <plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12.4</version>
+        <configuration>
+          <skipTests>${skipTests}</skipTests>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-webapp-maven-plugin</artifactId>

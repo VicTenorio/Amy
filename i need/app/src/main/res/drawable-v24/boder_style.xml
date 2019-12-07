@@ -3,19 +3,18 @@
 
     <stroke
         android:width="2dp"
-        android:color="#494796"
+        android:color="#FCB05A"
         />
 
     <corners
-        android:radius="25dp"
+        android:radius="100dp"
         />
 
     <padding
-        android:bottom="1dp"
+        android:bottom="5dp"
         android:left="10dp"
         android:right="5dp"
-        android:top="5dp"
+        android:top="10dp"
         />
-
 
 </shape>

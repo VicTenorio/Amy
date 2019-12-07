@@ -17,7 +17,7 @@ class HomeLogin extends React.Component {
                                     <p id="text">Explore o lugar perfeito para realizar seus serviços e gerenciá-los com facilidade.</p>
                                 </div>
                             </div>
-                            <div className="col-xl-6 p-3">
+                            <div className="col-xl-6">
                                 <div className="row">
                                     <Link to="/cadastroDeServico" className="col link">
                                         <div className="p-3 justify-content-center item-catalogo">

@@ -2,11 +2,17 @@
 
 #logoHome{
     @extend %logoStyle;
+    width: 250px;
+    height: 220px;
+}
+
+#userName {
+    color: $color-primary;
 }
 
 #btnLoginNavbar {
     color: $color-primary;
-    border: 1px solid $color-primary;
+    border: 2px solid $color-primary;
     border-radius: 50px;
     font-size: 25px;
     width: 140px;
@@ -14,7 +20,7 @@
     &:hover {
     background-color: #010738;
     color: $color-gray;
-    border: 1px solid #010738;
+    border: 2px solid #010738;
     transition: 0.1s ease-in-out;
     }
 }
