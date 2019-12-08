@@ -22,7 +22,7 @@ class DetalhesServico : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_detalhes_servico)
-        val textView: TextView  = findViewById(R.id.tvModal)
+        val textView: TextView  = findViewById(R.id.BtContratar)
         textView.text = SimpleDateFormat("dd.MM.yyyy").format(System.currentTimeMillis())
 
         var cal = Calendar.getInstance()
