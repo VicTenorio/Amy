@@ -1,9 +1,80 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Core\\Amy.Core.csproj": {}
+    "C:\\Workspace\\.netCore\\Amy\\BestFriendsRight\\BestFriendsRight\\BestFriendsRight.csproj": {}
   },
   "projects": {
+    "C:\\Workspace\\.netCore\\Amy\\BestFriendsRight\\BestFriendsRight\\BestFriendsRight.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Workspace\\.netCore\\Amy\\BestFriendsRight\\BestFriendsRight\\BestFriendsRight.csproj",
+        "projectName": "BestFriendsRight",
+        "projectPath": "C:\\Workspace\\.netCore\\Amy\\BestFriendsRight\\BestFriendsRight\\BestFriendsRight.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Workspace\\.netCore\\Amy\\BestFriendsRight\\BestFriendsRight\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Core\\Amy.Core.csproj": {
+                "projectPath": "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Core\\Amy.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Core\\Amy.Core.csproj": {
       "version": "1.0.0",
       "restore": {
