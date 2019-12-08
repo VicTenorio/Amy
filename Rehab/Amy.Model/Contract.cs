@@ -8,12 +8,21 @@ namespace Amy.Model
     {
         [Key]
         [Column("id_contrato")]
-        public int IdContract { get; set; }
+        public int Id { get; set; }
 
-        [Column("id_usuario_consumidor")]
-        public int IdUserConsumer { get; set; }
+        [Column("id_servico")]
+        public int? IdService { get; set; }
 
-        [Column("id_usuario_prestador")]
-        public int IdUserProvider { get; set; }
+        [Column("id_endereco")]
+        public int? IdAdress { get; set; }
+
+        [Column("id_Usuario_prestador")]
+        public int IdProvider { get; set; }
+
+        [Column("id_Usuario_consumidor")]
+        public int IdConsumer { get; set; }
+
+        [Column("id_demanda")]
+        public int? IdNeed { get; set; }
     }
 }

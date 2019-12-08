@@ -14,6 +14,9 @@ namespace Amy.Model
         [Column("id_contrato")]
         public int IdContract { get; set; }
 
+        [Column("id_servico")]
+        public int IdService { get; set; }
+
         [Column("id_usuario_avaliador")]
         public int IdUserAvaliator { get; set; }
 

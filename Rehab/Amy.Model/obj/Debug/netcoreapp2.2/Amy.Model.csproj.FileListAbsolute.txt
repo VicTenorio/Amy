@@ -7,3 +7,12 @@ C:\Workspace\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.AssemblyInfoI
 C:\Workspace\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.AssemblyInfo.cs
 C:\Workspace\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.dll
 C:\Workspace\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.pdb
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\bin\Debug\netcoreapp2.2\Amy.Model.deps.json
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\bin\Debug\netcoreapp2.2\Amy.Model.dll
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\bin\Debug\netcoreapp2.2\Amy.Model.pdb
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.csprojAssemblyReference.cache
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.csproj.CoreCompileInputs.cache
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.AssemblyInfoInputs.cache
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.AssemblyInfo.cs
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.dll
+C:\Workspace\.netCore\Amy\Rehab\Amy.Model\obj\Debug\netcoreapp2.2\Amy.Model.pdb
