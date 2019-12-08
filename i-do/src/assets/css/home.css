@@ -52,12 +52,15 @@
   font-size: 25px;
 }
 
+.caixas {
+  margin-top: -8%;
+}
+
 .item-catalogo {
   animation-name: fade;
   animation-duration: 2s;
-  color: #B0ACAC;
-  background-color: #000423;
-  border: 2px solid #B0ACAC;
+  color: #FF9900;
+  border: 2px solid transparent;
   border-radius: 10px 10px 10px 0px;
   text-decoration: none;
   font-family: 16pt Quicksand, sans-serif;

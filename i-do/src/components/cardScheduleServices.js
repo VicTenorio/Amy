@@ -18,7 +18,7 @@ class cardScheduleServices extends React.Component {
                         <label className="row">Local: Av. Paulista, 535</label>
                     </div>
                     <div>
-                        <input className="w-50" id="btnDetailsService" type="button" value="Analisar proposta" data-toggle="modal" data-target="#exampleModalCenter" />
+                        <input className="w-50" id="btnDetailsService" type="button" value="Analisar proposta" data-toggle="modal" data-target="#staticBackdrop" />
                     </div>
                 </div>
                 <ModalServiceDetails/>

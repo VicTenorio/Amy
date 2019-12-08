@@ -5,9 +5,9 @@ class ModalServiceDetails extends React.Component {
     render() {
         return (
             <div>
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
+                        <div id="modalServiceDetails" class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title" id="exampleModalCenterTitle">Detalhes do serviço agendado</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -40,14 +40,14 @@ class ModalServiceDetails extends React.Component {
                                     <input type="button" className="w-25" id="btnAprovar" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" value="Aprovar" />
                                 </div>
                             </div>
-                            <div class="collapse" id="confirmAprove">
+                            <div class="collapse" id="collapseExample">
                                 <div class="card card-body">
                                     <label>
                                         Você tem certeza que quer confirmar este agendamento?
                                     </label>
                                     <div className="justify-content-center row w-100">
-                                        <input type="button" className="col-xl-4" id="btnRate" value="Avaliar melhor" />
-                                        <input type="button" className="col-xl-4" id="btnConfirm" value="Confirmar!" />
+                                        <input type="button" className="col-xl-4" id="btnRate" data-toggle="collapse" data-target="#collapseExample" value="Avaliar melhor" />
+                                        <input type="button" className="col-xl-4" id="btnConfirm" data-toggle="modal" data-target=".bd-example-modal-sm" value="Confirmar!" />
                                     </div>
                                 </div>
                             </div>

@@ -2,6 +2,10 @@ import Axios from 'axios';
 import service from './ConnectionString';
 
 export default function serviceRegisterRequest() {
+    const btn = document.getElementById("btnServiceRegister")
+    btn.textContent = "Carregando..."
+    btn.setAttribute("disabled", true)
+
     const nome = document.getElementById("txtName").value;
     const preco = document.getElementById("txtPrice").value;
     const descricao = document.getElementById("txtDescription").value;
@@ -72,8 +76,12 @@ export default function serviceRegisterRequest() {
     Axios.post(service() + 'Servico', params)
         .then(Response => {
             console.log(Response)
+            alert("Cadastrado com sucesso!")
+            btn.textContent = "Cadastrar"
         })
         .catch(Error => {
             console.log(Error)
+            alert("Ocorreu um erro")
+            btn.textContent = "Cadastrar"
         })
 }

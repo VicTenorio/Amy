@@ -35,6 +35,10 @@
   background-color: #34326E;
 }
 
+#modalServiceDetails {
+  border: 3px solid #34326E;
+}
+
 .dataClient {
   color: #34326E;
 }
