@@ -108,7 +108,7 @@
     <string name="tempo_servico">Tempo de Execução:</string>
     <string name="localizacao_servico">Localização Fixa:</string>
     <string name="descricao_servico">Descrição:</string>
-    <string name="ver_disponibilidade">Ver Disponibilidade</string>
+    <string name="agendar_data">Agendar</string>
 
     <!--check box-->
     <string name="Ch_solteiro">Solteiro</string>
