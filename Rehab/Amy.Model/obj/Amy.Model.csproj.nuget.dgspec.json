@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\Amy\\Rehab\\Amy.Model\\Amy.Model.csproj": {}
+    "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Model\\Amy.Model.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\Amy\\Rehab\\Amy.Model\\Amy.Model.csproj": {
+    "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Model\\Amy.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\Amy\\Rehab\\Amy.Model\\Amy.Model.csproj",
+        "projectUniqueName": "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Model\\Amy.Model.csproj",
         "projectName": "Amy.Model",
-        "projectPath": "C:\\Workspace\\Amy\\Rehab\\Amy.Model\\Amy.Model.csproj",
+        "projectPath": "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Model\\Amy.Model.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\Amy\\Rehab\\Amy.Model\\obj\\",
+        "outputPath": "C:\\Workspace\\.netCore\\Amy\\Rehab\\Amy.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

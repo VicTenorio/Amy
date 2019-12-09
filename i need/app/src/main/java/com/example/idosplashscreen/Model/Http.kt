@@ -6,7 +6,7 @@ import java.net.URL
 
 class Http {
 
-    fun get(vararg parts: String):String?{
+    fun get(vararg parts: String):String{
         var requestURL = parts.first()
         val mURL = URL(requestURL)
 

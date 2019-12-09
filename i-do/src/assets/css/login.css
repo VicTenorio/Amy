@@ -30,12 +30,9 @@
   background-color: #34326E;
 }
 
-#tudo {
-  background-color: black;
-}
-
 #logoLogin {
-  width: 250px;
+  width: 300px;
+  height: 300px;
 }
 
 .container {
@@ -49,7 +46,7 @@
 }
 
 .container {
-  padding: 8% 0 10% 30%;
+  padding: 3% 1% 5% 30%;
 }
 .container input {
   border: 2px solid #FF9900;

@@ -36,6 +36,15 @@
   background-color: #34326E;
 }
 
+#logoHome {
+  width: 250px;
+  height: 220px;
+}
+
+#userName {
+  color: #FF9900;
+}
+
 #btnLoginNavbar {
   color: #FF9900;
   border: 2px solid #FF9900;

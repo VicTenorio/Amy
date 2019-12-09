@@ -1,11 +1,12 @@
 @import '../scss/styleDefault.scss';
 
 #tudo {
-    background-color: darken($color: black, $amount: 10)
+    
 }
 
 #logoLogin {
-    width: 250px;
+    width: 300px;
+    height: 300px;
 }
 
 .container {
@@ -19,7 +20,7 @@
 }
 
 .container {
-    padding: 8% 0 10% 30%;
+    padding: 3% 1% 5% 30%;
 
     input {
         border: 2px solid $color-primary;

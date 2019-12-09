@@ -1,5 +1,9 @@
 @import '../scss//styleDefault.scss';
 
+#modalServiceDetails {
+    border: 3px solid $color-background;
+}
+
 .dataClient {
     color: $color-background;
 }

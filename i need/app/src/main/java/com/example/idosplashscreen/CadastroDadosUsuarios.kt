@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.idosplashscreen.Model.Endereco
 import com.example.idosplashscreen.Model.Http
 import com.example.idosplashscreen.Model.Usuario
+import kotlinx.android.synthetic.main.activity_cadastro_dados_usuarios.*
 
 class CadastroDadosUsuarios : AppCompatActivity() {
 
@@ -22,15 +23,6 @@ class CadastroDadosUsuarios : AppCompatActivity() {
 
     fun cadastro(v: View){
 
-        val email = intent.getStringExtra("email")
-        val telefone = intent.getStringExtra("telefone")
-        val senha = intent.getStringExtra("senha")
-        val confirmarSenha = intent.getStringExtra("confirmarSenha")
-        var nomeCompleto = intent.getStringExtra("nomeCompleto")
-        var RG = intent.getStringExtra("RG")
-        var CPF = intent.getStringExtra("CPF")
-        var dtNasc = intent.getStringExtra("dtNasc")
-
         var campoRua = findViewById(R.id.campoRua) as EditText
         var campoNumeroMoradia = findViewById(R.id.campoNumeroMoradia) as EditText
         var campoReferencia = findViewById(R.id.campoReferecia) as EditText
@@ -42,6 +34,7 @@ class CadastroDadosUsuarios : AppCompatActivity() {
         var campoPais = findViewById(R.id.campoPais) as EditText
 
         var rua = campoRua.text.toString()
+        var RG = campoRG.text.toString()
         var numeroMoradia = campoNumeroMoradia.text.toString()
         var referencia = campoReferencia.text.toString()
         var complemento = campoComplemento.text.toString()
@@ -50,6 +43,15 @@ class CadastroDadosUsuarios : AppCompatActivity() {
         var cidade = campoCidade.text.toString()
         var estado = campoEstado.text.toString()
         var pais = campoPais.text.toString()
+
+
+
+        var CPF = campoCPF.text.toString()
+        var dtNasc = campoDtNasc.text.toString()
+        var email = campoEmail.text.toString()
+        var nomeCompleto = campoNomeCompleto.text.toString()
+        var senha = campoSenha.text.toString()
+        var telefone = campoTelefone.text.toString()
 
         var endereco: Endereco =
                 Endereco(
@@ -82,27 +84,9 @@ class CadastroDadosUsuarios : AppCompatActivity() {
 
         val http = Http()
 
-        var url = getString(R.string.api_cadastro_usuario)
+        var url = getString(R.string.api_raven_crown) + "/cadastro"
 
         print("usuario>>>"+usuario.toJson())
-        //print("ALGUMACOISA>>>>>"+http.post(url,usuario.toJson()))
-
-        /*println(email)
-        println(telefone)
-        println(senha)
-        println(confirmarSenha)
-        println(nomeCompleto)
-        println(RG)
-        println(CPF)
-        println(dtNasc)
-        println(rua)
-        println(numeroMoradia)
-        println(referencia)
-        println(complemento)
-        println(CEP)
-        println(bairro)
-        println(cidade)
-        println(estado)*/
-
+        http.post(url,usuario.toJson())
     }
 }

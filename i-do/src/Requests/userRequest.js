@@ -1,4 +1,5 @@
 import Axios from 'axios'
+import service from './ConnectionString';
 
 export default function userRequest() {
     const nome = document.getElementById("txtNome").value
@@ -54,7 +55,7 @@ export default function userRequest() {
         dataNascimento
     }
 
-    Axios.post('https://ravenamy.azurewebsites.net/cadastro', params)
+    Axios.post(service() + 'cadastro', params)
         .then(Response => {
             console.log(Response)
         })

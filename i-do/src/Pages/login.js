@@ -2,7 +2,7 @@ import React from 'react';
 import '../assets/css/login.css';
 import { Link } from 'react-router-dom';
 import login from '../Requests/loginRequest';
-import Logo from '../assets/images/ido-preto.png';
+import Logo from '../assets/images/ido-logo.png';
 
 class Login extends React.Component {
     render() {
@@ -10,9 +10,11 @@ class Login extends React.Component {
             <div id="tudo">
                 <div class="bg-login">
                     <div class="container" id="form">
-                        <Link to="/">
-                            <img id="logoLogin" src={Logo} alt="logo" />
-                        </Link>
+                        <div className="row">
+                            <Link to="/">
+                                <img id="logoLogin" src={Logo} alt="logo" />
+                            </Link>
+                        </div>
                         <div class="row">
                             <input type="text" id="txtUser" placeholder="usuário"></input>
                         </div>

@@ -32,7 +32,7 @@
 
 .title-register p {
   font: 1.7em Quicksand, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   padding: 2%;
 }
 
@@ -90,7 +90,27 @@ form {
   padding: 2%;
   font: 1.5em Quicksand, sans-serif;
   font-weight: 500;
-  color: #B0ACAC;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.btn-cadastrar:hover {
+  background-color: #4d4aa3;
+  transition: 0.3s ease-in-out;
+}
+
+#findCep {
+  background-color: transparent;
+  border: 2px solid #34326E;
+  color: #34326E;
+  font-size: large;
+  font-weight: 600;
+  transition: 0.1s ease-in-out;
+  width: 20%;
+}
+#findCep:hover {
+  background-color: #454291;
+  color: white;
+  transition: 0.1s ease-in-out;
 }
 
 .btn-wrapper {
@@ -102,7 +122,6 @@ form {
   background-color: #FF9900;
   height: 90px;
   width: 120%;
-  margin-left: -18%;
 }
 
 /*# sourceMappingURL=userRegister.css.map */

@@ -37,21 +37,30 @@ class LoginActivity : AppCompatActivity() {
         var email = editTextLogin.getText().toString()
         var senha = editTextSenha.getText().toString()
 
-        //var reqParam = URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(login, "UTF-8")
-        //reqParam += "&" + URLEncoder.encode("senha", "UTF-8") + "=" + URLEncoder.encode(senha, "UTF-8")
-
         val http = Http()
-        var url = getString(R.string.api_login)
+        var url = getString(R.string.api_login) + "/usuario/login"
 
-        var login: Login =
-            Login(email, senha)
+        var login: Login = Login(email, senha)
+        var json = """{
+                        "nome": "wesley",
+                        "email": "wesley@teste",
+                        "senha": "teste123",
+                        "id": 2,
+                        "endereco": null,
+                        "imagem": null,
+                        "cpfCnpj": "23423423",
+                        "RG": "23423423",
+                        "telefone": "23423",
+                        "prestador": true,
+                        "sexo": "M",
+                        "estadoCivil": "estado_civil",
+                        "dataNascimento": "2000-05-14",
+                        "rg": "23423423"}"""
 
-        handleJson(http.post(url,login.toJson()))
-        //println(http.post(url,login.toJson()))
+        //handleJson(http.post(url,login.toJson()))
+        handleJson(json)
 
-        var url2 = "http://ravenamy.azurewebsites.net/Servicos/Categoria?categoria=47&login=69"
-
-        //println(http.get(url2))
+        //var url2 = "http://ravenamy.azurewebsites.net/Servicos/Categoria?categoria=47&login=69"
 
         //Login().execute(reqParam)
 
@@ -67,11 +76,6 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Usuário ou senha incorretos!!", Toast.LENGTH_SHORT).show()
         }
 
-    }
-
-    fun String.md5(): String {
-        val md = MessageDigest.getInstance("MD5")
-        return BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')
     }
 
    /* inner class Login : AsyncTask<String, String, String>() {
@@ -132,13 +136,12 @@ class LoginActivity : AppCompatActivity() {
 
         var jsonObject = JSONObject(jsonString)
 
-        var endereco = Endereco(
-        )
+        var endereco = Endereco()
 
         var usuario = Usuario(
-            jsonObject.getInt("idUsuario"),
+            jsonObject.getInt("id"),
             jsonObject.getString("RG"),
-            jsonObject.getString("CpfCnpj"),
+            jsonObject.getString("cpfCnpj"),
             jsonObject.getString("dataNascimento"),
             jsonObject.getString("email"),
             jsonObject.getString("estadoCivil"),

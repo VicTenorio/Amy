@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idosplashscreen.Common.Common
+import com.example.idosplashscreen.DetalhesServico
 import com.example.idosplashscreen.Interface.IcardIntemClickListener
 import com.example.idosplashscreen.Model.Service
 import com.example.idosplashscreen.R
@@ -41,19 +42,28 @@ class ServiceAdapter(internal var  context: Context,
         //p0.img_icon.setImageResource(myItems[p1].icon)
         //p0.txt_description.text = myItems[p1].description
 
-        p0.descricao.text = myItems[p1].descricao
-
+        p0.descricao.text = myItems[p1].nome
+        //p0.preco.text = myItems[p1].preco
+/*
         Picasso
             .get()//.with(context)
             .load(myItems[p1].imagem)//service.Imagem
             .placeholder(R.mipmap.ic_launcher)
             .into(p0.imagem)
-
+*/
         //==========================================
         // Define o OnClick dos items no gridView
         //==========================================
         p0.setEvent(object :IcardIntemClickListener{
             override fun onCartItemClick(view: View, position: Int) {
+                //Toast.makeText(context,"Clicked:"+ myItems[position].id,Toast.LENGTH_SHORT).show()
+
+                var detalhes = Intent(view.context, DetalhesServico::class.java)
+                //detalhes.putExtra("imagem", myItems[position].imagem)
+                detalhes.putExtra("descricao", myItems[position].descricao)
+                detalhes.putExtra("nome", myItems[position].nome)
+                ContextCompat.startActivity(view.context, detalhes, null)
+
             }
         })
     }

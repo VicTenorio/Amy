@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetalhesServico"
-    android:background="@drawable/bgtop">
+    android:orientation="vertical"
+    android:background="@drawable/side_nav_bar">
 
 
     <LinearLayout
@@ -17,89 +18,119 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:id="@+id/imagem_servico"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/mortarboard" />
+            android:src="@drawable/icon_mecanica" />
 
 
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="342dp"
-        android:layout_height="244dp"
+        android:layout_height="200dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="69dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft = "35dp"
         android:background="@drawable/def_boder_style"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/BtContratar"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp">
 
         <TextView
+            android:id="@+id/detalhes_servico"
             android:layout_width="321dp"
             android:layout_height="wrap_content"
             android:background="@drawable/lost_boder_style"
-            android:text="DETALHES DO SERVIÇO"
-            android:textColor="#ffff"
+            android:text="@string/detalhes_servico"
+            android:textColor="#DABEBE"
+            android:fontFamily="@string/fontFamily"
+            android:textSize="20dp"
+            android:textStyle="bold"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="125dp"
-            tools:layout_editor_absoluteY="324dp" />
+            tools:layout_editor_absoluteY="324dp"
+            />
 
         <TextView
-            android:layout_width="69dp"
+            android:id="@+id/nome_servico"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Nome:"
+            android:text="@string/nome_servico"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@string/fontFamily"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="373dp" />
 
         <TextView
-            android:layout_width="76dp"
+            android:id="@+id/categoria_servico"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Categoria:"
+            android:text="@string/categoria_servico"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@string/fontFamily"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="433dp" />
 
         <TextView
-            android:layout_width="56dp"
+            android:id="@+id/preco_servico"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Preço:"
+            android:text="@string/preco_servico"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@string/fontFamily"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="465dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tempo_servico"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Tempo de Execução:"
+            android:text="@string/tempo_servico"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@string/fontFamily"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="402dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/localizacao_servico"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Localização Fixa:"
+            android:text="@string/localizacao_servico"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@string/fontFamily"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="493dp" />
 
         <TextView
-            android:layout_width="89dp"
+            android:id="@+id/descricao_servico"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Descrição:"
+            android:text="@string/detalhes_servico"
+            android:fontFamily="@string/fontFamily"
             android:textColor="#000000"
             tools:ignore="MissingConstraints"
+            android:textSize="16sp"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="526dp" />
+            tools:layout_editor_absoluteY="526dp"/>
     </LinearLayout>
 
     <Button
@@ -107,11 +138,19 @@
         android:layout_width="236dp"
         android:layout_height="49dp"
         android:background="@drawable/lost_boder_style"
+        android:gravity="center"
+        android:layout_marginLeft = "90dp"
+        android:onClick="agendar"
         android:text="Ver Disponibilidade"
-        android:textColor="#ffff"
+        android:textColor="#E0BBBB"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="611dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvModal"
+        tools:ignore="MissingConstraints" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
