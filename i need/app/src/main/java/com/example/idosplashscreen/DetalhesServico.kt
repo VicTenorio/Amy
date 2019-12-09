@@ -23,7 +23,7 @@ class DetalhesServico : AppCompatActivity() {
 
         setContentView(R.layout.activity_detalhes_servico)
         val textView: TextView  = findViewById(R.id.BtContratar)
-        textView.text = SimpleDateFormat("dd.MM.yyyy").format(System.currentTimeMillis())
+        //textView.text = "Agendar"
 
         var cal = Calendar.getInstance()
 
@@ -49,21 +49,25 @@ class DetalhesServico : AppCompatActivity() {
     }
 
     fun setData(){
-        //var imagem = intent.getStringExtra("imagem")
         var imagem = getDrawable(R.drawable.icon_mecanica)
+        //var image = intent.getStringExtra("image")
         var descricao = intent.getStringExtra("descricao")
         var nome = intent.getStringExtra("nome")
+        var idCategoria = intent.getIntExtra("idCategoria",0)
+        var tempoExecucao = intent.getStringExtra("tempoExecucao")
+        var preco = intent.getDoubleExtra("preco",0.0)
+
         val data = """
             {
                 "id":4,
                 "idUsuario":4,
                 "endereco":null,
-                "idCategoria": 4,
+                "idCategoria": ${idCategoria},
                 "imagem": "${imagem}",
                 "nome": "${nome}",
                 "descricao": "${descricao}",
-                "tempoExecucao":"3 horas",
-                "preco":"20.00",
+                "tempoExecucao":"${tempoExecucao}",
+                "preco":${preco},
                 "localizacaoFixa":True
             }"""
 
@@ -73,7 +77,6 @@ class DetalhesServico : AppCompatActivity() {
         categoria_servico.text = categoria_servico.text.toString()+" "+service.idCategoria.toString()
         preco_servico.text = preco_servico.text.toString()+" "+service.preco.toString()
         tempo_servico.text = tempo_servico.text.toString()+" "+service.tempoExecucao
-        localizacao_servico.text = localizacao_servico.text.toString()+" "+service.localizacaoFixa.toString()
         descricao_servico.text = descricao_servico.text.toString()+" "+service.descricao
 /*
         Picasso
@@ -82,7 +85,6 @@ class DetalhesServico : AppCompatActivity() {
             .placeholder(R.mipmap.ic_launcher)
             .into(imagem_servico)*/
     }
-
 
     fun agendar(view:View){
         Toast.makeText(this, "Serviço agendado com sucesso!!!", Toast.LENGTH_LONG).show()
