@@ -17,21 +17,21 @@ export default function serviceRegisterRequest() {
     const blob = document.getElementById("foto").src
 
     const toDataURL = url => fetch(url)
-        .then(response => response.blob())
-        .then(blob => new Promise((resolve, reject) => {
-            const reader = new FileReader()
-            reader.onloadend = () => resolve(reader.result)
-            reader.onerror = reject
-            reader.readAsDataURL(blob)
-        }))
+    .then(response => response.blob())
+    .then(blob => new Promise((resolve, reject) => {
+      const reader = new FileReader()
+      reader.onloadend = () => resolve(reader.result)
+      reader.onerror = reject
+      reader.readAsDataURL(blob)
+    }))
 
     toDataURL(blob)
-        .then(dataUrl => {
-            localStorage.setItem("imagemServico", dataUrl.substring(23, dataUrl.length))
-        })
+    .then(dataUrl => {
+    localStorage.setItem("imagemServico", dataUrl.substring(23, dataUrl.length))
+    })
 
     const image = localStorage.getItem("imagemServico")
-
+    
     var escolhaLocalizacao = '';
     var localizacao = document.getElementsByName('localServico');
     for (var i = 0; i < localizacao.length; i++) {
@@ -61,18 +61,14 @@ export default function serviceRegisterRequest() {
             cidade: "Porto Real",
             estado: "SP"
         },
-        imagem: []
-    }
-
-    if (image != null) {
-        params.imagem.push(
+        imagem: [
             {
                 id: null,
                 idUsuario: 54,
                 url: null,
                 image
             }
-        );
+        ] 
     }
 
     console.log("params", params)
