@@ -17,14 +17,14 @@ namespace Amy.Infra
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public void SetSession(User user)
+        public void SetSession(AmyUser user)
         {
             _httpContextAccessor.HttpContext.Session.Set("userData", Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(user)));
         }
 
-        public User GetSession()
+        public AmyUser GetSession()
         {
-            User user = null;
+            AmyUser user = null;
             byte[] userBinary;
 
             _httpContextAccessor.HttpContext.Session.TryGetValue("userData",out userBinary);
@@ -32,7 +32,7 @@ namespace Amy.Infra
             if(userBinary != null)
             {
                 string jsonUser = Encoding.ASCII.GetString(userBinary);
-                user = JsonConvert.DeserializeObject<User>(jsonUser);
+                user = JsonConvert.DeserializeObject<AmyUser>(jsonUser);
             }
 
             return user;

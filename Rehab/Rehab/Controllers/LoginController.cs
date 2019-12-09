@@ -41,11 +41,11 @@ namespace Rehab.Controllers
                 credentials.Password = Encrypt.GetMd5Hash(md5Hash, credentials.Password);
             };
 
-            var user = _context.Usuario.Where(x => string.Equals(x.Email, credentials.Email) && string.Equals (x.Password, credentials.Password)).FirstOrDefault();
+            var user = _context.SystemUsers.Where(x => string.Equals(x.Email, credentials.Email) && string.Equals (x.Password, credentials.Password)).FirstOrDefault();
 
             if(user != null)
             {
-                _authentication.SetSession((User)user);
+                _authentication.SetSession((AmyUser)user);
                 return Redirect("../Home");
 
             }
