@@ -23,7 +23,7 @@ class  MeusServicosAdapter(internal var  context: Context,
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
         val itemView = LayoutInflater.from(context)
-            .inflate(R.layout.list_item_service,p0,false)
+            .inflate(R.layout.list_item_meus_servicos,p0,false)
         return MyViewHolder(itemView)
     }
 
@@ -80,7 +80,7 @@ class  MeusServicosAdapter(internal var  context: Context,
         }
 
         init {
-            imagem =itemView.findViewById<View>(R.id.service_image) as ImageView
+            imagem = itemView.findViewById<View>(R.id.service_image) as ImageView
             descricao = itemView.findViewById(R.id.service_description) as TextView
 
             itemView.setOnClickListener(this)
