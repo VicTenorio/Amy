@@ -109,9 +109,14 @@
     <string name="descricao_servico">Descripción:</string>
     <string name="agendar_data">horario</string>
     <string name="endereco_servico">dirección:</string>
+
+    <!--check box-->
     <string name="Ch_solteiro">soltero</string>
     <string name="Ch_casado">casado</string>
 
+    <!--contrato-->
+    <string name = "negocio_fechado"> NEGOCIO CERRADO </string>
+    <string name = "bt_fechar_contrato"> CERRAR NEGOCIO </string>
 
 
 
