@@ -11,6 +11,7 @@ import ScheduledServices from '../src/Pages/scheduledServices';
 import CardMyServices from '../src/components/cardMyServices';
 import cardScheduleServices from '../src/components/cardScheduleServices';
 import HomeLogoff from '../src/Pages/homeLogoff';
+import HomeLogin from './Pages/homeLogin';
 
 ReactDOM.render(
         <BrowserRouter>
@@ -24,6 +25,7 @@ ReactDOM.render(
                 <Route path="/cardMyServices" component={CardMyServices} />
                 <Route path="/cardScheduleServices" component={cardScheduleServices} />
                 <Route path="/homeLogoff" component={HomeLogoff} />
+                <Route path="/home" component={HomeLogin} />
             </Switch>
         </BrowserRouter>
     , document.getElementById('root'));

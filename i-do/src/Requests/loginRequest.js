@@ -8,20 +8,21 @@ const params = {
 
 var config = {
     headers: {
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Authorization", 
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE" ,
-        "Content-Type": "application/json;charset=UTF-8"  
+        "Content-Type": "text/xml;charset=UTF-8"  
     }
 }
 
-    axios.post('http://localhost:3001/usuario/login', params, config)
+    axios.post('http://ec2-3-87-223-198.compute-1.amazonaws.com:3001/usuario/login', params, config)
         .then(function (response){
         localStorage.setItem("usuario", response.data)
-        console.log("sucess")
+        window.location.href = "/home"
         }
         )
         .catch(function (error) {
+        window.location.href = "/home"
             console.log(error);
     })
       

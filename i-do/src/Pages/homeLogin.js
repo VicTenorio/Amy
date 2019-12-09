@@ -6,7 +6,7 @@ import Navbar from '../components/navbar-home';
 class HomeLogin extends React.Component {
     render() {
         return (
-            <div>
+            <div id="body" style={{height: "150%", paddingBottom: "10%"}}>
                 <Navbar />
                 <div id="content" className="justify-content-center mt-4">
                     <section name="start">
