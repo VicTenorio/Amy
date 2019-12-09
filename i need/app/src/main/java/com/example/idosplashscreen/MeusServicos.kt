@@ -60,7 +60,7 @@ class MeusServicos : AppCompatActivity() {
 
     var idCategoriaHome = intent.getIntExtra("idCategoria", 0)
     val http = Http()
-    var url = getString(R.string.api_raven_crown)+"/ValeryAPI/Usuario/Contratos?id=55"
+    var url = getString(R.string.api_raven_crown)+"/Usuario/Contratos?id=55"
     var array = http.get(url)
 
     serviceList = Service().streamingArray(array)//json de servicos

@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_detalhes_servico.*
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import com.example.idosplashscreen.Model.Http
 import com.example.idosplashscreen.Model.UsuarioLogado
 import java.text.SimpleDateFormat
 import java.util.*
@@ -24,7 +25,7 @@ class DetalhesServico : AppCompatActivity() {
         setContentView(R.layout.activity_detalhes_servico)
         val textView: TextView  = findViewById(R.id.BtContratar)
         //textView.text = "Agendar"
-
+/*
         var cal = Calendar.getInstance()
 
         val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
@@ -44,7 +45,7 @@ class DetalhesServico : AppCompatActivity() {
                 cal.get(Calendar.MONTH),
                 cal.get(Calendar.DAY_OF_MONTH)).show()
         }
-
+*/
         setData()
     }
 
@@ -87,6 +88,41 @@ class DetalhesServico : AppCompatActivity() {
     }
 
     fun agendar(view:View){
+        val http = Http()
+
+        var url = getString(R.string.api_raven_crown) + "/Servico/Agendar"
+
+        //print("usuario>>>"+usuario.toJson())
+        val json = """
+             {
+                "id": null,
+                "idServico": 59,
+                "idPrestador": 53,
+                "idConsumidor": 55,
+                "idDemanda": null,             
+                "datas": [
+                    {
+                        "idDemanda": null,
+                        "dtAgendamento": "2019-12-20T21:11:30",
+                        "tipoReserva": "T",
+                        "idServico": 59,
+                        "idConsumidor": 55,
+                        "idContrato": null,
+                        "idDataAgendamento": null,
+                        "idPrestador": 53
+                    }
+                ],
+                "aprovado_Consumidor": false,
+                "aprovado_Prestador": false,
+                "endereco":null,
+                "valor_Final": 100.0,
+                "pago": false
+           }
+        """
+
+        http.post(url,json)
+
+
         Toast.makeText(this, "Serviço agendado com sucesso!!!", Toast.LENGTH_LONG).show()
 
         var home = Intent(this, HomeActivity::class.java)
