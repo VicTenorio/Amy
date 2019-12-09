@@ -100,10 +100,10 @@ class userRegister extends React.Component {
                     </div>
                     <div class="row w-100">
                         <div class="col-5">
-                            <input id="txtSenha" class="input-meio" />
+                            <input id="txtSenha" type="password" class="input-meio" />
                         </div>
                         <div class="col-5">
-                            <input class="input-meio" />
+                            <input type="password" class="input-meio" />
                         </div>
                     </div>
                 </div>

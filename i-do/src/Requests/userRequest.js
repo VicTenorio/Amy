@@ -1,5 +1,6 @@
 import Axios from 'axios'
 import service from './ConnectionString';
+import {Redirect} from 'react-router-dom';
 
 export default function userRequest() {
     const nome = document.getElementById("txtNome").value
@@ -92,6 +93,9 @@ export default function userRequest() {
 
             }
             console.log(Response)
+            if(Response.status === 200) {
+                window.location.href = '/sucesso';
+            }
         })
         .catch(Error => {
             console.log(Error)

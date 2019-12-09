@@ -18,7 +18,7 @@ class Navbar extends React.Component {
                         <form className="row w-100 form-inline justify-content-end p-3">
                             <div className="row" align="center">
                                 <label id="userName" className="display-4">
-                                    Bem vindo, Usuário!
+                                    Bem vindo!
                                 </label>
                             </div>
                         </form>

@@ -1,0 +1,54 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #34326E;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #586ADF;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-resizer {
+  background-color: #34326E;
+}
+
+#btnConcluir {
+  background-color: #34326E;
+  color: white;
+  font-size: 19pt;
+  border-radius: 50px;
+  padding: 0.5%;
+  width: 20%;
+  transition: 0.3s ease-in-out;
+}
+#btnConcluir:hover {
+  background-color: #4d4aa3;
+  transition: 0.3s ease-in-out;
+}
+
+.link {
+  text-decoration: #34326E;
+}
+.link:hover {
+  text-decoration: #34326E;
+}
+
+/*# sourceMappingURL=successfullyregister.css.map */
