@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalhesServico"
+    android:orientation="vertical"
+    android:background="@drawable/side_nav_bar">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="342dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft = "35dp"
+        android:background="@drawable/boder_style"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/contrato"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/lost_boder_style"
+            android:fontFamily="@string/fontFamily"
+            android:text="NEGOCIO FECHADO ?"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="324dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BTfecharContatrato"
+        android:layout_width="236dp"
+        android:layout_height="49dp"
+        android:background="@drawable/lost_boder_style"
+        android:gravity="center"
+        android:layout_marginLeft = "90dp"
+        android:onClick="agendar"
+        android:text="Fechar Contrato"
+        android:textColor="#ffff"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="611dp" />
+
+    <TextView
+        android:id="@+id/tvModal"
+        android:layout_width="170dp"
+        android:layout_height="32dp"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>
