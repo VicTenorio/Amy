@@ -33,8 +33,8 @@ class MyServices extends React.Component {
                         return (
                             <div className="p-4">
                                 <div className="cardContainer col-xl-3 col-lg-3 col-md-3 col-sm-10">
-                                    <div className="border h-50">
-                                      {/* <img src="#" alt="imgService" src={`data:image/jpeg;base64,${item.imagem[0].image}`} /> */}
+                                    <div className="border h-50" >
+                                      <img src="#" alt="imgService" src={`data:image/jpeg;base64,${item.imagem[0].image}`} style={{maxWidth: '100%', maxHeight: '20%'}} />
                                     </div>
                                     <label id="ServiceName">
                                        {item.nome}
@@ -44,7 +44,7 @@ class MyServices extends React.Component {
                                     </label><br />
                                     <hr />
                                     <strong id="ServicePrice">
-                                        {item.preco}
+                                        R${item.preco}
                                     </strong>
                                     <div className="row p-2">
                                         <div className="col-6">

@@ -60,9 +60,10 @@ class ServiceRegister extends React.Component {
                     </div>
                     <div className="col-xl-4 p-5">
                         <div className="img-service">
-                            <img id="foto"></img>
+                           
                             <label align="center" className="mt-2 w-100">Adicione uma foto</label>
                         <input type="file" id="fileInput" className="form-control" placeholder="Escolher arquivo" onChange={uploadFile}/>
+                        <img id="foto" style={{maxWidth: '100%', maxHeight: '100%'}}></img>
                         </div>
                         <div className="row w-100 justify-content-center">
                             <button id="btnServiceRegister" className="mt-3 w-50" type="submit" onClick={ServiceRequest}>Cadastrar</button>

@@ -45,11 +45,11 @@ class ScheduledServices extends React.Component {
                         <button id="applyFilter" type="submit" className="btn">Aplicar filtro</button>
                     </div>
                 </div>
-                {/* <label id="noRegister" className="w-100" align="center">Usuário, você ainda não possui serviços agendados.</label> */}
-                {this.state.contrato.map(item => {
-                    return (
-                        <div className="row ml-1 mr-1 mt-4 " align="center">
-                            <div className="cardContainer col-xl-3 col-lg-3 col-md-3 col-sm-10" align="center">
+                <div className="row ml-1 mr-1 mt-4 justify-content-center" align="center">
+                    {this.state.contrato.map(item => {
+                        return (
+
+                            <div className="cardContainer col-xl-3 col-lg-3 col-md-3 col-sm-10 mr-2 ml-2 mb-2" align="center">
                                 <label id="DayOfService">
                                     {item.dtAgendamento}
                                 </label>
@@ -126,9 +126,10 @@ class ScheduledServices extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    )
-                })}
+
+                        )
+                    })}
+                </div>
             </div>
         )
     }
