@@ -107,10 +107,10 @@
             tools:layout_editor_absoluteY="402dp" />
 
         <TextView
-            android:id="@+id/localizacao_servico"
+            android:id="@+id/endereco"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="@string/localizacao_servico"
+            android:text="@string/endereco_servico"
             android:textSize="16sp"
             android:textStyle="bold"
             android:fontFamily="@string/fontFamily"

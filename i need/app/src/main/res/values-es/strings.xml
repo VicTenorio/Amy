@@ -108,7 +108,7 @@
     <string name="localizacao_servico">Ubicación fija:</string>
     <string name="descricao_servico">Descripción:</string>
     <string name="agendar_data">horario</string>
-
+    <string name="endereco_servico">dirección:</string>
     <string name="Ch_solteiro">soltero</string>
     <string name="Ch_casado">casado</string>
 
