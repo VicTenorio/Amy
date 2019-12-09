@@ -63,6 +63,10 @@ class userRegister extends React.Component {
                                 <label>Masculino</label>
                             </div>
                         </div>
+                        <div class="fotoupload w-100">
+                            <img id="fotoDocument"></img>
+                            <input id="fileDoc" type="file" placeholder="Escolher arquivo"/>
+                        </div>
                     </div>
                 </div>
                 <div className="w-100 p-2">
