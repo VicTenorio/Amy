@@ -12,3 +12,15 @@ C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Microsoft.EntityFramewor
 C:\Workspace\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.csproj.CopyComplete
 C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Model.dll
 C:\Workspace\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Model.pdb
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Core.deps.json
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Core.dll
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Core.pdb
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Model.dll
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\bin\Debug\netcoreapp2.2\Amy.Model.pdb
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.csprojAssemblyReference.cache
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.csproj.CoreCompileInputs.cache
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.AssemblyInfoInputs.cache
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.AssemblyInfo.cs
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.csproj.CopyComplete
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.dll
+C:\Workspace\.netCore\Amy\Rehab\Amy.Core\obj\Debug\netcoreapp2.2\Amy.Core.pdb

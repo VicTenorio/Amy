@@ -14,5 +14,11 @@ namespace Amy.Core.Data
         public DbSet<User> Usuario { get; set; }
 
         public DbSet<UserDocumentImage> Imagens {get;set;}
+
+        public DbSet<Contract> Contracts { get; set; }
+
+        public DbSet<ServiceAvaliation> Avaliations { get; set; }
+
+        public DbSet<AmyUser> SystemUsers { get; set; }
     }
 }

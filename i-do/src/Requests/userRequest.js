@@ -8,7 +8,7 @@ export default function userRequest() {
     const dataNascimento = document.getElementById("txtDataNascimento").value
     const estadoCivil = document.getElementById("estadoCivil")
     const option = estadoCivil.selectedIndex;
-    const optionFinal = estadoCivil.options[option].text
+    const optionFinal = estadoCivil.options[option].text;
 
     var escolhaSexo;
     const genero = document.getElementsByName("sexo")
@@ -57,6 +57,40 @@ export default function userRequest() {
 
     Axios.post(service() + 'cadastro', params)
         .then(Response => {
+            const flieDoc = document.getElementById("fileDoc").src;
+
+            if (flieDoc != null) {
+                const toDataURL = url => fetch(url)
+                    .then(response => response.blob())
+                    .then(blob => new Promise((resolve, reject) => {
+                        const reader = new FileReader()
+                        reader.onloadend = () => resolve(reader.result)
+                        reader.onerror = reject
+                        reader.readAsDataURL(blob)
+                    }))
+
+                toDataURL(flieDoc)
+                    .then(dataUrl => {
+                        localStorage.setItem("imagemDoc", dataUrl.substring(23, dataUrl.length))
+                    })
+
+                const imageDoc =
+                {
+                    "Id": 0,
+                    "idUser": Response.data.id,
+                    "imagem": localStorage.getItem("imagemDoc")
+                }
+
+                console.log(imageDoc)
+                Axios.post('https://rehab-amy.azurewebsites.net/api/document', imageDoc)
+                    .then(Response => {
+                        console.log(Response)
+                    })
+                    .catch(Error => {
+                        console.log(Error)
+                    })
+
+            }
             console.log(Response)
         })
         .catch(Error => {
