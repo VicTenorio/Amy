@@ -130,4 +130,10 @@ class HomeActivity : AppCompatActivity() {
         startActivity(tela2)
     }
 
+    fun IrMeusServicos(item: MenuItem) {
+        val IrMeusServicos = Intent(this,MeusServicos::class.java)
+        startActivity(IrMeusServicos)
+    }
+
+
 }

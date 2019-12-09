@@ -14,7 +14,6 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".Contrato"></activity>
         <activity android:name=".MeusServicos" />
-        <activity android:name=".DialogModal" />
         <activity android:name=".DetalhesServico" />
         <activity android:name=".CadastroDadosUsuarios" />
         <activity
