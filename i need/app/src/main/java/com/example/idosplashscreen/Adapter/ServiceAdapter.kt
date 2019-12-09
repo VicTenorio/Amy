@@ -2,6 +2,7 @@ package com.example.idosplashscreen.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,8 @@ import com.example.idosplashscreen.Model.Service
 import com.example.idosplashscreen.R
 import com.example.idosplashscreen.ServiceActivity
 import com.squareup.picasso.Picasso
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ServiceAdapter(internal var  context: Context,
                 internal var myItems: ArrayList<Service>):RecyclerView.Adapter<ServiceAdapter.MyViewHolder>() {
@@ -43,6 +46,7 @@ class ServiceAdapter(internal var  context: Context,
         //p0.txt_description.text = myItems[p1].description
 
         p0.descricao.text = myItems[p1].nome
+
         //p0.preco.text = myItems[p1].preco
 /*
         Picasso
@@ -59,9 +63,26 @@ class ServiceAdapter(internal var  context: Context,
                 //Toast.makeText(context,"Clicked:"+ myItems[position].id,Toast.LENGTH_SHORT).show()
 
                 var detalhes = Intent(view.context, DetalhesServico::class.java)
+
                 //detalhes.putExtra("imagem", myItems[position].imagem)
                 detalhes.putExtra("descricao", myItems[position].descricao)
                 detalhes.putExtra("nome", myItems[position].nome)
+                detalhes.putExtra("idCategoria",myItems[position].idCategoria)
+                detalhes.putExtra("tempoExecucao",myItems[position].tempoExecucao)
+                detalhes.putExtra("preco",myItems[position].preco)
+
+                /*
+                val imagem = myItems[position].imagem[0].image
+                val imageByteArray = Base64.getDecoder().decode(imagem)
+                val decodedByte = BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.size)
+                //val decodedStr = String(decoded, Charsets.UTF_8)
+                println(decodedByte)
+                if(decodedByte != null){
+                    detalhes.putExtra("image",myItems[position].imagem[0].image)
+                }else{
+                    detalhes.putExtra("image","Sem Imagem")
+                }*/
+
                 ContextCompat.startActivity(view.context, detalhes, null)
 
             }
