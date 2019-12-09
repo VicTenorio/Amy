@@ -3,14 +3,6 @@ import '../assets/css/cardMyservices.css';
 
 class cardMyServices extends React.Component {
 
-    state = {
-        servico: []
-    };
-
-    constructor(servico) {
-        super();
-        this.state.servico = servico;
-    }
 
     render() {
         return (
@@ -20,14 +12,14 @@ class cardMyServices extends React.Component {
                         <img src="#" alt="imgService" />
                     </div>
                     <label id="ServiceName">
-                        {console.log(this.state.servico.nome)}
+                       
                     </label>
                     <label id="ServiceDescription">
-                        {console.log(this.state.servico.descricao)}
+                        {this.props.item.nome}
                     </label><br />
                     <hr />
                     <strong id="ServicePrice">
-                        {console.log(this.state.servico.preco)}
+                        {this.props.item.preco}
                     </strong>
                     <div className="row p-2">
                         <div className="col-6">

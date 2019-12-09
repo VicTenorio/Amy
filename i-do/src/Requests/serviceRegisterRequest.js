@@ -42,7 +42,7 @@ export default function serviceRegisterRequest() {
 
     const params = {
         id: null,
-        idUsuario: 882,
+        idUsuario: 54,
         idCategoria: categoriaSelecionada,
         nome,
         preco,
@@ -54,17 +54,17 @@ export default function serviceRegisterRequest() {
             rua: "Rua Das Orquideas",
             cep: "0000-000",
             complemento: "aa",
-            pais: "A Terra do REU",
-            numero: "69",
-            referencia: "aa",
+            pais: "Brasil",
+            numero: "12",
+            referencia: "Atras da padaria",
             bairro: "Jardim das Flores",
             cidade: "Porto Real",
-            estado: "UK"
+            estado: "SP"
         },
         imagem: [
             {
                 id: null,
-                idUsuario: 882,
+                idUsuario: 54,
                 url: null,
                 image
             }

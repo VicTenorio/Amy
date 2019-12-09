@@ -12,6 +12,7 @@ import CardMyServices from '../src/components/cardMyServices';
 import cardScheduleServices from '../src/components/cardScheduleServices';
 import HomeLogoff from '../src/Pages/homeLogoff';
 import SuccessfullyRegister from '../src/Pages/successfullyRegister';
+import HomeLogin from './Pages/homeLogin';
 
 ReactDOM.render(
         <BrowserRouter>
@@ -26,6 +27,7 @@ ReactDOM.render(
                 <Route path="/cardScheduleServices" component={cardScheduleServices} />
                 <Route path="/homeLogoff" component={HomeLogoff} />
                 <Route path="/sucesso" component={SuccessfullyRegister} />
+                <Route path="/home" component={HomeLogin} />
             </Switch>
         </BrowserRouter>
     , document.getElementById('root'));
