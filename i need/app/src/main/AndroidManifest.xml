@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DialogModal"></activity>
+        <activity android:name=".MeusServicos"></activity>
+        <activity android:name=".DialogModal" />
         <activity android:name=".DetalhesServico" />
         <activity android:name=".CadastroDadosUsuarios" />
         <activity

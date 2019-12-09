@@ -110,7 +110,7 @@
     <string name="localizacao_servico">Fixed Location:</string>
     <string name="descricao_servico">Description:</string>
     <string name="agendar_data">schedule</string>
-
+    <string name="endereco_servico">Address:</string>
     <string name="Ch_solteiro">Single</string>
     <string name="Ch_casado">married</string>
 
