@@ -1,6 +1,7 @@
 package com.example.idosplashscreen.Model
 
 import com.example.idosplashscreen.Model.Endereco
+import org.json.JSONObject
 
 data class Usuario (var id_usuario: Int,
                     var rg: String,
@@ -44,5 +45,32 @@ data class Usuario (var id_usuario: Int,
             "estadoCivil" : "${this.estado_civil}",
             "dataNascimento" : "${this.data_nascimento}"}""")
 
+    }
+
+
+    fun streamingJson(jsonString: String?) : Usuario {
+
+        var jsonObject = JSONObject(jsonString)
+
+        var endereco = Endereco(
+        )
+
+
+        var usuario = Usuario(
+            jsonObject.getInt("id"),
+            jsonObject.getString("rg"),
+            jsonObject.getString("cpfCnpj"),
+            jsonObject.getString("dataNascimento"),
+            jsonObject.getString("email"),
+            jsonObject.getString("estadoCivil"),
+            jsonObject.getString("nome"),
+            jsonObject.getBoolean("prestador"),
+            jsonObject.getString("senha"),
+            jsonObject.getString("sexo"),
+            jsonObject.getString("telefone"),
+            endereco
+        )
+
+        return usuario
     }
 }

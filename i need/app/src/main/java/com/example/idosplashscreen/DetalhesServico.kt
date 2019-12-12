@@ -23,9 +23,9 @@ class DetalhesServico : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_detalhes_servico)
-        val textView: TextView  = findViewById(R.id.BtContratar)
+        val textView: TextView  = findViewById(R.id.BtAgendar)
         //textView.text = "Agendar"
-/*
+
         var cal = Calendar.getInstance()
 
         val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
@@ -45,7 +45,7 @@ class DetalhesServico : AppCompatActivity() {
                 cal.get(Calendar.MONTH),
                 cal.get(Calendar.DAY_OF_MONTH)).show()
         }
-*/
+
         setData()
     }
 
@@ -97,8 +97,8 @@ class DetalhesServico : AppCompatActivity() {
              {
                 "id": null,
                 "idServico": 59,
-                "idPrestador": 53,
-                "idConsumidor": 55,
+                "idPrestador": 55,
+                "idConsumidor": 53,
                 "idDemanda": null,             
                 "datas": [
                     {
@@ -125,7 +125,7 @@ class DetalhesServico : AppCompatActivity() {
 
         Toast.makeText(this, "Serviço agendado com sucesso!!!", Toast.LENGTH_LONG).show()
 
-        var home = Intent(this, HomeActivity::class.java)
+        var home = Intent(this, ContratoActivity::class.java)
         // enviando valores para a outra activity
         home.putExtra("idUsuario", UsuarioLogado.idUsuario)
         home.putExtra("nome", UsuarioLogado.nomeUsuario)

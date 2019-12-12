@@ -133,15 +133,14 @@
             tools:layout_editor_absoluteY="526dp"/>
     </LinearLayout>
 
-    <Button
+    <TextView
         android:id="@+id/BtAgendar"
         android:layout_width="236dp"
         android:layout_height="49dp"
-        android:background="@drawable/lost_boder_style"
         android:gravity="center"
         android:layout_marginLeft = "90dp"
-        android:onClick="agendar"
-        android:text="@string/agendar_data"
+        android:textSize="20dp"
+        android:text="Agendar horário"
         android:textColor="#E0BBBB"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
@@ -155,7 +154,7 @@
         android:gravity="center"
         android:layout_marginLeft = "90dp"
         android:onClick="agendar"
-        android:text="@string/agendar_data"
+        android:text="Contratar"
         android:textColor="#E0BBBB"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"

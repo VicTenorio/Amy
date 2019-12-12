@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Contrato"></activity>
+        <activity android:name=".ContratoActivity"></activity>
         <activity android:name=".MeusServicos" />
         <activity android:name=".DetalhesServico" />
         <activity android:name=".CadastroDadosUsuarios" />

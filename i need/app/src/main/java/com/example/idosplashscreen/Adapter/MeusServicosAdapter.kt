@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idosplashscreen.Common.Common
+import com.example.idosplashscreen.ContratoActivity
 import com.example.idosplashscreen.DetalhesServico
 import com.example.idosplashscreen.Interface.IcardIntemClickListener
 import com.example.idosplashscreen.Model.Service
@@ -58,10 +59,10 @@ class  MeusServicosAdapter(internal var  context: Context,
             override fun onCartItemClick(view: View, position: Int) {
                 //Toast.makeText(context,"Clicked:"+ myItems[position].id,Toast.LENGTH_SHORT).show()
 
-                var detalhes = Intent(view.context, DetalhesServico::class.java)
+                var detalhes = Intent(view.context, ContratoActivity::class.java)
                 //detalhes.putExtra("imagem", myItems[position].imagem)
-                detalhes.putExtra("descricao", myItems[position].descricao)
-                detalhes.putExtra("nome", myItems[position].nome)
+                detalhes.putExtra("idUsuario", myItems[position].idUsuario)
+                detalhes.putExtra("idPrestador", myItems[position].idUsuario)
                 ContextCompat.startActivity(view.context, detalhes, null)
 
             }
