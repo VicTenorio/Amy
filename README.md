@@ -15,4 +15,4 @@ Para clonar o projeto, vá ao diretório de sua preferência:
 
 E depois clone o projeto:
 
->git clone "https://github.com/VicTenorio/Amy.git"
+>git clone "https://github.com/ViTenorio/Amy.git"
